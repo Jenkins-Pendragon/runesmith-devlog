@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting ready for Next Fest · The Runesmith Devlog</title>
+<meta name="description" content="The demo is heading to Steam Next Fest, October 19 to 26. This update is all about the first hour and the last minute of it: hits that land harder, forging that reveals its rarity, a starter rune you get to pick, and a proper goodbye when the demo ends.">
+<meta property="og:title" content="Getting ready for Next Fest · The Runesmith Devlog">
+<meta property="og:description" content="The demo is heading to Steam Next Fest, October 19 to 26. This update is all about the first hour and the last minute of it: hits that land harder, forging that reveals its rarity, a starter rune you get to pick, and a proper goodbye when the demo ends.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/demo-over-panel.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/getting-ready-for-next-fest/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png?v=52ab8223">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css?v=67fc6d84">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png?v=424a69f6" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active">Devlog</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #6 &middot; October 2, 2026 &middot; October 2</div>
+    <h1>Getting ready for Next Fest</h1>
+    <p class="lead">The demo is heading to Steam Next Fest, October 19 to 26. This update is all about the first hour and the last minute of it: hits that land harder, forging that reveals its rarity, a starter rune you get to pick, and a proper goodbye when the demo ends.</p>
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/demo-over-panel.jpg?v=3bfde2bb" alt="The end of demo screen with a personal summary, three full game cards and a Wishlist on Steam button"></figure>
+  <div class="post-body wrap-narrow">
+<p>The Runesmith demo goes live on Steam ahead of <strong>Next Fest, October 19 to 26</strong>. A festival demo gets one shot: people try a dozen games in an afternoon and remember the ones that felt good in the first few minutes. So this round of work wasn't about new content. It was about the moments that decide whether someone keeps playing, and whether they wishlist when they stop.</p>
+<h2>Hits that actually stop</h2>
+<p>When a heavy hit lands, the game freezes your character for a split second. It's called hitstop, and it's most of what makes a swing feel solid. Mine was measured in frames, which sounds fine until you remember that a frame at 144 fps lasts about 7 milliseconds. On a fast PC the freeze was so short you couldn't see it. It's now measured in real time, so the hit feels the same at 60 fps and at 240.</p>
+<p>Two other timings were backwards:</p>
+<ul>
+<li><strong>Killing a boss</strong> gave you a shorter slow motion moment than killing a regular enemy. Now the boss kill gets a proper 0.6 second slowdown, the longest in the game.</li>
+<li><strong>Critical hits while gathering</strong> froze the game for 0.4 seconds. That's great once. Across hundreds of swings at ore and trees, it felt like lag. It's down to 0.1 seconds, enough to notice a crit without breaking the rhythm.</li>
+</ul>
+<h2>Forging that knows what it made</h2>
+<p><img alt="Six god rune icons glowing red on a dark blue background" src="/runesmith-devlog/assets/img/god-runes.jpg?v=847a3198" />
+<em>One rune family per god</em></p>
+<p>Before, a rune's rarity was decided at the very end of the forging animation, so the animation itself had no idea what it was building. A common rune and a rare one looked exactly the same until the result popped up.</p>
+<p>Now the rarity is rolled the moment you press forge, and the animation plays along. The glow takes on the rarity's color, and the higher you go, the bigger the finale: Epic, Legendary and Mythic each get a stronger flash and a harder punch. Glyph forging works the same way.</p>
+<p>The sound followed. Forging a rune used to play a breaking gem sound, which was the wrong message entirely. Now a normal result plays a craft complete sound, Epic and above get their own rare sound, and upgrading a rune plays a level up when it succeeds and the breaking gem when it fails. Items that finish in the crafting queue while you're watching also chime when they're done.</p>
+<h2>Pick your first rune</h2>
+<p>Your first real rune used to show up late, after a stretch of gathering and crafting. Runes are what this game is about, so that wait was a problem.</p>
+<p>Now the second main quest ends with a choice of three Rare runes: one from <strong>Hades</strong>, one from <strong>Hermes</strong> and one from <strong>Demeter</strong>. Each leans into its god's style, and I made sure every stat on them does something you'll notice inside the demo. Pick the one that matches how you want to play.</p>
+<h2>A proper ending</h2>
+<p>When you beat the demo's final boss, a closing screen now opens with a short personal summary: how many runes you forged, how many creatures you hunted, how long you played, and your finest rune, shown in its rarity color. Below that are three cards with a taste of what the full game adds: six gods, seven biomes and runes that go up to +15.</p>
+<p>The <strong>Wishlist on Steam</strong> button now opens the store page right inside the Steam overlay, so you never leave the game. If the overlay is turned off, it opens the page in the Steam client instead. The whole screen is translated into all 33 languages.</p>
+<p><em>(The cover shows the screen with sample numbers.)</em></p>
+<h2>Smaller fixes</h2>
+<ul>
+<li>In rune tooltips, the stat lines were squeezed so tight that numbers like 1.13% could blur into each other, and the star rating at the end of a line sometimes dropped to the next one. They now have normal spacing and stay on one line.</li>
+</ul>
+<h2>What's next</h2>
+<p>Next up is testing all of this in full playthroughs before the demo goes live. If you'd like to be there on day one, the best thing you can do right now is add The Runesmith to your wishlist.</p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/the-runesmith-speaks-33-languages/"><span>&larr; Previous</span>The Runesmith now speaks 33 languages</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
