@@ -201,6 +201,22 @@ def render_feed(posts: list) -> str:
 """
 
 
+def bust_cache(page: str) -> str:
+    # GitHub Pages asset'leri max-age=600 ile sunuyor; aynı adla güncellenen görsel tarayıcıda
+    # 10 dk eski kalıyordu. İçerik hash'i sorgu parametresi olarak eklenir — dosya değişince URL değişir.
+    import hashlib
+
+    def repl(m):
+        rel = m.group(2)
+        f = ROOT / "assets" / rel
+        if not f.exists():
+            return m.group(0)
+        h = hashlib.md5(f.read_bytes()).hexdigest()[:8]
+        return f'{m.group(1)}{BASE}/assets/{rel}?v={h}"'
+
+    return re.sub(r'((?:src|href|content)=")' + re.escape(BASE) + r'/assets/([^"?]+)"', repl, page)
+
+
 def build() -> list:
     posts = [parse_post(p) for p in sorted((ROOT / "posts").glob("*.md"))]
     posts.sort(key=lambda p: (p["date_obj"], p["number"]), reverse=True)
@@ -222,14 +238,14 @@ def build() -> list:
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     if (ROOT / "CNAME").exists():
         shutil.copy(ROOT / "CNAME", OUT / "CNAME")
-    (OUT / "index.html").write_text(render_index(posts), encoding="utf-8")
+    (OUT / "index.html").write_text(bust_cache(render_index(posts)), encoding="utf-8")
     (OUT / "feed.xml").write_text(render_feed(posts), encoding="utf-8")
     for i, p in enumerate(posts):
         newer = posts[i - 1] if i > 0 else None
         older = posts[i + 1] if i + 1 < len(posts) else None
         d = OUT / "posts" / p["slug"]
         d.mkdir(parents=True)
-        (d / "index.html").write_text(render_post(p, newer, older), encoding="utf-8")
+        (d / "index.html").write_text(bust_cache(render_post(p, newer, older)), encoding="utf-8")
     print(f"{len(posts)} yazı -> {OUT}")
     return posts
 
