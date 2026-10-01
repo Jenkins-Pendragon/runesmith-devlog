@@ -25,7 +25,7 @@ The game has a lot of buttons: inventory slots, quest rows, recipe cards, menus.
 
 ## Cutscenes are cutscenes
 
-![The statue of Hades on the shore]({{base}}/assets/img/statue-hades.jpg)
+![Fragments of Hades' statue on a tropical shore under a cloudy sky]({{base}}/assets/img/hades-fragments.jpg)
 *Hades, waiting for his reveal*
 
 During the god reveals and the boss entrance, the game used to stop you moving and hide the HUD, but your shortcuts still worked. You could open the inventory, the crafting menu or the weapon wheel in the middle of a cinematic. Now the game knows when a cutscene is playing, and all of those shortcuts wait until it ends.

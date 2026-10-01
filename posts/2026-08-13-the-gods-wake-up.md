@@ -17,6 +17,9 @@ I'm building it solo, and from now on I'll be writing up what changes every week
 
 Each of the six gods (Ares, Hades, Hermes, Hephaestus, Demeter and Artemis) has a statue somewhere in the world. When you first meet one, the statue is a broken pile of stone. During the reveal cinematic, thousands of fragments leap back into place and the god stands whole again.
 
+![The broken statue of Artemis lying in pieces on a grassy hill]({{base}}/assets/img/artemis-fragments.jpg)
+*Before the reveal: what's left of Artemis*
+
 That moment looked great but cost a lot: the fragments stayed in the scene forever, even after the cinematic was long over. Now, as soon as you've seen the reveal (or when you load a save where you already have), the fragments are removed and swapped for a single, intact statue. Same view, a fraction of the cost.
 
 ## A proper entrance for the boss
