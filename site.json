@@ -1,0 +1,10 @@
+{
+  "title": "The Runesmith Devlog",
+  "description": "Development log of The Runesmith, a crafting RPG about a fallen god forging runes to climb back home. What we built, what we cut, and what comes next.",
+  "base_url": "/runesmith-devlog",
+  "site_url": "https://jenkins-pendragon.github.io",
+  "game_url": "https://therunesmith.com/",
+  "steam_url": "https://store.steampowered.com/app/4116240/The_Runesmith/",
+  "discord_url": "https://discord.gg/R8SJpTqVku",
+  "studio": "Shawk Studios"
+}

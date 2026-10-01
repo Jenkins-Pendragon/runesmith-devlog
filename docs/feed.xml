@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>The Runesmith Devlog</title>
+  <link>https://jenkins-pendragon.github.io/runesmith-devlog/</link>
+  <description>Development log of The Runesmith, a crafting RPG about a fallen god forging runes to climb back home. What we built, what we cut, and what comes next.</description>
+  <item>
+    <title>The Runesmith now speaks 33 languages</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-runesmith-speaks-33-languages/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-runesmith-speaks-33-languages/</guid>
+    <pubDate>Tue, 22 Sep 2026 12:00:00 +0000</pubDate>
+    <description>The whole game is now translated into 33 languages, from Japanese to Ukrainian. Also in this update: a fix for the freeze when a big hit drops a mountain of loot, crafted gear you can finally pull out of a bench, and better tools for testing.</description>
+  </item>
+  <item>
+    <title>66 achievements and a better pickup</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/66-achievements-and-a-better-pickup/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/66-achievements-and-a-better-pickup/</guid>
+    <pubDate>Mon, 31 Aug 2026 12:00:00 +0000</pubDate>
+    <description>The Runesmith now has 66 Steam achievements, each with its own hand-made icon and an in-game panel to track them. Picking things off the ground got an animation, and combat got a combo counter.</description>
+  </item>
+  <item>
+    <title>Giving the forge a voice</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/giving-the-forge-a-voice/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/giving-the-forge-a-voice/</guid>
+    <pubDate>Wed, 26 Aug 2026 12:00:00 +0000</pubDate>
+    <description>Two days rebuilding how The Runesmith sounds. Every sound now comes from one place, the main menu finally makes noise, and every button in the game clicks. Cutscenes also stopped letting you open your inventory mid-scene.</description>
+  </item>
+  <item>
+    <title>Settings, safety nets and a sky that behaves</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/settings-safety-nets-and-a-sky-that-behaves/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/settings-safety-nets-and-a-sky-that-behaves/</guid>
+    <pubDate>Mon, 24 Aug 2026 12:00:00 +0000</pubDate>
+    <description>A real pause menu and settings screen, a no-penalty rescue for when you fall off the world, hits you can actually feel, and a day-night cycle that stays in its best hours.</description>
+  </item>
+  <item>
+    <title>The gods wake up</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-gods-wake-up/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-gods-wake-up/</guid>
+    <pubDate>Thu, 13 Aug 2026 12:00:00 +0000</pubDate>
+    <description>The six god statues now shatter and reassemble in their reveal, the first boss gets a proper entrance, and every bench can finally reach into your chests. Plus a long, quiet optimization pass.</description>
+  </item>
+</channel>
+</rss>

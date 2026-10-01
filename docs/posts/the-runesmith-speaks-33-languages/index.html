@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Runesmith now speaks 33 languages · The Runesmith Devlog</title>
+<meta name="description" content="The whole game is now translated into 33 languages, from Japanese to Ukrainian. Also in this update: a fix for the freeze when a big hit drops a mountain of loot, crafted gear you can finally pull out of a bench, and better tools for testing.">
+<meta property="og:title" content="The Runesmith now speaks 33 languages · The Runesmith Devlog">
+<meta property="og:description" content="The whole game is now translated into 33 languages, from Japanese to Ukrainian. Also in this update: a fix for the freeze when a big hit drops a mountain of loot, crafted gear you can finally pull out of a bench, and better tools for testing.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/statue-hades.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-runesmith-speaks-33-languages/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active">Devlog</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #5 &middot; September 22, 2026 &middot; September 5 to 22</div>
+    <h1>The Runesmith now speaks 33 languages</h1>
+    <p class="lead">The whole game is now translated into 33 languages, from Japanese to Ukrainian. Also in this update: a fix for the freeze when a big hit drops a mountain of loot, crafted gear you can finally pull out of a bench, and better tools for testing.</p>
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/statue-hades.jpg" alt="A stone statue of Hades holding a bident on a sunny tropical shore"></figure>
+  <div class="post-body wrap-narrow">
+<h2>33 languages</h2>
+<p>The Runesmith is now playable in <strong>33 languages</strong>: English, Turkish, German, French, Spanish, Italian, Portuguese, Polish, Russian, Ukrainian, Czech, Slovak, Slovenian, Hungarian, Romanian, Bulgarian, Greek, Dutch, Danish, Swedish, Norwegian, Finnish, Estonian, Latvian, Lithuanian, Japanese, Korean, Chinese (Simplified and Traditional), Thai, Vietnamese, Indonesian and Arabic.</p>
+<p>Translating is the easy half. The hard half is finding every single piece of text. Item names and tooltips were already set up for translation, but menus, panels and buttons had plenty of words typed straight into the interface over the months. Those would have stayed in English no matter which language you picked.</p>
+<p>So I built a sweep tool. It walks through every scene and every interface prefab the game uses, finds each text label, and flags the ones that aren't hooked up to the translation system yet. After a review, it connects them all in one go. Every language then got its own audit pass for missing or broken entries, and the English text got a typo pass of its own.</p>
+<p>If you play in a language other than English and something reads oddly, I'd genuinely love to hear about it on the Discord.</p>
+<h2>No more freeze on big hits</h2>
+<p>Gathering in The Runesmith works like a small fight: the harder you hit a node, the more you get out of it. With a strong rune setup, a single swing at an ore vein could drop well over a hundred pieces.</p>
+<p>Each of those pieces was being written into your inventory one at a time, and every write told the whole interface to refresh. A big hit meant over a hundred refreshes in a row, and the game would hitch for a second or more. Your reward for building a great gathering setup was a stutter.</p>
+<p>Now everything a single hit drops is gathered up first and added to your bag in one go. The same hit, one refresh, no freeze. It applies to ore, stone, trees, plants and animal corpses alike.</p>
+<h2>Pulling crafted gear out of a bench</h2>
+<p>Quick transfer (alt-click to move an item between your bag and an open storage) used to refuse any equipment or glyph. That was meant to stop gear from being dropped somewhere it didn't belong, but it also meant a weapon or tool you'd just crafted was stuck inside the bench unless you dragged it out by hand. Equipment and glyphs now quick-transfer like everything else, with the few places they really can't go (your hotbar, the rune pages) still protected.</p>
+<h2>Tools for testing</h2>
+<p>A couple of things players won't see, but which make every future update faster to test:</p>
+<ul>
+<li>A <strong>build checklist</strong> that runs the routine pre-release checks in one window. It exists because an earlier demo build shipped with the previous version number on the main menu.</li>
+<li>A <strong>rune generator</strong> that drops a hand-picked rune straight into my inventory, built through the exact same path as a real forged rune.</li>
+<li>A <strong>world tier tool</strong> to jump to any map at any difficulty without grinding the requirements first.</li>
+</ul>
+<h2>What's next</h2>
+<p>The demo is getting ready for <strong>Steam Next Fest, October 19 to 26</strong>. I'll write about what's going into it soon. If you'd like to try it, the best thing you can do right now is add The Runesmith to your wishlist.</p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/66-achievements-and-a-better-pickup/"><span>&larr; Previous</span>66 achievements and a better pickup</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

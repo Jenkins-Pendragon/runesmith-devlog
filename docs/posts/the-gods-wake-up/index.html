@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The gods wake up · The Runesmith Devlog</title>
+<meta name="description" content="The six god statues now shatter and reassemble in their reveal, the first boss gets a proper entrance, and every bench can finally reach into your chests. Plus a long, quiet optimization pass.">
+<meta property="og:title" content="The gods wake up · The Runesmith Devlog">
+<meta property="og:description" content="The six god statues now shatter and reassemble in their reveal, the first boss gets a proper entrance, and every bench can finally reach into your chests. Plus a long, quiet optimization pass.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/statue-artemis.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-gods-wake-up/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active">Devlog</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #1 &middot; August 13, 2026 &middot; August 10 to 13</div>
+    <h1>The gods wake up</h1>
+    <p class="lead">The six god statues now shatter and reassemble in their reveal, the first boss gets a proper entrance, and every bench can finally reach into your chests. Plus a long, quiet optimization pass.</p>
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/statue-artemis.jpg" alt="A stone statue of Artemis drawing her bow on a grassy hill"></figure>
+  <div class="post-body wrap-narrow">
+<p>Welcome to the first devlog for <strong>The Runesmith</strong>. You play a fallen god in a mortal world, and the only way home is through the forge: mining, hunting and farming raw materials, then turning them into runes blessed by the old gods.</p>
+<p>I'm building it solo, and from now on I'll be writing up what changes every week or two. This first entry covers a busy few days in mid August.</p>
+<h2>Statues that pull themselves together</h2>
+<p>Each of the six gods (Ares, Hades, Hermes, Hephaestus, Demeter and Artemis) has a statue somewhere in the world. When you first meet one, the statue is a broken pile of stone. During the reveal cinematic, thousands of fragments leap back into place and the god stands whole again.</p>
+<p>That moment looked great but cost a lot: the fragments stayed in the scene forever, even after the cinematic was long over. Now, as soon as you've seen the reveal (or when you load a save where you already have), the fragments are removed and swapped for a single, intact statue. Same view, a fraction of the cost.</p>
+<h2>A proper entrance for the boss</h2>
+<p>The first boss, a huge bear, used to just... be there. Now, when its quest begins, the camera cuts away for a short reveal, the boss arrives, and an off-screen arrow keeps pointing at it until you find it. It's a small change, but it turns "a big enemy" into an event.</p>
+<h2>Benches that reach into your chests</h2>
+<p><img alt="The alchemy bench, its craft panel and the player inventory side by side" src="/runesmith-devlog/assets/img/alchemy-bench.jpg" />
+<em>The alchemy bench pulling from everything you own</em></p>
+<p>This is the one I'm happiest about. Before, crafting meant hauling materials from bench to bench. Now your inventory, every bench and every chest in the area act as <strong>one shared material pool</strong>. Click craft and the bench takes what it needs from wherever it is.</p>
+<p>A few rules keep this honest:</p>
+<ul>
+<li>The bench's own storage is always used first.</li>
+<li>Finished items always land in the bench, never in a random chest.</li>
+<li>A craft either takes everything it needs or nothing at all. No half-spent materials.</li>
+<li>Any chest that gives up materials is saved right away, so nothing comes back on your next session.</li>
+</ul>
+<h2>Under the hood</h2>
+<ul>
+<li>A new <strong>loading screen</strong> with rotating artwork and gameplay tips, used for every scene change.</li>
+<li>Enemy skins now load on demand instead of all sitting in memory at once.</li>
+<li>A pass over texture sizes and build settings to trim memory and load times.</li>
+<li>A tool that checks and fixes the navigation setup on every enemy at once, instead of one by one.</li>
+</ul>
+<p>None of that is glamorous, but it's the kind of work that keeps the game running smoothly on more machines.</p>
+<p>Next time: settings, a safety net for when you fall off the world, and a sky that behaves.</p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><span></span><a class="pn next" href="/runesmith-devlog/posts/settings-safety-nets-and-a-sky-that-behaves/"><span>Next &rarr;</span>Settings, safety nets and a sky that behaves</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

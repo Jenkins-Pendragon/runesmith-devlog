@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giving the forge a voice · The Runesmith Devlog</title>
+<meta name="description" content="Two days rebuilding how The Runesmith sounds. Every sound now comes from one place, the main menu finally makes noise, and every button in the game clicks. Cutscenes also stopped letting you open your inventory mid-scene.">
+<meta property="og:title" content="Giving the forge a voice · The Runesmith Devlog">
+<meta property="og:description" content="Two days rebuilding how The Runesmith sounds. Every sound now comes from one place, the main menu finally makes noise, and every button in the game clicks. Cutscenes also stopped letting you open your inventory mid-scene.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/hideout.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/giving-the-forge-a-voice/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active">Devlog</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #3 &middot; August 26, 2026 &middot; August 25 to 26</div>
+    <h1>Giving the forge a voice</h1>
+    <p class="lead">Two days rebuilding how The Runesmith sounds. Every sound now comes from one place, the main menu finally makes noise, and every button in the game clicks. Cutscenes also stopped letting you open your inventory mid-scene.</p>
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/hideout.jpg" alt="The player&#x27;s hideout, a marble plaza with a small temple, a statue and a teleport ring"></figure>
+  <div class="post-body wrap-narrow">
+<p>Sound in a crafting game is half the feedback. The ring of a hammer, the thud of ore breaking, the little click when an item lands in your bag. Until now, those sounds were wired up wherever each system happened to need them, scattered across dozens of files. That made the game hard to tune and easy to break. So I tore it out and rebuilt it.</p>
+<h2>One place for every sound</h2>
+<p>There is now a single <strong>sound director</strong> that listens to what happens in the game (a rune forged, a tool striking ore, a prop placed in your hideout, a level gained) and decides what to play. Gameplay code no longer plays sounds directly. If a moment sounds wrong, there is exactly one line to change.</p>
+<p>All of the sound settings live in <strong>one sound library</strong> file: which clips a moment can pick from (without repeating the same one twice in a row), volume, pitch, how far a sound carries in the world, and a minimum gap so nothing can spam. A side effect I didn't expect: the main menu used to be completely silent, because its old sound setup only existed once you were in-game. With the library on its own, the menu now has sound like everywhere else.</p>
+<p>To make tuning easier, there's also a small in-editor overlay that lists every sound as it plays, so I can hear and see exactly what fires and when.</p>
+<h2>Every button clicks</h2>
+<p>The game has a lot of buttons: inventory slots, quest rows, recipe cards, menus. Instead of touching each one, a single hook now gives <strong>every button in the game</strong> a hover and click sound, including the ones that are created on the fly.</p>
+<h2>Cutscenes are cutscenes</h2>
+<p><img alt="The statue of Hades on the shore" src="/runesmith-devlog/assets/img/statue-hades.jpg" />
+<em>Hades, waiting for his reveal</em></p>
+<p>During the god reveals and the boss entrance, the game used to stop you moving and hide the HUD, but your shortcuts still worked. You could open the inventory, the crafting menu or the weapon wheel in the middle of a cinematic. Now the game knows when a cutscene is playing, and all of those shortcuts wait until it ends.</p>
+<h2>Smaller things</h2>
+<ul>
+<li>When you finish a quest, its reward window now opens by itself if nothing else is on screen. Before, you had to click the quest to notice the reward was waiting, and some players never did.</li>
+<li>The god reveal cutscene got another polish pass on timing and camera.</li>
+<li>Weapon wheel and radial menu fixes.</li>
+</ul>
+<p>Next time: achievements, and making the smallest action in the game (picking up a twig) feel right.</p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/settings-safety-nets-and-a-sky-that-behaves/"><span>&larr; Previous</span>Settings, safety nets and a sky that behaves</a><a class="pn next" href="/runesmith-devlog/posts/66-achievements-and-a-better-pickup/"><span>Next &rarr;</span>66 achievements and a better pickup</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
