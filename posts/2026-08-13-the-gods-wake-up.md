@@ -1,4 +1,7 @@
 ---
+series: devlog
+stories: S0264, S0297, S0294, S0299, S0301
+source_snapshot: e2f2ba8e3f92a4221bcbd8e404b45bec5d071fae
 title: The gods wake up
 date: 2026-08-13
 number: 1

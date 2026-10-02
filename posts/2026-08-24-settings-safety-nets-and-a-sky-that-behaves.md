@@ -1,4 +1,7 @@
 ---
+series: devlog
+stories: S0305, S0306, S0308, S0307, S0310, S0304
+source_snapshot: e2f2ba8e3f92a4221bcbd8e404b45bec5d071fae
 title: Settings, safety nets and a sky that behaves
 date: 2026-08-24
 number: 2

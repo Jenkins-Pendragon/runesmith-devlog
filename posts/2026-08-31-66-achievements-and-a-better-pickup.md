@@ -1,4 +1,7 @@
 ---
+series: devlog
+stories: S0317, S0318, S0312
+source_snapshot: e2f2ba8e3f92a4221bcbd8e404b45bec5d071fae
 title: 66 achievements and a better pickup
 date: 2026-08-31
 number: 4

@@ -1,4 +1,7 @@
 ---
+series: devlog
+stories: S0319, S0324, S0270, S0321, S0322
+source_snapshot: e2f2ba8e3f92a4221bcbd8e404b45bec5d071fae
 title: The Runesmith now speaks 33 languages
 date: 2026-09-22
 number: 5

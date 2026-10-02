@@ -1,4 +1,5 @@
 ---
+series: devlog
 title: Getting ready for Next Fest
 date: 2026-10-02
 number: 6

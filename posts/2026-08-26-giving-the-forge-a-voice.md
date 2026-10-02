@@ -1,4 +1,7 @@
 ---
+series: devlog
+stories: S0312, S0313, S0311, S0264
+source_snapshot: e2f2ba8e3f92a4221bcbd8e404b45bec5d071fae
 title: Giving the forge a voice
 date: 2026-08-26
 number: 3

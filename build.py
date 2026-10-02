@@ -40,6 +40,15 @@ def parse_post(path: Path) -> dict:
     for key in ("title", "date", "number", "summary", "cover"):
         if key not in meta:
             raise ValueError(f"{path.name}: '{key}' alanı eksik")
+    meta["series"] = meta.get("series", "devlog")
+    if meta["series"] not in ("devlog", "archive"):
+        raise ValueError(f"{path.name}: unknown series {meta['series']}")
+    story_ids = [sid.strip() for sid in meta.get("stories", "").split(",") if sid.strip()]
+    if any(not re.fullmatch(r"S\d{4}", sid) for sid in story_ids) or len(story_ids) != len(set(story_ids)):
+        raise ValueError(f"{path.name}: invalid or repeated story IDs")
+    if story_ids and not re.fullmatch(r"[0-9a-f]{40}", meta.get("source_snapshot", "")):
+        raise ValueError(f"{path.name}: stories require a full source_snapshot SHA")
+    meta["story_ids"] = story_ids
     body = m.group(2).replace("{{base}}", BASE)
     meta["html"] = markdown.markdown(body, extensions=["extra", "sane_lists", "attr_list"])
     meta["date_obj"] = date.fromisoformat(meta["date"])
@@ -54,8 +63,10 @@ def fmt_date(d: date) -> str:
     return d.strftime("%B %-d, %Y") if sys.platform != "win32" else d.strftime("%B %#d, %Y")
 
 
-def layout(title: str, description: str, body: str, og_image: str = "", canonical: str = "") -> str:
+def layout(title: str, description: str, body: str, og_image: str = "", canonical: str = "", series: str = "devlog") -> str:
     e = html.escape
+    devlog_state = ' class="active" aria-current="page"' if series == "devlog" else ""
+    archive_state = ' class="active" aria-current="page"' if series == "archive" else ""
     og_img = f'<meta property="og:image" content="{e(CFG["site_url"] + og_image)}">' if og_image else ""
     return f"""<!doctype html>
 <html lang="en">
@@ -84,8 +95,9 @@ def layout(title: str, description: str, body: str, og_image: str = "", canonica
       <img src="{BASE}/assets/img/logo.png" alt="The Runesmith" width="160" height="43">
     </a>
     <nav class="nav">
-      <a href="{e(CFG['game_url'])}">The Game</a>
-      <a href="{BASE}/" class="active">Devlog</a>
+      <a class="game-link" href="{e(CFG['game_url'])}">The Game</a>
+      <a href="{BASE}/"{devlog_state}>Devlog</a>
+      <a href="{BASE}/archive/"{archive_state}>Development Archive</a>
       <a class="btn btn-gold btn-sm" href="{e(CFG['steam_url'])}">Wishlist on Steam</a>
     </nav>
   </div>
@@ -109,33 +121,42 @@ def layout(title: str, description: str, body: str, og_image: str = "", canonica
 """
 
 
-def render_index(posts: list) -> str:
+def render_index(posts: list, series: str = "devlog") -> str:
     e = html.escape
+    is_archive = series == "archive"
+    heading = "Development Archive" if is_archive else "Devlog"
+    eyebrow = "Early development" if is_archive else "Development log"
+    lead = ("A look back at how The Runesmith began. Read these entries from the beginning; they describe the game as it was during development."
+            if is_archive else "Follow how The Runesmith takes shape: what I'm building, what I throw away, and what the next version of the game looks like.")
+    label = "Archive" if is_archive else "Devlog"
+    index_path = f"{BASE}/archive/" if is_archive else f"{BASE}/"
     cards = []
     for p in posts:
         cards.append(f"""
     <a class="card" href="{p['url']}">
       <div class="card-media"><img src="{p['cover_url']}" alt="" loading="lazy"></div>
       <div class="card-body">
-        <div class="eyebrow">Devlog #{p['number']} &middot; {fmt_date(p['date_obj'])}</div>
+        <div class="eyebrow">{label} #{p['number']} &middot; {fmt_date(p['date_obj'])}</div>
         <h2>{e(p['title'])}</h2>
         <p>{e(p['summary'])}</p>
       </div>
       <span class="card-arrow" aria-hidden="true">&rarr;</span>
     </a>""")
+    if not cards:
+        cards.append('<p class="lead archive-empty">The early development entries are being prepared. <a href="' + BASE + '/">Read the current devlogs</a> in the meantime.</p>')
     body = f"""
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Development log</div>
-    <h1>Devlog</h1>
-    <p class="lead">Follow how The Runesmith takes shape: what I'm building, what I throw away, and what the next version of the game looks like.</p>
+    <div class="eyebrow">{eyebrow}</div>
+    <h1>{heading}</h1>
+    <p class="lead">{lead}</p>
   </div>
 </section>
 <section class="wrap list">
 {''.join(cards)}
 </section>
 """
-    return layout(CFG["title"], CFG["description"], body, posts[0]["cover_url"] if posts else "", f"{BASE}/")
+    return layout(f"{heading} · The Runesmith", lead, body, posts[0]["cover_url"] if posts else "", index_path, series)
 
 
 def render_post(p: dict, newer: dict | None, older: dict | None) -> str:
@@ -147,14 +168,20 @@ def render_post(p: dict, newer: dict | None, older: dict | None) -> str:
         nav.append('<span></span>')
     if newer:
         nav.append(f'<a class="pn next" href="{newer["url"]}"><span>Next &rarr;</span>{e(newer["title"])}</a>')
+    series = p["series"]
+    index_path = f"{BASE}/archive/" if series == "archive" else f"{BASE}/"
+    label = "Archive" if series == "archive" else "Devlog"
+    back_label = "Development Archive" if series == "archive" else "All devlogs"
+    archive_note = '<p class="archive-note">From the development archive. This entry describes the game at the time of the work.</p>' if series == "archive" else ""
     period = f' &middot; {e(p["period"])}' if p.get("period") else ""
     body = f"""
 <article class="post">
   <header class="post-head wrap-narrow">
-    <a class="back" href="{BASE}/">&larr; All devlogs</a>
-    <div class="eyebrow">Devlog #{p['number']} &middot; {fmt_date(p['date_obj'])}{period}</div>
+    <a class="back" href="{index_path}">&larr; {back_label}</a>
+    <div class="eyebrow">{label} #{p['number']} &middot; {fmt_date(p['date_obj'])}{period}</div>
     <h1>{e(p['title'])}</h1>
     <p class="lead">{e(p['summary'])}</p>
+    {archive_note}
   </header>
   <figure class="post-cover wrap"><img src="{p['cover_url']}" alt="{e(p.get('cover_alt', ''))}"></figure>
   <div class="post-body wrap-narrow">
@@ -173,7 +200,7 @@ def render_post(p: dict, newer: dict | None, older: dict | None) -> str:
   <nav class="post-nav wrap-narrow">{''.join(nav)}</nav>
 </article>
 """
-    return layout(f"{p['title']} · The Runesmith Devlog", p["summary"], body, p["cover_url"], p["url"])
+    return layout(f"{p['title']} · The Runesmith Devlog", p["summary"], body, p["cover_url"], p["url"], series)
 
 
 def render_feed(posts: list) -> str:
@@ -220,7 +247,7 @@ def bust_cache(page: str) -> str:
 def build() -> list:
     posts = [parse_post(p) for p in sorted((ROOT / "posts").glob("*.md"))]
     posts.sort(key=lambda p: (p["date_obj"], p["number"]), reverse=True)
-    nums = [p["number"] for p in posts]
+    nums = [(p["series"], p["number"]) for p in posts]
     if len(nums) != len(set(nums)):
         raise ValueError(f"Devlog numaraları çakışıyor: {sorted(nums)}")
     for p in posts:
@@ -231,6 +258,12 @@ def build() -> list:
             if not (ROOT / "assets" / "img" / ref).exists():
                 raise FileNotFoundError(f"{p['slug']}: görsel yok -> {ref}")
 
+    urls = [p["url"] for p in posts]
+    if len(urls) != len(set(urls)):
+        raise ValueError("Post URL collision")
+    # Generated output must stay inside this checkout even if docs is replaced with a link.
+    if OUT.is_symlink() or OUT.resolve().parent != ROOT.resolve():
+        raise ValueError("Unsafe generated output path")
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir()
@@ -238,11 +271,17 @@ def build() -> list:
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     if (ROOT / "CNAME").exists():
         shutil.copy(ROOT / "CNAME", OUT / "CNAME")
-    (OUT / "index.html").write_text(bust_cache(render_index(posts)), encoding="utf-8")
-    (OUT / "feed.xml").write_text(render_feed(posts), encoding="utf-8")
-    for i, p in enumerate(posts):
-        newer = posts[i - 1] if i > 0 else None
-        older = posts[i + 1] if i + 1 < len(posts) else None
+    current = [p for p in posts if p["series"] == "devlog"]
+    archive = sorted((p for p in posts if p["series"] == "archive"), key=lambda p: (p["date_obj"], p["number"]))
+    (OUT / "index.html").write_text(bust_cache(render_index(current)), encoding="utf-8")
+    (OUT / "archive").mkdir()
+    (OUT / "archive" / "index.html").write_text(bust_cache(render_index(archive, "archive")), encoding="utf-8")
+    (OUT / "feed.xml").write_text(render_feed(current), encoding="utf-8")
+    for p in posts:
+        neighbors = [other for other in posts if other["series"] == p["series"]]
+        i = neighbors.index(p)
+        newer = neighbors[i - 1] if i > 0 else None
+        older = neighbors[i + 1] if i + 1 < len(neighbors) else None
         d = OUT / "posts" / p["slug"]
         d.mkdir(parents=True)
         (d / "index.html").write_text(bust_cache(render_post(p, newer, older)), encoding="utf-8")
