@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enemies, attacks and the feeling of a hit · The Runesmith Devlog</title>
+<meta name="description" content="Patrols, coordinated encounters, projectile hits and the feedback that made combat easier to read.">
+<meta property="og:title" content="Enemies, attacks and the feeling of a hit · The Runesmith Devlog">
+<meta property="og:description" content="Patrols, coordinated encounters, projectile hits and the feedback that made combat easier to read.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/statue-hades.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/archive-enemies-and-combat-feedback/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png?v=52ab8223">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css?v=21eae56b">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png?v=424a69f6" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a class="game-link" href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/">Devlog</a>
+      <a href="/runesmith-devlog/archive/" class="active" aria-current="page">Development Archive</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/archive/">&larr; Development Archive</a>
+    <div class="eyebrow">Archive #6 &middot; July 24, 2026 &middot; 2025-08-25 to 2026-07-24</div>
+    <h1>Enemies, attacks and the feeling of a hit</h1>
+    <p class="lead">Patrols, coordinated encounters, projectile hits and the feedback that made combat easier to read.</p>
+    <p class="archive-note">From the development archive. This entry describes the game at the time of the work.</p>
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/statue-hades.jpg?v=c734ef8c" alt="The Hades statue and its surrounding landscape"></figure>
+  <div class="post-body wrap-narrow">
+<p><em>Image note: Cover captured October 1, 2026. The cover is a later-build illustration, not a screenshot from this development period. Current prefab comparisons below are dated individually.</em></p>
+<p>Combat developed in layers. I first needed enemies to respond to the world, then attacks to connect reliably, and finally feedback that explained what had happened.</p>
+<h2>More than a spawn point</h2>
+<p>Enemy behavior grew through patrol, detection, roaring, pursuit and weighted attacks. Habitats managed populations and variants, including fleeing and pack assistance. Discovery sequences revealed meshes and moved the camera, with nearby enemies able to react. God-item collection also gained an early local achievement display, alongside Steam startup and overlay work.</p>
+<p>Later, a combat director coordinated attack permission and inner and outer positioning rings. Enemy roster, scale, audio pitch and dissolve presentation added variation. Cancellation, death, corpse interaction and respawn resets received fixes, with level, rarity and configurable low-health fleeing helping define an encounter.</p>
+<p><img alt="An exploration landmark in the later build; this image does not demonstrate combat" src="/runesmith-devlog/assets/img/artemis-overlook.jpg?v=9d454689" />
+<em>An exploration landmark in the later build; this image does not demonstrate combat. Later-build illustration, not a screenshot from the development period. Captured October 1, 2026.</em></p>
+<h2>Making attacks connect</h2>
+<p>Skills gained targeting, casting, cancellation and projectiles. Health regeneration and healing-over-time sat alongside burning, poison and bleeding. Health bars and hit numbers made those states visible.</p>
+<p>Animation timing was connected to effects, projectile release and ammunition use. Attacks could combine distinct hit moments with cone or projectile targeting, and barrels and chests could receive skill hits. Projectile checks followed the distance traveled and prevented the same pierced target being hit repeatedly.</p>
+<h2>Reading the impact</h2>
+<p>Trails and swing distortion described the path of an attack. Knockback, enemy status effects, hit-stop, camera shake and flashes added feedback around contact. Floating numbers distinguished normal, critical and status damage and healing. Channel attacks consumed mana until stopped; proc items applied timed weapon effects and projectile statuses.</p>
+<p>Combo transitions and leftover weapon visuals needed cleanup too. These were the foundations, not the final timing pass. The later hit-stop changes are described in <a href="/runesmith-devlog/posts/getting-ready-for-next-fest/">Getting ready for Next Fest</a>.</p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/archive-arriving-and-returning/"><span>&larr; Previous</span>Arriving, exploring and returning home</a><a class="pn next" href="/runesmith-devlog/posts/archive-workshop-tiers-and-production/"><span>Next &rarr;</span>A workshop that grows with you</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giving the demo a beginning and an ending · The Runesmith Devlog</title>
+<meta name="description" content="An opening quest chain, rebuilt god statues, cinematic control and a stopping point for the demo journey.">
+<meta property="og:title" content="Giving the demo a beginning and an ending · The Runesmith Devlog">
+<meta property="og:description" content="An opening quest chain, rebuilt god statues, cinematic control and a stopping point for the demo journey.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/statue-artemis.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/archive-quests-and-demo-journey/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png?v=52ab8223">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css?v=21eae56b">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png?v=424a69f6" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a class="game-link" href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/">Devlog</a>
+      <a href="/runesmith-devlog/archive/" class="active" aria-current="page">Development Archive</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/archive/">&larr; Development Archive</a>
+    <div class="eyebrow">Archive #8 &middot; August 27, 2026 &middot; 2026-06-25 to 2026-08-27</div>
+    <h1>Giving the demo a beginning and an ending</h1>
+    <p class="lead">An opening quest chain, rebuilt god statues, cinematic control and a stopping point for the demo journey.</p>
+    <p class="archive-note">From the development archive. This entry describes the game at the time of the work.</p>
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/statue-artemis.jpg?v=dedc699c" alt="The assembled Artemis statue"></figure>
+  <div class="post-body wrap-narrow">
+<p><em>Image note: Cover captured October 1, 2026. The cover is a later-build illustration, not a screenshot from this development period. Current prefab comparisons below are dated individually.</em></p>
+<p>Gathering, crafting and equipment can become a list of disconnected menus if the first journey does not bring them together. I built an opening quest chain around the actions the player needed to learn.</p>
+<h2>Connecting the first tasks</h2>
+<p>The chain tracked crafting, equipping, placement, runes and encounters. Active-step progress was saved, and English and Turkish text assets supported the early quest presentation.</p>
+<p>Claiming a reward advanced the chain. Panel and input cleanup mattered around that transition, and a completed quest could open its reward screen when other interface activity allowed it. The aim was to keep the next step connected to the reward that had just been earned.</p>
+<p><img alt="Artemis statue fragments before the reveal" src="/runesmith-devlog/assets/img/artemis-fragments.jpg?v=d8d44847" />
+<em>Artemis statue fragments before the reveal. Later-build illustration, not a screenshot from the development period. Captured October 1, 2026.</em></p>
+<h2>Rebuilding a god</h2>
+<p>Rebuilding god statues triggered narrated and subtitled sequences. Prerequisites, watched-state handling and fallbacks supported those reveals. A boss introduction coordinated character control and interface visibility, while cinematic input handling blocked gameplay shortcuts and added a held skip action for god reveals.</p>
+<p><img alt="The assembled Hades statue, staged for the capture" src="/runesmith-devlog/assets/img/statue-hades.jpg?v=c734ef8c" />
+<em>The assembled Hades statue, staged for the capture. Later-build illustration, not a screenshot from the development period. Captured October 1, 2026.</em></p>
+<p>Out-of-bounds recovery also gained a fade back to safe ground and cleanup for displaced enemies. It was another place where the game needed to return control cleanly after interrupting the usual flow.</p>
+<h2>Reaching the stopping point</h2>
+<p>The historical demo-ending screen offered Steam, Discord and exit options and kept developer commands out of that flow. The end screen has since changed substantially. Its later personal summary and full-game cards are described in <a href="/runesmith-devlog/posts/getting-ready-for-next-fest/">Getting ready for Next Fest</a>.</p>
+<p>This phase gave the early systems a guided route, with introductions, rewards and a conclusion rather than only a collection of things to try.</p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/archive-workshop-tiers-and-production/"><span>&larr; Previous</span>A workshop that grows with you</a><a class="pn next" href="/runesmith-devlog/posts/archive-inventory-and-everyday-controls/"><span>Next &rarr;</span>A bag that supports a crafting game</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

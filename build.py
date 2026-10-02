@@ -126,7 +126,7 @@ def render_index(posts: list, series: str = "devlog") -> str:
     is_archive = series == "archive"
     heading = "Development Archive" if is_archive else "Devlog"
     eyebrow = "Early development" if is_archive else "Development log"
-    lead = ("A look back at how The Runesmith began. Read these entries from the beginning; they describe the game as it was during development."
+    lead = ("A look back at how The Runesmith took shape, from its first landscapes to crafting, runes and the demo journey. Each retrospective follows a theme across its development period; later images are labeled."
             if is_archive else "Follow how The Runesmith takes shape: what I'm building, what I throw away, and what the next version of the game looks like.")
     label = "Archive" if is_archive else "Devlog"
     index_path = f"{BASE}/archive/" if is_archive else f"{BASE}/"
