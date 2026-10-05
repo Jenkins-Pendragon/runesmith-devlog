@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A new look for the interface · The Runesmith Devlog</title>
+<meta name="description" content="The gothic frames are gone. The HUD, health bars, inventory, tooltips and equipment panel all moved to a new, calmer style I&#x27;ve been calling Night Sky, built to a design mockup down to the pixel.">
+<meta property="og:title" content="A new look for the interface · The Runesmith Devlog">
+<meta property="og:description" content="The gothic frames are gone. The HUD, health bars, inventory, tooltips and equipment panel all moved to a new, calmer style I&#x27;ve been calling Night Sky, built to a design mockup down to the pixel.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/ui-equipment.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/a-new-look-for-the-interface/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png?v=52ab8223">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css?v=21eae56b">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png?v=424a69f6" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a class="game-link" href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active" aria-current="page">Devlog</a>
+      <a href="/runesmith-devlog/archive/">Development Archive</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #9 &middot; October 5, 2026 &middot; October 4 to 5</div>
+    <h1>A new look for the interface</h1>
+    <p class="lead">The gothic frames are gone. The HUD, health bars, inventory, tooltips and equipment panel all moved to a new, calmer style I&#x27;ve been calling Night Sky, built to a design mockup down to the pixel.</p>
+    
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/ui-equipment.jpg?v=b15a1736" alt="The equipment panel and the inventory side by side in the new dark navy style, with category tabs and a Sort button"></figure>
+  <div class="post-body wrap-narrow">
+<p>The old interface had grown in layers. A gothic bar with a skull at the bottom of the screen, a cartoon ribbon for quests, lavender headings, and every new window styled a little differently from the one before. Each piece was fine on its own. Together they were noisy, and they didn't look like one game.</p>
+<p>So I stopped and designed it properly. First a mockup of the whole HUD and the main panels, then a style sheet, and only then the actual work in the game, matched against the mockup at its real pixel size.</p>
+<h2>Night Sky</h2>
+<p>The direction is simple:</p>
+<ul>
+<li><strong>Flat, dark navy panels</strong> instead of ornate frames.</li>
+<li><strong>One accent color, gold</strong>, for whatever is selected, active or important.</li>
+<li><strong>A single heading font, Tilt Warp</strong>, for titles and every number in the game.</li>
+<li><strong>The nebula look is saved for two places</strong>: the health and energy orbs, and the rune pages, where the gods live.</li>
+</ul>
+<p>Tilt Warp doesn't cover every alphabet, so headings in 13 of the 33 languages fall back to Noto. Numbers use Tilt Warp everywhere, so a damage number or a stack count looks the same in Japanese as in English. Even the XP percentage follows the language: 100.0% in English, %100.0 in Turkish.</p>
+<h2>The HUD</h2>
+<p><img alt="The new HUD: quest card in the top left, pickup feed on the left, orbs and a slim hotbar at the bottom, round ability buttons on the right" src="/runesmith-devlog/assets/img/ui-hud.jpg?v=27e79930" />
+<em>The new HUD. This is my development save, which is why I'm level 99 with 600 health.</em></p>
+<p>Everything on the main screen was rebuilt:</p>
+<ul>
+<li><strong>The hotbar</strong> is a slim row of nine slots with the XP bar under it, level on the left and percentage on the right. Slots show the rarity of what's in them.</li>
+<li><strong>The ability buttons</strong> are round, with line icons and the key above each one. While an ability is on cooldown, the button fills up from the bottom and shows the seconds left.</li>
+<li><strong>The quest card</strong> shows the quest title, each step with a status mark and a counter, and a gold progress bar. It collapses into a single line in place instead of disappearing.</li>
+<li><strong>The pickup feed</strong> has the item name on the left and the count on the right, and bonus drops from your runes get a frame in your god's color.</li>
+<li><strong>The interaction hint</strong> lost its panel and is just the key and the action now.</li>
+</ul>
+<p><img alt="Four round ability buttons, first with Dash highlighted, then with cooldown fills and seconds remaining" src="/runesmith-devlog/assets/img/ui-abilities.jpg?v=afd8a97b" />
+<em>Ready and on cooldown</em></p>
+<h2>Health bars</h2>
+<p>Resource and boss health bars moved to the same style: a thin dark frame, level on the left, health on the right. The Shatter break line from the <a href="/runesmith-devlog/posts/runes-that-keep-their-promises/">rune post</a> sits on the new bar too.</p>
+<p><img alt="Two health bars, one with a purple Shatter section and a break line, one plain red" src="/runesmith-devlog/assets/img/ui-health-bars.jpg?v=0e975de2" />
+<em>A bar with the Shatter break line, and one without</em></p>
+<h2>Inventory</h2>
+<p>This one changed the most. Here's where it started:</p>
+<p><img alt="The old inventory: a framed panel with two tabs, a plain grid and slot count and weight at the bottom" src="/runesmith-devlog/assets/img/ui-inventory-before.jpg?v=0bec9f1c" />
+<em>The old inventory, next to the old Alchemy Bench and Craft windows (September 12)</em></p>
+<p>And here's where it is now:</p>
+<p><img alt="The new inventory: a dark navy panel with All, Materials, Gear, Runes, Consumables and Benches tabs and a Sort button" src="/runesmith-devlog/assets/img/ui-inventory-after.jpg?v=cfb54cfa" />
+<em>The new inventory</em></p>
+<p>The inventory got two features along with the new look:</p>
+<ul>
+<li><strong>Category tabs</strong>: All, Materials, Gear, Runes, Consumables and Benches. A tab shows only that kind of item, packed together, with empty and locked slots hidden. It's only a view: your slots stay exactly where they are.</li>
+<li><strong>Sort</strong> puts everything in order and merges partial stacks.</li>
+</ul>
+<p>I also decided against darkening the whole screen when the inventory is open. You're usually looking at the world and your bag at the same time.</p>
+<h2>Tooltips</h2>
+<p>Tooltips now have a header in the item's rarity color and stat lines in two columns, the stat on the left and the value on the right, so a rune's numbers line up and are easy to compare.</p>
+<p><img alt="Four tooltips: a Normal stone, an Epic brew, a Rare Hades rune with three stat lines, and a Superior jerky" src="/runesmith-devlog/assets/img/ui-tooltips.jpg?v=fe87c977" /></p>
+<h2>Equipment</h2>
+<p>The equipment panel is now a proper companion to the inventory, with <strong>Combat</strong> and <strong>Life</strong> tabs for weapons and tools. Weapons that come in sets lay themselves out by family: two daggers side by side, or bow, quiver and arrow in a row. The panel opens from a button in the inventory header, and a strip of control hints sits under it.</p>
+<h2>Tools</h2>
+<p>To make the switch, I built a small editor tool that applies the new kit to the existing interface: sprites, fonts, sizes and positions, all from one place. That meant I could change a measurement once and rerun it, instead of nudging dozens of objects by hand. It also caught a sneaky problem: the game renders in linear color space, which made the dark semi-transparent panels come out noticeably lighter than in the mockup. The tool compensates for that now.</p>
+<h2>What's next</h2>
+<p>The crafting benches and the Craft window are next. They're still in the old style, as you can see in the before shot. After that, the whole interface will finally look like one game.</p>
+<p><em>Interface screenshots captured October 4 and 5 on a development build.</em></p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/hits-dodges-and-menus-that-answer-back/"><span>&larr; Previous</span>Hits, dodges and menus that answer back</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

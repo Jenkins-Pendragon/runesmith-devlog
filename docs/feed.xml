@@ -5,6 +5,27 @@
   <link>https://jenkins-pendragon.github.io/runesmith-devlog/</link>
   <description>Development log of The Runesmith, a crafting RPG about a fallen god forging runes to climb back home. What we built, what we cut, and what comes next.</description>
   <item>
+    <title>A new look for the interface</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/a-new-look-for-the-interface/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/a-new-look-for-the-interface/</guid>
+    <pubDate>Mon, 05 Oct 2026 12:00:00 +0000</pubDate>
+    <description>The gothic frames are gone. The HUD, health bars, inventory, tooltips and equipment panel all moved to a new, calmer style I&#x27;ve been calling Night Sky, built to a design mockup down to the pixel.</description>
+  </item>
+  <item>
+    <title>Hits, dodges and menus that answer back</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/hits-dodges-and-menus-that-answer-back/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/hits-dodges-and-menus-that-answer-back/</guid>
+    <pubDate>Sun, 04 Oct 2026 12:00:00 +0000</pubDate>
+    <description>A stat you can&#x27;t see working might as well not exist. This round gave dodges, blocks and bonus loot their own feedback, put motion into every menu, and fixed a camera that kept jumping at you.</description>
+  </item>
+  <item>
+    <title>Runes that keep their promises</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/runes-that-keep-their-promises/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/runes-that-keep-their-promises/</guid>
+    <pubDate>Sun, 04 Oct 2026 12:00:00 +0000</pubDate>
+    <description>Thirty-four rune stats used to show up on your runes and then do nothing at all. This week every one of them got wired into the game, and Shatter, the strangest of them, got a look of its own.</description>
+  </item>
+  <item>
     <title>Getting ready for Next Fest</title>
     <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/getting-ready-for-next-fest/</link>
     <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/getting-ready-for-next-fest/</guid>

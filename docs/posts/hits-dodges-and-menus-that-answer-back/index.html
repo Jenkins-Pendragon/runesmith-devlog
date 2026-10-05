@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hits, dodges and menus that answer back · The Runesmith Devlog</title>
+<meta name="description" content="A stat you can&#x27;t see working might as well not exist. This round gave dodges, blocks and bonus loot their own feedback, put motion into every menu, and fixed a camera that kept jumping at you.">
+<meta property="og:title" content="Hits, dodges and menus that answer back · The Runesmith Devlog">
+<meta property="og:description" content="A stat you can&#x27;t see working might as well not exist. This round gave dodges, blocks and bonus loot their own feedback, put motion into every menu, and fixed a camera that kept jumping at you.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/feel-dodge.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/hits-dodges-and-menus-that-answer-back/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png?v=52ab8223">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css?v=21eae56b">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png?v=424a69f6" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a class="game-link" href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active" aria-current="page">Devlog</a>
+      <a href="/runesmith-devlog/archive/">Development Archive</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #8 &middot; October 4, 2026 &middot; October 4</div>
+    <h1>Hits, dodges and menus that answer back</h1>
+    <p class="lead">A stat you can&#x27;t see working might as well not exist. This round gave dodges, blocks and bonus loot their own feedback, put motion into every menu, and fixed a camera that kept jumping at you.</p>
+    
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/feel-dodge.jpg?v=faea2667" alt="The player character with a pale blue afterimage sliding off to the side and the word Dodged above it"></figure>
+  <div class="post-body wrap-narrow">
+<p>The <a href="/runesmith-devlog/posts/runes-that-keep-their-promises/">last post</a> was about rune stats finally doing something. The problem with that kind of work is that a lot of it is invisible. If Evasion makes an attack miss, and nothing on screen tells you, it just looks like the enemy missed. So this round was about making the game answer back.</p>
+<h2>Dodge and block</h2>
+<p>Both results are the same on paper, no damage taken, but I wanted them to feel opposite.</p>
+<p><strong>A dodge is light.</strong> A pale blue afterimage of your character slides off to the side and fades, with "Dodged" above you. No freeze, nothing heavy, you just weren't there.</p>
+<p><strong>A block is heavy.</strong> A shield ring flashes in the direction of the attack, metal sparks fly, and the game holds for 60 ms, like a hit landing on you that didn't get through. "Blocked" gets its own styled text, separate from the damage numbers.</p>
+<p><img alt="The player character with a golden shield ring and sparks on one side" src="/runesmith-devlog/assets/img/feel-block.jpg?v=2d0af585" />
+<em>A block, with the ring on the side the attack came from (captured October 4, before the HUD redesign)</em></p>
+<h2>Loot your runes earned</h2>
+<p>When a rune stat gives you a bonus item, you should know that it came from your rune and not from the regular drop table. So bonus drops now:</p>
+<ul>
+<li>show up in the pickup feed in your god's color, with the god's sigil and name on the line,</li>
+<li>fly from the resource to you as little icons,</li>
+<li>play their own sound.</li>
+</ul>
+<p>Double and triple drops used to be silent too. The only way to notice one was to read the number in the pickup feed. Now a hit that doubles or triples its loot drops a small <strong>x2</strong> or <strong>x3</strong> stamp next to the hit, with its own sound, a little higher for a triple.</p>
+<p><img alt="The pickup feed with a normal Iron x2 line and an Iron Ingot line marked with an orange stripe and Hephaestus's sigil" src="/runesmith-devlog/assets/img/feel-bonus-drop.jpg?v=8bf13e62" />
+<em>A regular drop and a bonus ingot from Hephaestus (captured October 4, before the HUD redesign)</em></p>
+<p>The skinning and butchering speed streaks from the last post got feedback too. Every hit in a streak throws a small spark in your god's color that grows as the streak builds, the sound rises in pitch, and a ring pops once when you reach full speed. Before, the only sign was the animation getting a bit faster, which was easy to miss.</p>
+<h2>Menus that move</h2>
+<p>Up to now, every window in the game simply appeared and disappeared. Twelve of them, from the inventory and crafting benches to the skill tree, achievements and the rune pages, now open with a short fade and scale and close with a quick fade. Buttons react when you hover over or press them, and that includes buttons you select with the keyboard.</p>
+<p>The important detail is that only the visuals are animated. The window is clickable the moment you open it and stops taking clicks the moment you close it, so the animation never sits between you and your input. Item tooltips wait a beat before appearing so they don't flicker while you sweep the mouse across the inventory, then show instantly as you move from one item to the next.</p>
+<h2>Camera</h2>
+<ul>
+<li><strong>Running and dashing</strong> now widen the camera slightly, so speed reads as speed. It's tied to actually moving: holding Shift while standing still doesn't do anything.</li>
+<li><strong>The camera kept jumping toward you</strong> around mined ore. When an ore node breaks, its pieces lie on the ground for about 12 seconds, and the camera was treating them as walls and snapping forward to avoid them. The same happened around the broken god statues, which still had the collision volume of the whole 9 meter statue. Both are now ignored by the camera, while you still can't walk through them. The camera also eases in and out of collisions now instead of snapping.</li>
+</ul>
+<h2>Tools</h2>
+<p>All the combat feel values (hitstop lengths, camera pulses on crits and kills) used to be constants in code. They now live in a settings asset I can tune while the game is running, with exactly the same values as before. The menu timings got the same treatment.</p>
+<h2>Next time</h2>
+<p>Most of these screenshots still show the old interface. That's because right after this, I started redesigning it. That's the next post.</p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/runes-that-keep-their-promises/"><span>&larr; Previous</span>Runes that keep their promises</a><a class="pn next" href="/runesmith-devlog/posts/a-new-look-for-the-interface/"><span>Next &rarr;</span>A new look for the interface</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
