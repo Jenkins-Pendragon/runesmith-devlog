@@ -5,6 +5,13 @@
   <link>https://jenkins-pendragon.github.io/runesmith-devlog/</link>
   <description>Development log of The Runesmith, a crafting RPG about a fallen god forging runes to climb back home. What we built, what we cut, and what comes next.</description>
   <item>
+    <title>Every window, one game</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/every-window-one-game/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/every-window-one-game/</guid>
+    <pubDate>Tue, 06 Oct 2026 12:00:00 +0000</pubDate>
+    <description>The Night Sky style now covers the whole game, from the crafting benches to the main menu. Along the way the game picked up save slots called Realms, a cursor size setting and a handful of fixes.</description>
+  </item>
+  <item>
     <title>A new look for the interface</title>
     <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/a-new-look-for-the-interface/</link>
     <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/a-new-look-for-the-interface/</guid>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every window, one game · The Runesmith Devlog</title>
+<meta name="description" content="The Night Sky style now covers the whole game, from the crafting benches to the main menu. Along the way the game picked up save slots called Realms, a cursor size setting and a handful of fixes.">
+<meta property="og:title" content="Every window, one game · The Runesmith Devlog">
+<meta property="og:description" content="The Night Sky style now covers the whole game, from the crafting benches to the main menu. Along the way the game picked up save slots called Realms, a cursor size setting and a handful of fixes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/ui-craft-window.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/every-window-one-game/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png?v=52ab8223">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css?v=21eae56b">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png?v=424a69f6" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a class="game-link" href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active" aria-current="page">Devlog</a>
+      <a href="/runesmith-devlog/archive/">Development Archive</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #10 &middot; October 6, 2026 &middot; October 5 to 6</div>
+    <h1>Every window, one game</h1>
+    <p class="lead">The Night Sky style now covers the whole game, from the crafting benches to the main menu. Along the way the game picked up save slots called Realms, a cursor size setting and a handful of fixes.</p>
+    
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/ui-craft-window.jpg?v=8aa3fa6b" alt="The Craft window between the recipe list and the inventory, with Wood and Stone rows in green and a missing Iron row in red"></figure>
+  <div class="post-body wrap-narrow">
+<p>At the end of the <a href="/runesmith-devlog/posts/a-new-look-for-the-interface/">last post</a> the HUD, inventory and tooltips had the new Night Sky look, and the crafting benches were still in the old gothic style. That's done now. So is every other window I could find, which turned out to be a lot more than the benches.</p>
+<h2>Crafting</h2>
+<p>All eleven benches and the Craft window you open from your bag now share one panel:</p>
+<ul>
+<li><strong>On the left</strong>, the bench itself: its name, its tier, an Upgrade button, the recipe grid and the bench's own storage. Recipes from higher tiers are listed too, faded and locked, so you can see what an upgrade gets you.</li>
+<li><strong>In the middle</strong>, the Craft panel: the selected recipe, one row per ingredient with what you have and what you need, an amount box with Max, and a gold Craft button.</li>
+<li><strong>If you're short of something</strong>, that row turns red and a line under the button tells you exactly what's missing and how many.</li>
+<li><strong>The queue</strong> sits at the bottom. The job that's running gets a wide row with its progress, the ones waiting get small slots.</li>
+</ul>
+<p>Scrolling works better too. The mouse wheel and dragging used to work only in the gaps between slots, because the slots swallowed the input. Now you can scroll from anywhere in the list, one row per tick, and the top row of the Craft list no longer gets clipped.</p>
+<p>The Grinder got its own version: a hopper ring with twelve places around the grinder, and a Grind panel that lists what goes in and how much Rune Dust comes out. While something is grinding, a Refund button sits next to Grind.</p>
+<p><img alt="The Grinder: a ring of items around the grinder icon, and a Grind panel listing five inputs and +53 Rune Dust" src="/runesmith-devlog/assets/img/ui-grinder.jpg?v=03f445fa" /></p>
+<h2>The rune pages and the forge</h2>
+<p>The rune page for each god now has the god's title above the heading (Goddess of the Hunt, God of Travelers and so on), an 8 by 6 grid of sockets, and a list of your total bonuses from every socketed rune across all six paths. Unlocking a socket opens a small window with the cost in the same "have / need" format as crafting.</p>
+<p>I also fixed a band that cut through the page title. The nebula background was being tiled, and one seam ran right across the heading. It's a single image now that covers the whole screen.</p>
+<p>The Rune Furnace, where runes are made, got sub tabs, an upgrade counter for the bench and a proper empty state for Enhance when there's nothing to enhance.</p>
+<h2>In the world</h2>
+<ul>
+<li><strong>Farming.</strong> The Plant menu sorts seeds into category boxes and shows how many of each you own. The Growth menu fits on one screen. The little panel above each farm plot got the new look as well.</li>
+<li><strong>The action wheel.</strong> Things you can interact with in more than one way (like a carcass you can flay or butcher) show a wheel with dots for each option. If you're missing the tool for an action, its node turns red with a lock and a note like "Skinning Knife not equipped", before you press anything. Objects with only one action, like stone, hide the Next hint.</li>
+</ul>
+<p><img alt="Six states of the action wheel: Flay, Butcher, Gather Wood, Collect Stone, a red Flay with &quot;Skinning Knife not equipped&quot;, and Flay again" src="/runesmith-devlog/assets/img/ui-action-wheel.jpg?v=ea83d480" /></p>
+<ul>
+<li><strong>Key caps.</strong> Every control hint in the game now shows the key as a light key cap with the letter on it: inventory shortcuts, farming, placing props, menus.</li>
+<li><strong>No more one second wait.</strong> Control hints used to sit empty for a full second when they first appeared, because of a fixed delay in the code. Now they only wait until the player is ready.</li>
+<li><strong>A cleaner screen while you work.</strong> When a bench, chest, rune page or the skill tree is open, the quest card and the bottom HUD step aside. They used to peek out from behind the panels.</li>
+<li><strong>Smaller pieces.</strong> Item labels on the ground, the "not enough" popup, the region name banner, buff badges (now in the top right), the loot chest window, the wood harvesting timer, chapter titles and cutscene text all moved to the new style.</li>
+</ul>
+<h2>Travel</h2>
+<p><img alt="The World Access panel: map cards for Grasslands, Desert, Jungle and Swamp, a World Tier 2 to 3 bar with its costs, and a list of available resources" src="/runesmith-devlog/assets/img/ui-world-access.jpg?v=b77b3315" /></p>
+<p>The World Access panel was rebuilt. Map cards run along the top, with the tier you'll travel at on the selected card. Locked maps tell you which World Tier opens them. The World Tier upgrade moved to a strip at the bottom with a progress bar and its costs, and the resource list on the right now runs the full height. It counts how many of the world's resources your current World Tier gives you access to, and colors each row by whether it's already open, opens with the next map, or is still locked.</p>
+<h2>Windows and menus</h2>
+<p>The rest of the game's windows went through the same treatment:</p>
+<ul>
+<li><strong>Quests.</strong> The quest detail window shows rewards in cells with the amount in the corner. Optional rewards get a gold frame and a tick when you choose them.</li>
+<li><strong>Chests.</strong> A chest opens to the left of your inventory with the same slots and grid. The speed up confirmation now shows what it costs against what you have. If you can't afford it, the frame turns red and Confirm is disabled. Before, you could press it and the window just closed without doing anything.</li>
+<li><strong>The skill tree</strong> has tabs per god, a skill point badge and node shapes by type: squares for skills, circles for passives, diamonds for upgrades. Locked, available and unlocked nodes each look different, and the info box shows cost and requirements. The trees themselves are still being written, so for now each path says so.</li>
+<li><strong>Choosing a god's path</strong> is a row of six cards. The one you hover lifts and gets a frame. Paths you've already opened are marked with a tick.</li>
+<li><strong>Achievements</strong> have a summary badge, a total progress bar, and rows with a tick, a counter with a ring, or a lock. Achievements you've made progress on no longer look faded.</li>
+<li><strong>The quick menu wheel</strong> and the <strong>weapon strip</strong> got the same look: gold for selected, faded for locked.</li>
+<li><strong>Small windows</strong>: the right click menu (Destroy is in a warning color) and the split stack window with a slider.</li>
+<li><strong>Pause, Settings and the demo end screen.</strong> Settings sliders show their value next to them.</li>
+</ul>
+<h2>Floating text</h2>
+<p><img alt="All the floating text styles side by side: white damage, a larger gold critical hit, gold Blocked, blue Dodged, red damage taken, green healing, status hits, a combo counter and Shatter +3" src="/runesmith-devlog/assets/img/ui-floating-text.jpg?v=b3830ec7" />
+<em>Every floating text style at once. In the game they come one at a time.</em></p>
+<p>The numbers above enemies are now in the new heading font, in colors and sizes from the style sheet. Regular damage is white, critical hits are gold and bigger, Blocked is gold, Dodged is in Hermes' blue, and damage you take is red.</p>
+<h2>The main menu and Realms</h2>
+<p><img alt="The new main menu, the Realms panel with one realm and three empty slots, and the delete confirmation" src="/runesmith-devlog/assets/img/ui-realms.jpg?v=e525f0da" /></p>
+<p>The main menu has the logo and studio name, a gold Continue, then Play, Options and Exit, a short note about the game being in Pre-Alpha, and buttons for patch notes, Discord and the Steam wishlist. Character creation, the patch notes panel and the loading screen were redesigned to match.</p>
+<p>The bigger change here is <strong>Realms</strong>, which are save slots:</p>
+<ul>
+<li>You can have up to <strong>four Realms</strong>. Each one is a separate character with its own progress: inventory, skills, placed props, farms, quests and the loot chest.</li>
+<li><strong>The character's name is the Realm's name</strong>, and each Realm shows its level and how long you've played it.</li>
+<li><strong>Continue</strong> picks up the Realm you played last. <strong>Play</strong> opens the Realms panel, where you can start a new one or delete one, with a confirmation.</li>
+<li><strong>Settings and achievements are shared</strong> across Realms. "Reset Game Progress" in the settings now only resets the selected Realm.</li>
+<li>If you already have a save, it moves into your first Realm automatically the first time you start the game.</li>
+</ul>
+<h2>Other changes</h2>
+<ul>
+<li><strong>Cursor size.</strong> There's a new slider in Settings for the size of the mouse cursor, and tooltips now move aside so the cursor doesn't cover them.</li>
+<li><strong>Wrong item types.</strong> Iron Ingot, Copper Ingot and Purified Clay were labeled "Bench" in their tooltips, and the chest was labeled as a plant. Copper Ingot and Purified Clay also wouldn't stack. That came from a bug in my spreadsheet import, which copied a bench recipe's settings onto the ingredients in it. Fixed at the source.</li>
+<li><strong>God statues.</strong> I've turned off praying at the god statues for now. The god card screen that opens there is getting a redesign, and I'd rather it stays closed than shows the old one.</li>
+</ul>
+<h2>Tools</h2>
+<p>The same editor tool from the last post did most of the heavy lifting: it applies the kit to each window from one place, so a change in the style sheet reaches every panel at once. It now covers everything above, from the benches to the floating text.</p>
+<h2>What's next</h2>
+<p>The interface finally looks like one game. Next up is the god card screen at the statues, so praying can come back, and then filling in the skill trees that now have a home waiting for them.</p>
+<p><em>Interface screenshots captured October 5 and 6 on a development build. The Craft window was captured with sample items in the bag. The Realms panel shows my development save, which is why it says level 99.</em></p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/a-new-look-for-the-interface/"><span>&larr; Previous</span>A new look for the interface</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
