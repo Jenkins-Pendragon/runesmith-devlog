@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New skills, new enemies · The Runesmith Devlog</title>
+<meta name="description" content="Six skills you earn back through the gods&#x27; skill trees, three new kinds of enemies in the meadow, and a pass on how every hit feels and sounds.">
+<meta property="og:title" content="New skills, new enemies · The Runesmith Devlog">
+<meta property="og:description" content="Six skills you earn back through the gods&#x27; skill trees, three new kinds of enemies in the meadow, and a pass on how every hit feels and sounds.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/combat-echo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/new-skills-new-enemies/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png?v=52ab8223">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css?v=c23f0435">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png?v=424a69f6" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a class="game-link" href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active" aria-current="page">Devlog</a>
+      <a href="/runesmith-devlog/archive/">Development Archive</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #12 &middot; October 7, 2026 &middot; October 6 to 7</div>
+    <h1>New skills, new enemies</h1>
+    <p class="lead">Six skills you earn back through the gods&#x27; skill trees, three new kinds of enemies in the meadow, and a pass on how every hit feels and sounds.</p>
+    
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/combat-echo.jpg?v=7f5b44f2" alt="Echo of the God: the translucent ghost of Hades with his trident rising behind the player in the middle of a goblin fight"></figure>
+  <div class="post-body wrap-narrow">
+<p>The <a href="/runesmith-devlog/posts/falling-from-olympus/">prologue</a> ends with Zeus taking your power away. This post is about getting some of it back, and about the things in the meadow that would rather you didn't.</p>
+<h2>Skills you earn back</h2>
+<p>There are six new skills, one or two per god:</p>
+<ul>
+<li><strong>War Cry</strong> (Ares): nearby enemies are knocked back and start bleeding, and for 15 seconds you get +20% attack and +15% attack speed.</li>
+<li><strong>Crimson Arc</strong> (Ares): a crimson sword wave that travels about ten meters, pierces every enemy in its path and makes them bleed. It follows the ground and stops at walls and rocks, so you can't hit things through a cliff.</li>
+<li><strong>Tartarus Rift</strong> (Hades): the ground tears open in front of you in three quick strikes, and the last one chills.</li>
+<li><strong>Talaria Dash</strong> (Hermes): a dash on winged sandals that damages everything you pass through.</li>
+<li><strong>Earth's Embrace</strong> (Demeter): a ring of thorns poisons nearby enemies, and for 12 seconds you heal 2% of your max health every second.</li>
+<li><strong>Echo of the God</strong>: the big one. The god you're most devoted to rises behind you as a ghost and strikes the ground. On the cover it's Hades, trident and all.</li>
+</ul>
+<p><img alt="Tartarus Rift: purple crystals bursting out of the ground around the player next to a goblin" src="/runesmith-devlog/assets/img/combat-tartarus.jpg?v=1c0edc9b" />
+<em>Tartarus Rift</em></p>
+<p><img alt="War Cry: a red shockwave bursting around the player as goblins are knocked back" src="/runesmith-devlog/assets/img/combat-warcry.jpg?v=bdefe9ee" />
+<em>War Cry</em></p>
+<p>War Cry and Earth's Embrace are auras, and only one aura can be active at a time. The active one shows up as a badge in the top right corner. I also redid how they look while they last: War Cry's aura used to be a big swirl of blood around your feet, and now it's a thin red ring on the ground with a slow pulse. You can still see the enemies you're trying to hit.</p>
+<p><img alt="Earth's Embrace: green leaves swirling in a ring around the player while goblins close in" src="/runesmith-devlog/assets/img/combat-earths.jpg?v=84491d29" />
+<em>Earth's Embrace</em></p>
+<p>To make room for these, the runic energy bar now goes up to 100 instead of 50, and refills twice as fast, so it still takes the same time to fill. Echo of the God costs the whole bar.</p>
+<h3>Only from the tree</h3>
+<p>Skills now come from one place: the skill trees. Hades, Hermes and Demeter each have their skill on the first node of their tree. Crimson Arc sits deeper in Ares' tree, and Echo of the God is there too, locked until his statue awakens. Locked nodes tell you why they're locked and what opens them.</p>
+<p>There's also a new Legendary rune for Ares, <strong>Trial of Ares</strong>. It carries Berserk Oath: below 40% health you get bonus attack and attack speed, and fire wraps around you so you know it's active.</p>
+<h2>New enemies</h2>
+<p>The meadow got crowded:</p>
+<ul>
+<li><strong>Goblins</strong> live in camps, three of them spread across the first area. Your first fight is clearing one and opening its chest.</li>
+<li><strong>Skeletal hounds</strong> hunt in packs. They're fast and fragile, and they can leap up ledges to reach you, so standing on a rock no longer makes you safe.</li>
+<li><strong>The Cyclops</strong> keeps to itself, far from the camps. It's slow, and before its big blows a circle appears on the ground. Get out of the circle.</li>
+</ul>
+<p><img alt="A Cyclops on a beach raising its arm for a crushing blow while a red circle fills on the sand under the player" src="/runesmith-devlog/assets/img/combat-cyclops.jpg?v=97a1c779" /></p>
+<p>The ground circle works for the big bear boss too, the Lord of the Wild. He also roars a lot less now: only below half health, only when you back away, and never more than once every 12 seconds. Before, he roared eleven times a minute.</p>
+<p>When an enemy dies, its loot flies straight to you and the body dissolves, so you don't have to walk over and pick things up in the middle of a fight.</p>
+<h3>A new look for the creatures</h3>
+<p>All the creatures moved to a new shading setup: soft shadows, a light rim around the edges, and brighter colors in shade. It's the same stylized look as the rest of the world, and creatures stay readable when they walk into shadow.</p>
+<p><img alt="A lineup of creatures on a beach: a goblin, the Cyclops, a skeletal hound and two bears, all with soft shading and rim light" src="/runesmith-devlog/assets/img/combat-creatures.jpg?v=028746a5" />
+<em>The creature lineup with the new shading</em></p>
+<h2>How hits feel</h2>
+<p>I went through the feedback for every kind of hit:</p>
+<ul>
+<li><strong>Hitstop</strong> now freezes both sides for a split second, you and the enemy, so the impact reads as a real contact.</li>
+<li><strong>Critical hits</strong> get a tiny slowdown and a small camera pulse. Kills get a slightly bigger one. Normal hits get neither, so the special ones stand out.</li>
+<li><strong>Crowds</strong> have a budget. When a lot of enemies are getting hit at once, the effects scale down instead of flooding the screen.</li>
+<li><strong>Resisted</strong> now appears over enemies that shrug off a status effect, so you know the bleed or chill didn't land.</li>
+<li><strong>Two new settings</strong> in the Game tab: Screen Shake and Reduce Flashing. Reduce Flashing turns off the camera pulse and softens flashes across the game.</li>
+</ul>
+<h2>Sound</h2>
+<p>Most of what's above now makes noise: sword impacts, critical hits, all five active skills, both auras, Shatter, blocks and dodges, and a special sound when you forge something Legendary. The game also got eight new music tracks, including one that plays while you're doing the Trial of Ares.</p>
+<h2>Tools</h2>
+<p>To check over two hundred sounds without hunting for them in the game, I built a Sound Tour window in the editor. It lists every sound with a play button, lets me leave a note and mark it "keep" or "change", and puts the risky ones at the top.</p>
+<h2>What's next</h2>
+<p>You have the skills and something to use them on. The next post is about why you're out there at all: the new quest line, and the first god who answers you.</p>
+<p><em>Screenshots captured October 7 on a development build.</em></p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/falling-from-olympus/"><span>&larr; Previous</span>Falling from Olympus</a><a class="pn next" href="/runesmith-devlog/posts/the-first-god-wakes/"><span>Next &rarr;</span>The first god wakes</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

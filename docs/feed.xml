@@ -5,6 +5,27 @@
   <link>https://jenkins-pendragon.github.io/runesmith-devlog/</link>
   <description>Development log of The Runesmith, a crafting RPG about a fallen god forging runes to climb back home. What we built, what we cut, and what comes next.</description>
   <item>
+    <title>The first god wakes</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-first-god-wakes/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-first-god-wakes/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
+    <description>A new quest line from the meadow to the Statue of Ares, a god you wake with offerings and a trial, and a Shatter that fires as often as it should.</description>
+  </item>
+  <item>
+    <title>New skills, new enemies</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/new-skills-new-enemies/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/new-skills-new-enemies/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
+    <description>Six skills you earn back through the gods&#x27; skill trees, three new kinds of enemies in the meadow, and a pass on how every hit feels and sounds.</description>
+  </item>
+  <item>
+    <title>Falling from Olympus</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/falling-from-olympus/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/falling-from-olympus/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 +0000</pubDate>
+    <description>Every new realm now begins on Olympus, in a short playable fight against Zeus. You start as a god with all your power, and he takes it back.</description>
+  </item>
+  <item>
     <title>Every window, one game</title>
     <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/every-window-one-game/</link>
     <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/every-window-one-game/</guid>

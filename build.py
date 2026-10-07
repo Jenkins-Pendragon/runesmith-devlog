@@ -241,7 +241,7 @@ def bust_cache(page: str) -> str:
         h = hashlib.md5(f.read_bytes()).hexdigest()[:8]
         return f'{m.group(1)}{BASE}/assets/{rel}?v={h}"'
 
-    return re.sub(r'((?:src|href|content)=")' + re.escape(BASE) + r'/assets/([^"?]+)"', repl, page)
+    return re.sub(r'((?:src|href|content|poster)=")' + re.escape(BASE) + r'/assets/([^"?]+)"', repl, page)
 
 
 def build() -> list:
@@ -257,6 +257,10 @@ def build() -> list:
         for ref in re.findall(r'src="' + re.escape(BASE) + r'/assets/img/([^"]+)"', p["html"]):
             if not (ROOT / "assets" / "img" / ref).exists():
                 raise FileNotFoundError(f"{p['slug']}: görsel yok -> {ref}")
+        # Video yazıya ham HTML olarak girer (<video src=... poster=...>); yukarıdaki denetim onu kapsamaz.
+        for ref in re.findall(r'(?:src|poster)="' + re.escape(BASE) + r'/assets/((?:video|img)/[^"]+)"', p["html"]):
+            if not (ROOT / "assets" / ref).exists():
+                raise FileNotFoundError(f"{p['slug']}: video/poster yok -> {ref}")
 
     urls = [p["url"] for p in posts]
     if len(urls) != len(set(urls)):

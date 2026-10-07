@@ -12,6 +12,10 @@ commits: 5524f037e0..35b713c308
 
 At the end of the [last post]({{base}}/posts/a-new-look-for-the-interface/) the HUD, inventory and tooltips had the new Night Sky look, and the crafting benches were still in the old gothic style. That's done now. So is every other window I could find, which turned out to be a lot more than the benches.
 
+<video src="{{base}}/assets/video/ui-tour.mp4" poster="{{base}}/assets/img/ui-tour-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="A quick tour of the new interface: the Craft window, the Hades rune page, achievements, settings and the pause menu"></video>
+
+*A quick tour: crafting, a rune page, achievements, settings and the pause menu (sped up slightly)*
+
 ## Crafting
 
 All eleven benches and the Craft window you open from your bag now share one panel:
