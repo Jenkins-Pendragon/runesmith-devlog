@@ -1,0 +1,93 @@
+{
+  "title": "Media",
+  "intro": "Screenshots and clips from The Runesmith, straight from development builds. Click any image to see it full size.",
+  "sections": [
+    {
+      "title": "Videos",
+      "items": [
+        {"video": "skills.mp4", "poster": "skills-poster.jpg", "caption": "Tartarus Rift, War Cry, Earth's Embrace and Echo of the God", "post": "new-skills-new-enemies"},
+        {"video": "hermes-boots.mp4", "poster": "hermes-boots-poster.jpg", "caption": "Running in Hermes Boots", "post": "finding-your-feet"},
+        {"video": "cyclops-slam.mp4", "poster": "cyclops-slam-poster.jpg", "caption": "The Cyclops' crushing blow, with the warning circle on the sand", "post": "new-skills-new-enemies"},
+        {"video": "ui-tour.mp4", "poster": "ui-tour-poster.jpg", "caption": "A quick tour of the interface", "post": "every-window-one-game"}
+      ]
+    },
+    {
+      "title": "The prologue on Olympus",
+      "items": [
+        {"image": "prologue-zeus.jpg", "caption": "Zeus arrives", "post": "falling-from-olympus"},
+        {"image": "prologue-arena.jpg", "caption": "The arena above the clouds", "post": "falling-from-olympus"},
+        {"image": "prologue-duel.jpg", "caption": "The circle duel", "post": "falling-from-olympus"},
+        {"image": "prologue-qte.jpg", "caption": "A blade lock", "post": "falling-from-olympus"},
+        {"image": "prologue-echo.jpg", "caption": "Echo of the God: all six at once", "post": "falling-from-olympus"},
+        {"image": "prologue-fall.jpg", "caption": "Falling from Olympus", "post": "falling-from-olympus"}
+      ]
+    },
+    {
+      "title": "The world",
+      "items": [
+        {"image": "world-vista.jpg", "caption": "The landscape beyond the hideout", "post": "settings-safety-nets-and-a-sky-that-behaves"},
+        {"image": "artemis-overlook.jpg", "caption": "A landmark overlooking the valley", "post": "archive-shaping-the-world"},
+        {"image": "hideout.jpg", "caption": "The hideout", "post": "giving-the-forge-a-voice"},
+        {"image": "feet-hermes-statue.jpg", "caption": "The Statue of Hermes", "post": "finding-your-feet"},
+        {"image": "statue-artemis.jpg", "caption": "The Statue of Artemis", "post": "the-gods-wake-up"},
+        {"image": "statue-hades.jpg", "caption": "The Statue of Hades", "post": "the-runesmith-speaks-33-languages"},
+        {"image": "hades-fragments.jpg", "caption": "A broken statue on the shore", "post": "giving-the-forge-a-voice"}
+      ]
+    },
+    {
+      "title": "Gods and runes",
+      "items": [
+        {"image": "gods-ares-awakens.jpg", "caption": "The Statue of Ares awakens", "post": "the-first-god-wakes"},
+        {"image": "gods-ares-stages.jpg", "caption": "Silent, offered to, tested, awake", "post": "the-first-god-wakes"},
+        {"image": "gods-trail.jpg", "caption": "A trail of red light to the war god", "post": "the-first-god-wakes"},
+        {"image": "god-runes.jpg", "caption": "The six gods' runes", "post": "getting-ready-for-next-fest"},
+        {"image": "rune-shatter-moment.jpg", "caption": "The moment of Shatter", "post": "runes-that-keep-their-promises"},
+        {"image": "rune-shatter-veins.jpg", "caption": "An ore bound to Shatter", "post": "runes-that-keep-their-promises"},
+        {"image": "rune-shatter-tree.jpg", "caption": "A tree veined in blue", "post": "runes-that-keep-their-promises"},
+        {"image": "gods-shatter.jpg", "caption": "Ore in Hades' purple", "post": "the-first-god-wakes"}
+      ]
+    },
+    {
+      "title": "Combat and creatures",
+      "items": [
+        {"image": "combat-echo.jpg", "caption": "Echo of the God", "post": "new-skills-new-enemies"},
+        {"image": "combat-tartarus.jpg", "caption": "Tartarus Rift", "post": "new-skills-new-enemies"},
+        {"image": "combat-warcry.jpg", "caption": "War Cry", "post": "new-skills-new-enemies"},
+        {"image": "combat-earths.jpg", "caption": "Earth's Embrace", "post": "new-skills-new-enemies"},
+        {"image": "feet-hermes-boots.jpg", "caption": "Hermes Boots", "post": "finding-your-feet"},
+        {"image": "combat-cyclops.jpg", "caption": "The Cyclops' crushing blow", "post": "new-skills-new-enemies"},
+        {"image": "fight-hounds.jpg", "caption": "A skeletal hound pack", "post": "every-weapon-pulls-its-weight"},
+        {"image": "combat-creatures.jpg", "caption": "The creatures of the first area", "post": "new-skills-new-enemies"},
+        {"image": "feel-dodge.jpg", "caption": "A dodge", "post": "hits-dodges-and-menus-that-answer-back"},
+        {"image": "feel-block.jpg", "caption": "A block", "post": "hits-dodges-and-menus-that-answer-back"}
+      ]
+    },
+    {
+      "title": "Interface",
+      "items": [
+        {"image": "ui-hud.jpg", "caption": "The HUD", "post": "a-new-look-for-the-interface"},
+        {"image": "ui-craft-window.jpg", "caption": "Crafting", "post": "every-window-one-game"},
+        {"image": "ui-inventory-after.jpg", "caption": "The inventory", "post": "a-new-look-for-the-interface"},
+        {"image": "ui-equipment.jpg", "caption": "Equipment", "post": "a-new-look-for-the-interface"},
+        {"image": "ui-tooltips.jpg", "caption": "Tooltips", "post": "a-new-look-for-the-interface"},
+        {"image": "ui-world-access.jpg", "caption": "World Access", "post": "every-window-one-game"},
+        {"image": "ui-realms.jpg", "caption": "The main menu and Realms", "post": "every-window-one-game"},
+        {"image": "ui-floating-text.jpg", "caption": "Floating combat text", "post": "every-window-one-game"},
+        {"image": "ui-action-wheel.jpg", "caption": "The action wheel", "post": "every-window-one-game"},
+        {"image": "ui-grinder.jpg", "caption": "The Grinder", "post": "every-window-one-game"},
+        {"image": "feet-demo-end.jpg", "caption": "The end of the demo", "post": "finding-your-feet"}
+      ]
+    },
+    {
+      "title": "The workshop",
+      "items": [
+        {"image": "archive-blacksmith.jpg", "caption": "Blacksmith workbench variants", "post": "archive-workshop-tiers-and-production"},
+        {"image": "archive-alchemisttable.jpg", "caption": "Alchemy table variants", "post": "archive-workshop-tiers-and-production"},
+        {"image": "archive-orefurnace.jpg", "caption": "Ore furnace variants", "post": "archive-workshop-tiers-and-production"},
+        {"image": "archive-grinder.jpg", "caption": "Grinder variants", "post": "archive-workshop-tiers-and-production"},
+        {"image": "archive-farm-plots.jpg", "caption": "Farm plots", "post": "archive-growing-a-field"},
+        {"image": "archive-ore-studies.jpg", "caption": "Ore nodes", "post": "archive-gathering-and-resources"}
+      ]
+    }
+  ]
+}

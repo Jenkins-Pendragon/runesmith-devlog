@@ -67,6 +67,7 @@ def layout(title: str, description: str, body: str, og_image: str = "", canonica
     e = html.escape
     devlog_state = ' class="active" aria-current="page"' if series == "devlog" else ""
     archive_state = ' class="active" aria-current="page"' if series == "archive" else ""
+    media_state = ' class="active" aria-current="page"' if series == "media" else ""
     og_img = f'<meta property="og:image" content="{e(CFG["site_url"] + og_image)}">' if og_image else ""
     return f"""<!doctype html>
 <html lang="en">
@@ -98,6 +99,7 @@ def layout(title: str, description: str, body: str, og_image: str = "", canonica
       <a class="game-link" href="{e(CFG['game_url'])}">The Game</a>
       <a href="{BASE}/"{devlog_state}>Devlog</a>
       <a href="{BASE}/archive/"{archive_state}>Development Archive</a>
+      <a href="{BASE}/media/"{media_state}>Media</a>
       <a class="btn btn-gold btn-sm" href="{e(CFG['steam_url'])}">Wishlist on Steam</a>
     </nav>
   </div>
@@ -157,6 +159,109 @@ def render_index(posts: list, series: str = "devlog") -> str:
 </section>
 """
     return layout(f"{heading} · The Runesmith", lead, body, posts[0]["cover_url"] if posts else "", index_path, series)
+
+
+MEDIA_JSON = ROOT / "media.json"
+THUMB_W = 720
+
+
+def ensure_thumbs(media: dict) -> None:
+    # Galeri 50+ görseli tek sayfada gösteriyor; 1600 px asıllarla sayfa ~20 MB oluyordu.
+    # Önizlemeler assets/thumbs altında bir kez üretilir ve commit'lenir: Pages'te build adımı yok.
+    # Pillow yalnız önizleme eksik ya da kaynaktan eskiyse gerekir.
+    todo = []
+    for sec in media["sections"]:
+        for it in sec["items"]:
+            name = it.get("image") or it.get("poster")
+            src = ROOT / "assets" / "img" / name
+            dst = ROOT / "assets" / "thumbs" / name
+            if not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime:
+                todo.append((src, dst))
+    if not todo:
+        return
+    from PIL import Image
+    (ROOT / "assets" / "thumbs").mkdir(exist_ok=True)
+    for src, dst in todo:
+        im = Image.open(src).convert("RGB")
+        if im.width > THUMB_W:
+            im = im.resize((THUMB_W, round(im.height * THUMB_W / im.width)), Image.LANCZOS)
+        im.save(dst, quality=82, optimize=True)
+
+
+def validate_media(media: dict, slugs: set) -> None:
+    for sec in media["sections"]:
+        for it in sec["items"]:
+            files = [("img", it["image"])] if "image" in it else [("video", it["video"]), ("img", it["poster"])]
+            for folder, name in files:
+                if not (ROOT / "assets" / folder / name).exists():
+                    raise FileNotFoundError(f"media.json: dosya yok -> {folder}/{name}")
+            if it.get("post") and it["post"] not in slugs:
+                raise ValueError(f"media.json: yazı yok -> {it['post']}")
+
+
+def render_media(media: dict, posts_by_slug: dict) -> str:
+    e = html.escape
+    sections = []
+    first_image = ""
+    for sec in media["sections"]:
+        tiles = []
+        for it in sec["items"]:
+            post = posts_by_slug.get(it.get("post", ""))
+            source = f'<a class="media-source" href="{post["url"]}">{e(post["title"])}</a>' if post else ""
+            cap = e(it["caption"])
+            if "video" in it:
+                tiles.append(f"""
+      <figure class="media-tile media-video">
+        <video src="{BASE}/assets/video/{e(it['video'])}" poster="{BASE}/assets/thumbs/{e(it['poster'])}" controls muted loop playsinline preload="none" aria-label="{cap}"></video>
+        <figcaption><span>{cap}</span>{source}</figcaption>
+      </figure>""")
+            else:
+                first_image = first_image or it["image"]
+                tiles.append(f"""
+      <figure class="media-tile">
+        <a class="media-open" href="{BASE}/assets/img/{e(it['image'])}" data-caption="{cap}">
+          <img src="{BASE}/assets/thumbs/{e(it['image'])}" alt="{cap}" loading="lazy">
+        </a>
+        <figcaption><span>{cap}</span>{source}</figcaption>
+      </figure>""")
+        cls = "media-grid media-grid-video" if any("video" in it for it in sec["items"]) else "media-grid"
+        sections.append(f"""
+<section class="wrap media-section">
+  <h2>{e(sec['title'])}</h2>
+  <div class="{cls}">{''.join(tiles)}
+  </div>
+</section>""")
+    lead = media["intro"]
+    body = f"""
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Screenshots and clips</div>
+    <h1>{e(media['title'])}</h1>
+    <p class="lead">{e(lead)}</p>
+  </div>
+</section>
+{''.join(sections)}
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+  <img alt="">
+  <p class="lightbox-caption"></p>
+</dialog>
+<script>
+(() => {{
+  const box = document.getElementById('lightbox');
+  if (!box || !box.showModal) return;
+  const img = box.querySelector('img'), cap = box.querySelector('.lightbox-caption');
+  document.querySelectorAll('.media-open').forEach(a => a.addEventListener('click', ev => {{
+    ev.preventDefault();
+    img.src = a.href; img.alt = a.dataset.caption; cap.textContent = a.dataset.caption;
+    box.showModal();
+  }}));
+  box.addEventListener('click', ev => {{ if (ev.target === box || ev.target.closest('.lightbox-close')) box.close(); }});
+}})();
+</script>
+"""
+    og = f"{BASE}/assets/img/{first_image}" if first_image else ""
+    return layout(f"{media['title']} · The Runesmith", lead, body, og, f"{BASE}/media/", "media")
 
 
 def render_post(p: dict, newer: dict | None, older: dict | None) -> str:
@@ -265,6 +370,10 @@ def build() -> list:
     urls = [p["url"] for p in posts]
     if len(urls) != len(set(urls)):
         raise ValueError("Post URL collision")
+    media = json.loads(MEDIA_JSON.read_text(encoding="utf-8")) if MEDIA_JSON.exists() else None
+    if media:
+        validate_media(media, {p["slug"] for p in posts})
+        ensure_thumbs(media)
     # Generated output must stay inside this checkout even if docs is replaced with a link.
     if OUT.is_symlink() or OUT.resolve().parent != ROOT.resolve():
         raise ValueError("Unsafe generated output path")
@@ -281,6 +390,9 @@ def build() -> list:
     (OUT / "archive").mkdir()
     (OUT / "archive" / "index.html").write_text(bust_cache(render_index(archive, "archive")), encoding="utf-8")
     (OUT / "feed.xml").write_text(render_feed(current), encoding="utf-8")
+    if media:
+        (OUT / "media").mkdir()
+        (OUT / "media" / "index.html").write_text(bust_cache(render_media(media, {p["slug"]: p for p in posts})), encoding="utf-8")
     for p in posts:
         neighbors = [other for other in posts if other["series"] == p["series"]]
         i = neighbors.index(p)

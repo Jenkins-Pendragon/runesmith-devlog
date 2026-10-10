@@ -152,3 +152,33 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.2; colo
   .lead { font-size: 17px; }
   .cta { padding: 22px 20px; }
 }
+
+/* Media galerisi */
+.media-section { margin-bottom: 52px; }
+.media-section h2 { font-family: var(--serif); font-size: 22px; font-weight: 700; letter-spacing: 0.03em; color: #fff; margin: 0 0 18px; }
+.media-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.media-grid-video { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.media-tile { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.media-tile img, .media-tile video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000; }
+.media-open { display: block; overflow: hidden; }
+.media-open img { transition: transform 0.4s ease; }
+.media-open:hover img, .media-open:focus-visible img { transform: scale(1.04); }
+.media-tile figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 14px; font-size: 14px; line-height: 1.45; }
+.media-tile figcaption span { color: var(--text); }
+.media-source { color: var(--gold-1); font-size: 13px; text-align: right; text-decoration: none; }
+.media-source:hover { text-decoration: underline; }
+.lightbox { border: 0; padding: 0; background: transparent; width: min(96vw, 1600px); max-width: none; overflow: visible; }
+.lightbox::backdrop { background: rgba(5, 8, 12, 0.9); }
+.lightbox img { display: block; width: 100%; height: auto; max-height: 84vh; object-fit: contain; border-radius: var(--radius); }
+.lightbox-caption { text-align: center; color: var(--muted); font-size: 15px; margin: 12px 0 0; }
+.lightbox-close { position: absolute; top: -18px; right: -6px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg-2); color: #fff; font-size: 24px; line-height: 1; cursor: pointer; }
+@media (max-width: 860px) {
+  .media-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .media-grid-video { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .media-grid { grid-template-columns: 1fr; }
+  .media-tile figcaption { flex-direction: column; gap: 2px; }
+  .media-source { text-align: left; }
+  .lightbox-close { top: -48px; right: 0; }
+}
