@@ -5,6 +5,20 @@
   <link>https://jenkins-pendragon.github.io/runesmith-devlog/</link>
   <description>Development log of The Runesmith, a crafting RPG about a fallen god forging runes to climb back home. What we built, what we cut, and what comes next.</description>
   <item>
+    <title>Every weapon pulls its weight</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/every-weapon-pulls-its-weight/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/every-weapon-pulls-its-weight/</guid>
+    <pubDate>Sat, 10 Oct 2026 12:00:00 +0000</pubDate>
+    <description>Twelve weapon families tuned to the same baseline, arrows that burn and daggers that poison, enemies that last long enough to fight, and a long list of things that used to trip you up while moving around.</description>
+  </item>
+  <item>
+    <title>Finding your feet</title>
+    <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/finding-your-feet/</link>
+    <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/finding-your-feet/</guid>
+    <pubDate>Sat, 10 Oct 2026 12:00:00 +0000</pubDate>
+    <description>The first hour got a lot of attention this week. Features now unlock one at a time, Hermes is the first god you meet, the quest line asks for less guesswork, and the demo ends with a reason to keep playing.</description>
+  </item>
+  <item>
     <title>The first god wakes</title>
     <link>https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-first-god-wakes/</link>
     <guid>https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-first-god-wakes/</guid>
