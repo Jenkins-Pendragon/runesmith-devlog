@@ -170,7 +170,7 @@ def ensure_thumbs(media: dict) -> None:
     # Önizlemeler assets/thumbs altında bir kez üretilir ve commit'lenir: Pages'te build adımı yok.
     # Pillow yalnız önizleme eksik ya da kaynaktan eskiyse gerekir.
     todo = []
-    for sec in media["sections"]:
+    for sec in media_sections(media):
         for it in sec["items"]:
             name = it.get("image") or it.get("poster")
             src = ROOT / "assets" / "img" / name
@@ -180,16 +180,20 @@ def ensure_thumbs(media: dict) -> None:
     if not todo:
         return
     from PIL import Image
-    (ROOT / "assets" / "thumbs").mkdir(exist_ok=True)
     for src, dst in todo:
+        dst.parent.mkdir(parents=True, exist_ok=True)
         im = Image.open(src).convert("RGB")
         if im.width > THUMB_W:
             im = im.resize((THUMB_W, round(im.height * THUMB_W / im.width)), Image.LANCZOS)
         im.save(dst, quality=82, optimize=True)
 
 
+def media_sections(media: dict) -> list:
+    return media["sections"] + (media["outtakes"]["sections"] if "outtakes" in media else [])
+
+
 def validate_media(media: dict, slugs: set) -> None:
-    for sec in media["sections"]:
+    for sec in media_sections(media):
         for it in sec["items"]:
             files = [("img", it["image"])] if "image" in it else [("video", it["video"]), ("img", it["poster"])]
             for folder, name in files:
@@ -199,11 +203,12 @@ def validate_media(media: dict, slugs: set) -> None:
                 raise ValueError(f"media.json: yazı yok -> {it['post']}")
 
 
-def render_media(media: dict, posts_by_slug: dict) -> str:
+def render_media(media: dict, posts_by_slug: dict, outtakes: bool = False) -> str:
     e = html.escape
+    page = media["outtakes"] if outtakes else media
     sections = []
     first_image = ""
-    for sec in media["sections"]:
+    for sec in page["sections"]:
         tiles = []
         for it in sec["items"]:
             post = posts_by_slug.get(it.get("post", ""))
@@ -231,13 +236,22 @@ def render_media(media: dict, posts_by_slug: dict) -> str:
   <div class="{cls}">{''.join(tiles)}
   </div>
 </section>""")
-    lead = media["intro"]
+    lead = page["intro"]
+    tabs = ""
+    if "outtakes" in media:
+        g_state = "" if outtakes else ' class="active" aria-current="page"'
+        o_state = ' class="active" aria-current="page"' if outtakes else ""
+        tabs = f"""
+    <nav class="media-tabs" aria-label="Media sections">
+      <a href="{BASE}/media/"{g_state}>Gallery</a>
+      <a href="{BASE}/media/outtakes/"{o_state}>{e(media['outtakes']['title'])}</a>
+    </nav>"""
     body = f"""
 <section class="hero">
   <div class="wrap">
     <div class="eyebrow">Screenshots and clips</div>
-    <h1>{e(media['title'])}</h1>
-    <p class="lead">{e(lead)}</p>
+    <h1>{e(page['title'])}</h1>
+    <p class="lead">{e(lead)}</p>{tabs}
   </div>
 </section>
 {''.join(sections)}
@@ -261,7 +275,8 @@ def render_media(media: dict, posts_by_slug: dict) -> str:
 </script>
 """
     og = f"{BASE}/assets/img/{first_image}" if first_image else ""
-    return layout(f"{media['title']} · The Runesmith", lead, body, og, f"{BASE}/media/", "media")
+    url = f"{BASE}/media/outtakes/" if outtakes else f"{BASE}/media/"
+    return layout(f"{page['title']} · The Runesmith", lead, body, og, url, "media")
 
 
 def render_post(p: dict, newer: dict | None, older: dict | None) -> str:
@@ -392,7 +407,11 @@ def build() -> list:
     (OUT / "feed.xml").write_text(render_feed(current), encoding="utf-8")
     if media:
         (OUT / "media").mkdir()
-        (OUT / "media" / "index.html").write_text(bust_cache(render_media(media, {p["slug"]: p for p in posts})), encoding="utf-8")
+        by_slug = {p["slug"]: p for p in posts}
+        (OUT / "media" / "index.html").write_text(bust_cache(render_media(media, by_slug)), encoding="utf-8")
+        if "outtakes" in media:
+            (OUT / "media" / "outtakes").mkdir()
+            (OUT / "media" / "outtakes" / "index.html").write_text(bust_cache(render_media(media, by_slug, outtakes=True)), encoding="utf-8")
     for p in posts:
         neighbors = [other for other in posts if other["series"] == p["series"]]
         i = neighbors.index(p)

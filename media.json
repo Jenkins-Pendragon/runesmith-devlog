@@ -1,93 +1,2341 @@
 {
   "title": "Media",
-  "intro": "Screenshots and clips from The Runesmith, straight from development builds. Click any image to see it full size.",
+  "intro": "Screenshots and clips from The Runesmith, straight from development builds. Click any image to see it full size. The shots that did not make the cut are under Outtakes.",
   "sections": [
     {
       "title": "Videos",
       "items": [
-        {"video": "skills.mp4", "poster": "skills-poster.jpg", "caption": "Tartarus Rift, War Cry, Earth's Embrace and Echo of the God", "post": "new-skills-new-enemies"},
-        {"video": "hermes-boots.mp4", "poster": "hermes-boots-poster.jpg", "caption": "Running in Hermes Boots", "post": "finding-your-feet"},
-        {"video": "cyclops-slam.mp4", "poster": "cyclops-slam-poster.jpg", "caption": "The Cyclops' crushing blow, with the warning circle on the sand", "post": "new-skills-new-enemies"},
-        {"video": "ui-tour.mp4", "poster": "ui-tour-poster.jpg", "caption": "A quick tour of the interface", "post": "every-window-one-game"}
+        {
+          "video": "skills.mp4",
+          "poster": "skills-poster.jpg",
+          "caption": "Tartarus Rift, War Cry, Earth's Embrace and Echo of the God",
+          "post": "new-skills-new-enemies"
+        },
+        {
+          "video": "hermes-boots.mp4",
+          "poster": "hermes-boots-poster.jpg",
+          "caption": "Running in Hermes Boots",
+          "post": "finding-your-feet"
+        },
+        {
+          "video": "cyclops-slam.mp4",
+          "poster": "cyclops-slam-poster.jpg",
+          "caption": "The Cyclops' crushing blow, with the warning circle on the sand",
+          "post": "new-skills-new-enemies"
+        },
+        {
+          "video": "ui-tour.mp4",
+          "poster": "ui-tour-poster.jpg",
+          "caption": "A quick tour of the interface",
+          "post": "every-window-one-game"
+        }
+      ]
+    },
+    {
+      "title": "Prologue clips",
+      "items": [
+        {
+          "video": "media/prologue-zeus-descends.mp4",
+          "poster": "media/prologue-zeus-descends-poster.jpg",
+          "caption": "Zeus descends"
+        },
+        {
+          "video": "media/prologue-face-to-face.mp4",
+          "poster": "media/prologue-face-to-face-poster.jpg",
+          "caption": "Face to face with Zeus"
+        },
+        {
+          "video": "media/prologue-arch-and-echo.mp4",
+          "poster": "media/prologue-arch-and-echo-poster.jpg",
+          "caption": "Lightning at the arch and Echo of the God"
+        },
+        {
+          "video": "media/prologue-power-taken.mp4",
+          "poster": "media/prologue-power-taken-poster.jpg",
+          "caption": "The gods' power is taken back"
+        },
+        {
+          "video": "media/prologue-fall.mp4",
+          "poster": "media/prologue-fall-poster.jpg",
+          "caption": "Falling from Olympus"
+        }
+      ]
+    },
+    {
+      "title": "Exploring the world",
+      "items": [
+        {
+          "video": "media/f01_ares_hill_wide_orbit.mp4",
+          "poster": "media/f01_ares_hill_wide_orbit-poster.jpg",
+          "caption": "The hill of Ares from above"
+        },
+        {
+          "video": "media/f03_hermes_hill_wide_orbit.mp4",
+          "poster": "media/f03_hermes_hill_wide_orbit-poster.jpg",
+          "caption": "The hill of Hermes from above"
+        },
+        {
+          "video": "media/f05_hermes_golden_orbit.mp4",
+          "poster": "media/f05_hermes_golden_orbit-poster.jpg",
+          "caption": "The Statue of Hermes at golden hour"
+        },
+        {
+          "video": "media/n04_sonar_hud_open.mp4",
+          "poster": "media/n04_sonar_hud_open-poster.jpg",
+          "caption": "Sonar pulse"
+        },
+        {
+          "video": "media/n05_sonar_crane_hud_open.mp4",
+          "poster": "media/n05_sonar_crane_hud_open-poster.jpg",
+          "caption": "Sonar, rising camera"
+        },
+        {
+          "video": "media/o01_hideout_wide_orbit.mp4",
+          "poster": "media/o01_hideout_wide_orbit-poster.jpg",
+          "caption": "The hideout"
+        },
+        {
+          "video": "media/o04_hideout_hud_walk.mp4",
+          "poster": "media/o04_hideout_hud_walk-poster.jpg",
+          "caption": "The hideout with HUD"
+        },
+        {
+          "video": "media/s01_hermes_statue_orbit.mp4",
+          "poster": "media/s01_hermes_statue_orbit-poster.jpg",
+          "caption": "The Statue of Hermes"
+        },
+        {
+          "video": "media/s02_ares_statue_orbit.mp4",
+          "poster": "media/s02_ares_statue_orbit-poster.jpg",
+          "caption": "The Statue of Ares"
+        },
+        {
+          "video": "media/s02c_ares_whisper_hud.mp4",
+          "poster": "media/s02c_ares_whisper_hud-poster.jpg",
+          "caption": "Ares speaks"
+        },
+        {
+          "video": "media/s04_ares_awakened_orbit.mp4",
+          "poster": "media/s04_ares_awakened_orbit-poster.jpg",
+          "caption": "Ares awakened"
+        },
+        {
+          "video": "media/w01c_start_walk_side_low.mp4",
+          "poster": "media/w01c_start_walk_side_low-poster.jpg",
+          "caption": "Setting out across the meadow"
+        },
+        {
+          "video": "media/w02c_start_crane_reveal_golden.mp4",
+          "poster": "media/w02c_start_crane_reveal_golden-poster.jpg",
+          "caption": "The first area"
+        },
+        {
+          "video": "media/w03c_start_walk_front_low.mp4",
+          "poster": "media/w03c_start_walk_front_low-poster.jpg",
+          "caption": "Out into the meadow"
+        },
+        {
+          "video": "media/w05_arrival_land_of_first_gods_hud.mp4",
+          "poster": "media/w05_arrival_land_of_first_gods_hud-poster.jpg",
+          "caption": "The Land of the First Gods"
+        }
+      ]
+    },
+    {
+      "title": "Combat",
+      "items": [
+        {
+          "video": "media/c01_goblin_charge_two_shot.mp4",
+          "poster": "media/c01_goblin_charge_two_shot-poster.jpg",
+          "caption": "Charging a goblin camp"
+        },
+        {
+          "video": "media/c01d_goblin_charge_two_shot_v2.mp4",
+          "poster": "media/c01d_goblin_charge_two_shot_v2-poster.jpg",
+          "caption": "Charging a goblin camp"
+        },
+        {
+          "video": "media/c02d_goblin_fight_low_orbit_v2.mp4",
+          "poster": "media/c02d_goblin_fight_low_orbit_v2-poster.jpg",
+          "caption": "Close fight at the goblin camp"
+        },
+        {
+          "video": "media/c03_goblin_fight_hud.mp4",
+          "poster": "media/c03_goblin_fight_hud-poster.jpg",
+          "caption": "Goblin fight with HUD"
+        },
+        {
+          "video": "media/c11e_goblin_skills_hud_v2.mp4",
+          "poster": "media/c11e_goblin_skills_hud_v2-poster.jpg",
+          "caption": "Skill combo with HUD"
+        },
+        {
+          "video": "media/h01_hounds_sword_two_shot.mp4",
+          "poster": "media/h01_hounds_sword_two_shot-poster.jpg",
+          "caption": "Sword against skeletal hounds"
+        },
+        {
+          "video": "media/h01d_hounds_sword_two_shot_v2.mp4",
+          "poster": "media/h01d_hounds_sword_two_shot_v2-poster.jpg",
+          "caption": "Sword against skeletal hounds"
+        },
+        {
+          "video": "media/h08_hounds_combat_hud.mp4",
+          "poster": "media/h08_hounds_combat_hud-poster.jpg",
+          "caption": "Hound fight with HUD"
+        },
+        {
+          "video": "media/y01_cyclops_two_shot_low.mp4",
+          "poster": "media/y01_cyclops_two_shot_low-poster.jpg",
+          "caption": "Facing the Cyclops"
+        },
+        {
+          "video": "media/y01e_cyclops_two_shot_low_v2.mp4",
+          "poster": "media/y01e_cyclops_two_shot_low_v2-poster.jpg",
+          "caption": "Facing the Cyclops"
+        },
+        {
+          "video": "media/y04_cyclops_hud.mp4",
+          "poster": "media/y04_cyclops_hud-poster.jpg",
+          "caption": "Cyclops fight with HUD"
+        }
+      ]
+    },
+    {
+      "title": "Skills",
+      "items": [
+        {
+          "video": "media/c04d_goblin_tartarus_v2.mp4",
+          "poster": "media/c04d_goblin_tartarus_v2-poster.jpg",
+          "caption": "Tartarus Rift on goblins"
+        },
+        {
+          "video": "media/c05e_goblin_war_cry_v2.mp4",
+          "poster": "media/c05e_goblin_war_cry_v2-poster.jpg",
+          "caption": "War Cry"
+        },
+        {
+          "video": "media/c06e_goblin_crimson_arc_v2.mp4",
+          "poster": "media/c06e_goblin_crimson_arc_v2-poster.jpg",
+          "caption": "Crimson Arc"
+        },
+        {
+          "video": "media/c08e_goblin_echo_of_the_god_v2.mp4",
+          "poster": "media/c08e_goblin_echo_of_the_god_v2-poster.jpg",
+          "caption": "Echo of the God"
+        },
+        {
+          "video": "media/c09e_goblin_talaria_dash_v2.mp4",
+          "poster": "media/c09e_goblin_talaria_dash_v2-poster.jpg",
+          "caption": "Talaria Dash"
+        },
+        {
+          "video": "media/c10e_goblin_tartarus_high_v2.mp4",
+          "poster": "media/c10e_goblin_tartarus_high_v2-poster.jpg",
+          "caption": "Tartarus Rift from above"
+        },
+        {
+          "video": "media/h04b_crimson_arc_hounds.mp4",
+          "poster": "media/h04b_crimson_arc_hounds-poster.jpg",
+          "caption": "Crimson Arc"
+        },
+        {
+          "video": "media/h05b_earths_embrace_hounds.mp4",
+          "poster": "media/h05b_earths_embrace_hounds-poster.jpg",
+          "caption": "Earth's Embrace"
+        },
+        {
+          "video": "media/h07_talaria_dash_hounds.mp4",
+          "poster": "media/h07_talaria_dash_hounds-poster.jpg",
+          "caption": "Talaria Dash"
+        },
+        {
+          "video": "media/h07d_talaria_dash_hounds_v2.mp4",
+          "poster": "media/h07d_talaria_dash_hounds_v2-poster.jpg",
+          "caption": "Talaria Dash"
+        },
+        {
+          "video": "media/y03e_cyclops_echo_v2.mp4",
+          "poster": "media/y03e_cyclops_echo_v2-poster.jpg",
+          "caption": "Echo of the God on the Cyclops"
+        },
+        {
+          "video": "media/y05e_cyclops_tartarus_v2.mp4",
+          "poster": "media/y05e_cyclops_tartarus_v2-poster.jpg",
+          "caption": "Tartarus Rift on the Cyclops"
+        }
+      ]
+    },
+    {
+      "title": "Weapons",
+      "items": [
+        {
+          "video": "media/w01a_sword_fight.mp4",
+          "poster": "media/w01a_sword_fight-poster.jpg",
+          "caption": "Sword"
+        },
+        {
+          "video": "media/w01b_sword_temper_burn_fight.mp4",
+          "poster": "media/w01b_sword_temper_burn_fight-poster.jpg",
+          "caption": "Sword, Burn Temper"
+        },
+        {
+          "video": "media/w02a_axe_fight.mp4",
+          "poster": "media/w02a_axe_fight-poster.jpg",
+          "caption": "Axe"
+        },
+        {
+          "video": "media/w02b_axe_temper_chill_fight.mp4",
+          "poster": "media/w02b_axe_temper_chill_fight-poster.jpg",
+          "caption": "Axe, Chill Temper"
+        },
+        {
+          "video": "media/w03a_dagger_fight.mp4",
+          "poster": "media/w03a_dagger_fight-poster.jpg",
+          "caption": "Twin daggers"
+        },
+        {
+          "video": "media/w03b_dagger_temper_poison_fight.mp4",
+          "poster": "media/w03b_dagger_temper_poison_fight-poster.jpg",
+          "caption": "Twin daggers, Poison Temper"
+        },
+        {
+          "video": "media/w04a_fist_fight.mp4",
+          "poster": "media/w04a_fist_fight-poster.jpg",
+          "caption": "Fists"
+        },
+        {
+          "video": "media/w04b_fist_temper_bleed_fight.mp4",
+          "poster": "media/w04b_fist_temper_bleed_fight-poster.jpg",
+          "caption": "Fists, Bleed Temper"
+        },
+        {
+          "video": "media/w05a_hammer_fight.mp4",
+          "poster": "media/w05a_hammer_fight-poster.jpg",
+          "caption": "Hammer"
+        },
+        {
+          "video": "media/w05b_hammer_temper_criticaldamage_fight.mp4",
+          "poster": "media/w05b_hammer_temper_criticaldamage_fight-poster.jpg",
+          "caption": "Hammer, Shatter Temper"
+        },
+        {
+          "video": "media/w06a_mace_fight.mp4",
+          "poster": "media/w06a_mace_fight-poster.jpg",
+          "caption": "Twin maces"
+        },
+        {
+          "video": "media/w06b_mace_temper_criticalchance_fight.mp4",
+          "poster": "media/w06b_mace_temper_criticalchance_fight-poster.jpg",
+          "caption": "Twin maces, Vital Temper"
+        },
+        {
+          "video": "media/w07a_polearm_fight.mp4",
+          "poster": "media/w07a_polearm_fight-poster.jpg",
+          "caption": "Polearm"
+        },
+        {
+          "video": "media/w07b_polearm_temper_attackspeed_fight.mp4",
+          "poster": "media/w07b_polearm_temper_attackspeed_fight-poster.jpg",
+          "caption": "Polearm, Swift Temper"
+        },
+        {
+          "video": "media/w08a_scythes_fight.mp4",
+          "poster": "media/w08a_scythes_fight-poster.jpg",
+          "caption": "Scythe"
+        },
+        {
+          "video": "media/w08b_scythes_temper_damagemultiplier_fight.mp4",
+          "poster": "media/w08b_scythes_temper_damagemultiplier_fight-poster.jpg",
+          "caption": "Scythe, Potency Temper"
+        },
+        {
+          "video": "media/w10c_spellbook_fight.mp4",
+          "poster": "media/w10c_spellbook_fight-poster.jpg",
+          "caption": "Spellbook"
+        },
+        {
+          "video": "media/w11b_staves_temper_truedamage_fight.mp4",
+          "poster": "media/w11b_staves_temper_truedamage_fight-poster.jpg",
+          "caption": "Staff, Absolute Temper"
+        },
+        {
+          "video": "media/w11c_staves_fight.mp4",
+          "poster": "media/w11c_staves_fight-poster.jpg",
+          "caption": "Staff"
+        },
+        {
+          "video": "media/w12a_bow_fight.mp4",
+          "poster": "media/w12a_bow_fight-poster.jpg",
+          "caption": "Bow"
+        },
+        {
+          "video": "media/w13a_wand_fight.mp4",
+          "poster": "media/w13a_wand_fight-poster.jpg",
+          "caption": "Twin wands"
+        },
+        {
+          "video": "media/w13b_wand_temper_chill_fight.mp4",
+          "poster": "media/w13b_wand_temper_chill_fight-poster.jpg",
+          "caption": "Twin wands, Chill Temper"
+        }
+      ]
+    },
+    {
+      "title": "Tempers",
+      "items": [
+        {
+          "video": "media/t01b_temper_burn_sword_wide.mp4",
+          "poster": "media/t01b_temper_burn_sword_wide-poster.jpg",
+          "caption": "Sword with Burn Temper"
+        },
+        {
+          "video": "media/t02b_temper_chill_sword_wide.mp4",
+          "poster": "media/t02b_temper_chill_sword_wide-poster.jpg",
+          "caption": "Sword with Chill Temper"
+        },
+        {
+          "video": "media/t03b_temper_poison_sword_wide.mp4",
+          "poster": "media/t03b_temper_poison_sword_wide-poster.jpg",
+          "caption": "Sword with Poison Temper"
+        },
+        {
+          "video": "media/t04b_temper_bleed_sword_wide.mp4",
+          "poster": "media/t04b_temper_bleed_sword_wide-poster.jpg",
+          "caption": "Sword with Bleed Temper"
+        },
+        {
+          "video": "media/t05b_temper_criticaldamage_sword_wide.mp4",
+          "poster": "media/t05b_temper_criticaldamage_sword_wide-poster.jpg",
+          "caption": "Sword with Shatter Temper"
+        },
+        {
+          "video": "media/t06b_temper_criticalchance_sword_wide.mp4",
+          "poster": "media/t06b_temper_criticalchance_sword_wide-poster.jpg",
+          "caption": "Sword with Vital Temper"
+        },
+        {
+          "video": "media/t07b_temper_attackspeed_sword_wide.mp4",
+          "poster": "media/t07b_temper_attackspeed_sword_wide-poster.jpg",
+          "caption": "Sword with Swift Temper"
+        },
+        {
+          "video": "media/t08b_temper_damagemultiplier_sword_wide.mp4",
+          "poster": "media/t08b_temper_damagemultiplier_sword_wide-poster.jpg",
+          "caption": "Sword with Potency Temper"
+        },
+        {
+          "video": "media/t09b_temper_armorpen_sword_wide.mp4",
+          "poster": "media/t09b_temper_armorpen_sword_wide-poster.jpg",
+          "caption": "Sword with Penetration Temper"
+        },
+        {
+          "video": "media/t10b_temper_flatattack_sword_wide.mp4",
+          "poster": "media/t10b_temper_flatattack_sword_wide-poster.jpg",
+          "caption": "Sword with Strength Temper"
+        },
+        {
+          "video": "media/t11b_temper_truedamage_sword_wide.mp4",
+          "poster": "media/t11b_temper_truedamage_sword_wide-poster.jpg",
+          "caption": "Sword with Absolute Temper"
+        }
+      ]
+    },
+    {
+      "title": "Hermes Boots and tempers",
+      "items": [
+        {
+          "video": "media/b01_hermes_boots_run_side.mp4",
+          "poster": "media/b01_hermes_boots_run_side-poster.jpg",
+          "caption": "Hermes Boots"
+        },
+        {
+          "video": "media/b02_hermes_boots_run_front.mp4",
+          "poster": "media/b02_hermes_boots_run_front-poster.jpg",
+          "caption": "Hermes Boots, front view"
+        },
+        {
+          "video": "media/r01_boots_run_sword_notemper.mp4",
+          "poster": "media/r01_boots_run_sword_notemper-poster.jpg",
+          "caption": "Hermes Boots with a sword"
+        },
+        {
+          "video": "media/r02_boots_run_sword_burn.mp4",
+          "poster": "media/r02_boots_run_sword_burn-poster.jpg",
+          "caption": "Hermes Boots with a sword, Burn Temper"
+        },
+        {
+          "video": "media/r03_boots_run_polearm_chill.mp4",
+          "poster": "media/r03_boots_run_polearm_chill-poster.jpg",
+          "caption": "Hermes Boots with a polearm, Chill Temper"
+        },
+        {
+          "video": "media/r04_boots_run_scythes_poison.mp4",
+          "poster": "media/r04_boots_run_scythes_poison-poster.jpg",
+          "caption": "Hermes Boots with a scythe, Poison Temper"
+        },
+        {
+          "video": "media/r06_boots_run_staves_truedamage.mp4",
+          "poster": "media/r06_boots_run_staves_truedamage-poster.jpg",
+          "caption": "Hermes Boots with a staff, Absolute Temper"
+        },
+        {
+          "video": "media/r07_boots_run_dagger_criticaldamage.mp4",
+          "poster": "media/r07_boots_run_dagger_criticaldamage-poster.jpg",
+          "caption": "Hermes Boots with a twin daggers, Shatter Temper"
+        }
+      ]
+    },
+    {
+      "title": "Forge, runes and crafting",
+      "items": [
+        {
+          "video": "media/a01_alchemy_bench_craft.mp4",
+          "poster": "media/a01_alchemy_bench_craft-poster.jpg",
+          "caption": "Crafting at the Alchemy Bench"
+        },
+        {
+          "video": "media/p01_rune_pages_tour.mp4",
+          "poster": "media/p01_rune_pages_tour-poster.jpg",
+          "caption": "The six rune pages"
+        },
+        {
+          "video": "media/p02_rune_page_with_inventory.mp4",
+          "poster": "media/p02_rune_page_with_inventory-poster.jpg",
+          "caption": "Rune page and inventory"
+        },
+        {
+          "video": "media/r01_rune_forge_open_and_craft.mp4",
+          "poster": "media/r01_rune_forge_open_and_craft-poster.jpg",
+          "caption": "Forging a rune"
+        },
+        {
+          "video": "media/r07_rune_forge_hammer_side.mp4",
+          "poster": "media/r07_rune_forge_hammer_side-poster.jpg",
+          "caption": "The hammer at the furnace"
+        },
+        {
+          "video": "media/r10_rune_forge_panel_hammer_framed.mp4",
+          "poster": "media/r10_rune_forge_panel_hammer_framed-poster.jpg",
+          "caption": "The rune forge"
+        }
+      ]
+    },
+    {
+      "title": "Short loops",
+      "items": [
+        {
+          "video": "media/loop-01-zeus-gokten-iner.mp4",
+          "poster": "media/loop-01-zeus-gokten-iner-poster.jpg",
+          "caption": "Zeus descends"
+        },
+        {
+          "video": "media/loop-01b-zeus-yuruyor.mp4",
+          "poster": "media/loop-01b-zeus-yuruyor-poster.jpg",
+          "caption": "Zeus walks in"
+        },
+        {
+          "video": "media/loop-02-echo-alti-tanri.mp4",
+          "poster": "media/loop-02-echo-alti-tanri-poster.jpg",
+          "caption": "Echo of the God: all six gods"
+        },
+        {
+          "video": "media/loop-03-sonar.mp4",
+          "poster": "media/loop-03-sonar-poster.jpg",
+          "caption": "Sonar pulse"
+        },
+        {
+          "video": "media/loop-04-run-ocagi-dovme.mp4",
+          "poster": "media/loop-04-run-ocagi-dovme-poster.jpg",
+          "caption": "Forging a rune"
+        },
+        {
+          "video": "media/loop-05-run-sayfalari.mp4",
+          "poster": "media/loop-05-run-sayfalari-poster.jpg",
+          "caption": "The six rune pages"
+        },
+        {
+          "video": "media/loop-06-cekic.mp4",
+          "poster": "media/loop-06-cekic-poster.jpg",
+          "caption": "The hammer at the furnace"
+        },
+        {
+          "video": "media/loop-08-war-cry.mp4",
+          "poster": "media/loop-08-war-cry-poster.jpg",
+          "caption": "War Cry"
+        },
+        {
+          "video": "media/loop-09-crimson-arc.mp4",
+          "poster": "media/loop-09-crimson-arc-poster.jpg",
+          "caption": "Crimson Arc"
+        },
+        {
+          "video": "media/loop-12-talaria-dash.mp4",
+          "poster": "media/loop-12-talaria-dash-poster.jpg",
+          "caption": "Talaria Dash"
+        },
+        {
+          "video": "media/loop-13-cyclops.mp4",
+          "poster": "media/loop-13-cyclops-poster.jpg",
+          "caption": "Facing the Cyclops"
+        },
+        {
+          "video": "media/loop-14-hermes-boots.mp4",
+          "poster": "media/loop-14-hermes-boots-poster.jpg",
+          "caption": "Hermes Boots"
+        },
+        {
+          "video": "media/loop-15-ares-uyandi.mp4",
+          "poster": "media/loop-15-ares-uyandi-poster.jpg",
+          "caption": "Ares awakened"
+        },
+        {
+          "video": "media/loop-18-siginak-tezgahlar.mp4",
+          "poster": "media/loop-18-siginak-tezgahlar-poster.jpg",
+          "caption": "Workbenches in the hideout"
+        },
+        {
+          "video": "media/loop-21-tazi-kilic.mp4",
+          "poster": "media/loop-21-tazi-kilic-poster.jpg",
+          "caption": "Sword against a skeletal hound"
+        },
+        {
+          "video": "media/loop-22-cyclops-echo.mp4",
+          "poster": "media/loop-22-cyclops-echo-poster.jpg",
+          "caption": "Echo of the God on the Cyclops"
+        },
+        {
+          "video": "media/loop-boots-asa-truedamage.mp4",
+          "poster": "media/loop-boots-asa-truedamage-poster.jpg",
+          "caption": "Hermes Boots with an Absolute Temper staff"
+        },
+        {
+          "video": "media/loop-boots-hancer-critdamage.mp4",
+          "poster": "media/loop-boots-hancer-critdamage-poster.jpg",
+          "caption": "Hermes Boots with Shatter Temper daggers"
+        },
+        {
+          "video": "media/loop-boots-kilic-burn.mp4",
+          "poster": "media/loop-boots-kilic-burn-poster.jpg",
+          "caption": "Hermes Boots with a Burn Temper sword"
+        },
+        {
+          "video": "media/loop-boots-mizrak-chill.mp4",
+          "poster": "media/loop-boots-mizrak-chill-poster.jpg",
+          "caption": "Hermes Boots with a Chill Temper polearm"
+        },
+        {
+          "video": "media/loop-boots-temper-yok.mp4",
+          "poster": "media/loop-boots-temper-yok-poster.jpg",
+          "caption": "Hermes Boots"
+        },
+        {
+          "video": "media/loop-boots-tirpan-poison.mp4",
+          "poster": "media/loop-boots-tirpan-poison-poster.jpg",
+          "caption": "Hermes Boots with a Poison Temper scythe"
+        },
+        {
+          "video": "media/loop-montaj-11-temper.mp4",
+          "poster": "media/loop-montaj-11-temper-poster.jpg",
+          "caption": "All eleven tempers"
+        },
+        {
+          "video": "media/loop-montaj-silahlar.mp4",
+          "poster": "media/loop-montaj-silahlar-poster.jpg",
+          "caption": "Eleven weapons"
+        },
+        {
+          "video": "media/loop-silah-asa-truedamage.mp4",
+          "poster": "media/loop-silah-asa-truedamage-poster.jpg",
+          "caption": "Staff, Absolute Temper"
+        },
+        {
+          "video": "media/loop-silah-balta-chill.mp4",
+          "poster": "media/loop-silah-balta-chill-poster.jpg",
+          "caption": "Axe, Chill Temper"
+        },
+        {
+          "video": "media/loop-silah-buyu-kitabi.mp4",
+          "poster": "media/loop-silah-buyu-kitabi-poster.jpg",
+          "caption": "Spellbook"
+        },
+        {
+          "video": "media/loop-silah-cekic-critdamage.mp4",
+          "poster": "media/loop-silah-cekic-critdamage-poster.jpg",
+          "caption": "Hammer, Shatter Temper"
+        },
+        {
+          "video": "media/loop-silah-degnek-chill.mp4",
+          "poster": "media/loop-silah-degnek-chill-poster.jpg",
+          "caption": "Twin wands, Chill Temper"
+        },
+        {
+          "video": "media/loop-silah-gurz-critchance.mp4",
+          "poster": "media/loop-silah-gurz-critchance-poster.jpg",
+          "caption": "Twin maces, Vital Temper"
+        },
+        {
+          "video": "media/loop-silah-hancer-poison.mp4",
+          "poster": "media/loop-silah-hancer-poison-poster.jpg",
+          "caption": "Twin daggers, Poison Temper"
+        },
+        {
+          "video": "media/loop-silah-kilic-burn.mp4",
+          "poster": "media/loop-silah-kilic-burn-poster.jpg",
+          "caption": "Sword, Burn Temper"
+        },
+        {
+          "video": "media/loop-silah-mizrak-attackspeed.mp4",
+          "poster": "media/loop-silah-mizrak-attackspeed-poster.jpg",
+          "caption": "Polearm, Swift Temper"
+        },
+        {
+          "video": "media/loop-silah-tirpan-damagemult.mp4",
+          "poster": "media/loop-silah-tirpan-damagemult-poster.jpg",
+          "caption": "Scythe, Potency Temper"
+        },
+        {
+          "video": "media/loop-silah-yay.mp4",
+          "poster": "media/loop-silah-yay-poster.jpg",
+          "caption": "Bow"
+        },
+        {
+          "video": "media/loop-silah-yumruk-bleed.mp4",
+          "poster": "media/loop-silah-yumruk-bleed-poster.jpg",
+          "caption": "Fists, Bleed Temper"
+        },
+        {
+          "video": "media/loop-temper-01-burn.mp4",
+          "poster": "media/loop-temper-01-burn-poster.jpg",
+          "caption": "Sword with Burn Temper"
+        },
+        {
+          "video": "media/loop-temper-02-chill.mp4",
+          "poster": "media/loop-temper-02-chill-poster.jpg",
+          "caption": "Sword with Chill Temper"
+        },
+        {
+          "video": "media/loop-temper-04-bleed.mp4",
+          "poster": "media/loop-temper-04-bleed-poster.jpg",
+          "caption": "Sword with Bleed Temper"
+        },
+        {
+          "video": "media/loop-temper-05-criticaldamage.mp4",
+          "poster": "media/loop-temper-05-criticaldamage-poster.jpg",
+          "caption": "Sword with Shatter Temper"
+        },
+        {
+          "video": "media/loop-temper-07-attackspeed.mp4",
+          "poster": "media/loop-temper-07-attackspeed-poster.jpg",
+          "caption": "Sword with Swift Temper"
+        },
+        {
+          "video": "media/loop-temper-09-armorpen.mp4",
+          "poster": "media/loop-temper-09-armorpen-poster.jpg",
+          "caption": "Sword with Penetration Temper"
+        },
+        {
+          "video": "media/loop-temper-10-flatattack.mp4",
+          "poster": "media/loop-temper-10-flatattack-poster.jpg",
+          "caption": "Sword with Strength Temper"
+        },
+        {
+          "video": "media/loop-temper-11-truedamage.mp4",
+          "poster": "media/loop-temper-11-truedamage-poster.jpg",
+          "caption": "Sword with Absolute Temper"
+        }
       ]
     },
     {
       "title": "The prologue on Olympus",
       "items": [
-        {"image": "prologue-zeus.jpg", "caption": "Zeus arrives", "post": "falling-from-olympus"},
-        {"image": "prologue-arena.jpg", "caption": "The arena above the clouds", "post": "falling-from-olympus"},
-        {"image": "prologue-duel.jpg", "caption": "The circle duel", "post": "falling-from-olympus"},
-        {"image": "prologue-qte.jpg", "caption": "A blade lock", "post": "falling-from-olympus"},
-        {"image": "prologue-echo.jpg", "caption": "Echo of the God: all six at once", "post": "falling-from-olympus"},
-        {"image": "prologue-fall.jpg", "caption": "Falling from Olympus", "post": "falling-from-olympus"}
+        {
+          "image": "prologue-zeus.jpg",
+          "caption": "Zeus arrives",
+          "post": "falling-from-olympus"
+        },
+        {
+          "image": "prologue-arena.jpg",
+          "caption": "The arena above the clouds",
+          "post": "falling-from-olympus"
+        },
+        {
+          "image": "prologue-duel.jpg",
+          "caption": "The circle duel",
+          "post": "falling-from-olympus"
+        },
+        {
+          "image": "prologue-qte.jpg",
+          "caption": "A blade lock",
+          "post": "falling-from-olympus"
+        },
+        {
+          "image": "prologue-echo.jpg",
+          "caption": "Echo of the God: all six at once",
+          "post": "falling-from-olympus"
+        },
+        {
+          "image": "prologue-fall.jpg",
+          "caption": "Falling from Olympus",
+          "post": "falling-from-olympus"
+        },
+        {
+          "image": "media/prologue2_2140.jpg",
+          "caption": "Lightning at the arch"
+        },
+        {
+          "image": "media/prologue2_2380.jpg",
+          "caption": "Echo of the God"
+        },
+        {
+          "image": "media/prologue2_2500.jpg",
+          "caption": "Zeus"
+        },
+        {
+          "image": "media/prologue2_3000.jpg",
+          "caption": "Stripped of power"
+        },
+        {
+          "image": "media/prologue_0181.jpg",
+          "caption": "Zeus descends"
+        },
+        {
+          "image": "media/prologue_0271.jpg",
+          "caption": "Zeus arrives"
+        },
+        {
+          "image": "media/prologue_1395.jpg",
+          "caption": "Face to face with Zeus"
+        },
+        {
+          "image": "media/prologue_2790.jpg",
+          "caption": "Echo of the God: all six gods"
+        },
+        {
+          "image": "media/prologue_3105.jpg",
+          "caption": "The gods' power is taken back"
+        },
+        {
+          "image": "media/prologue_3510.jpg",
+          "caption": "Falling from Olympus"
+        },
+        {
+          "image": "media/prologue_3600.jpg",
+          "caption": "Falling from Olympus"
+        }
       ]
     },
     {
       "title": "The world",
       "items": [
-        {"image": "world-vista.jpg", "caption": "The landscape beyond the hideout", "post": "settings-safety-nets-and-a-sky-that-behaves"},
-        {"image": "artemis-overlook.jpg", "caption": "A landmark overlooking the valley", "post": "archive-shaping-the-world"},
-        {"image": "hideout.jpg", "caption": "The hideout", "post": "giving-the-forge-a-voice"},
-        {"image": "feet-hermes-statue.jpg", "caption": "The Statue of Hermes", "post": "finding-your-feet"},
-        {"image": "statue-artemis.jpg", "caption": "The Statue of Artemis", "post": "the-gods-wake-up"},
-        {"image": "statue-hades.jpg", "caption": "The Statue of Hades", "post": "the-runesmith-speaks-33-languages"},
-        {"image": "hades-fragments.jpg", "caption": "A broken statue on the shore", "post": "giving-the-forge-a-voice"}
+        {
+          "image": "world-vista.jpg",
+          "caption": "The landscape beyond the hideout",
+          "post": "settings-safety-nets-and-a-sky-that-behaves"
+        },
+        {
+          "image": "artemis-overlook.jpg",
+          "caption": "A landmark overlooking the valley",
+          "post": "archive-shaping-the-world"
+        },
+        {
+          "image": "hideout.jpg",
+          "caption": "The hideout",
+          "post": "giving-the-forge-a-voice"
+        },
+        {
+          "image": "feet-hermes-statue.jpg",
+          "caption": "The Statue of Hermes",
+          "post": "finding-your-feet"
+        },
+        {
+          "image": "statue-artemis.jpg",
+          "caption": "The Statue of Artemis",
+          "post": "the-gods-wake-up"
+        },
+        {
+          "image": "statue-hades.jpg",
+          "caption": "The Statue of Hades",
+          "post": "the-runesmith-speaks-33-languages"
+        },
+        {
+          "image": "hades-fragments.jpg",
+          "caption": "A broken statue on the shore",
+          "post": "giving-the-forge-a-voice"
+        },
+        {
+          "image": "media/f01_ares_hill_wide_orbit_0017.jpg",
+          "caption": "The hill of Ares from above"
+        },
+        {
+          "image": "media/f03_hermes_hill_wide_orbit_0089.jpg",
+          "caption": "The hill of Hermes from above"
+        },
+        {
+          "image": "media/f05_hermes_golden_orbit_0293.jpg",
+          "caption": "The Statue of Hermes at golden hour"
+        },
+        {
+          "image": "media/w01c_start_walk_side_low_0116.jpg",
+          "caption": "Setting out across the meadow"
+        },
+        {
+          "image": "media/w03c_start_walk_front_low_0047.jpg",
+          "caption": "Out into the meadow"
+        },
+        {
+          "image": "media/w05_arrival_land_of_first_gods_0078.jpg",
+          "caption": "The Land of the First Gods"
+        },
+        {
+          "image": "media/n04_sonar_hud_open_0050.jpg",
+          "caption": "Sonar pulse"
+        },
+        {
+          "image": "media/n04_sonar_hud_open_0173.jpg",
+          "caption": "Sonar pulse"
+        },
+        {
+          "image": "media/n06_sonar_front_crane_clean_0149.jpg",
+          "caption": "Sonar from the front"
+        }
       ]
     },
     {
       "title": "Gods and runes",
       "items": [
-        {"image": "gods-ares-awakens.jpg", "caption": "The Statue of Ares awakens", "post": "the-first-god-wakes"},
-        {"image": "gods-ares-stages.jpg", "caption": "Silent, offered to, tested, awake", "post": "the-first-god-wakes"},
-        {"image": "gods-trail.jpg", "caption": "A trail of red light to the war god", "post": "the-first-god-wakes"},
-        {"image": "god-runes.jpg", "caption": "The six gods' runes", "post": "getting-ready-for-next-fest"},
-        {"image": "rune-shatter-moment.jpg", "caption": "The moment of Shatter", "post": "runes-that-keep-their-promises"},
-        {"image": "rune-shatter-veins.jpg", "caption": "An ore bound to Shatter", "post": "runes-that-keep-their-promises"},
-        {"image": "rune-shatter-tree.jpg", "caption": "A tree veined in blue", "post": "runes-that-keep-their-promises"},
-        {"image": "gods-shatter.jpg", "caption": "Ore in Hades' purple", "post": "the-first-god-wakes"}
+        {
+          "image": "gods-ares-awakens.jpg",
+          "caption": "The Statue of Ares awakens",
+          "post": "the-first-god-wakes"
+        },
+        {
+          "image": "gods-ares-stages.jpg",
+          "caption": "Silent, offered to, tested, awake",
+          "post": "the-first-god-wakes"
+        },
+        {
+          "image": "gods-trail.jpg",
+          "caption": "A trail of red light to the war god",
+          "post": "the-first-god-wakes"
+        },
+        {
+          "image": "god-runes.jpg",
+          "caption": "The six gods' runes",
+          "post": "getting-ready-for-next-fest"
+        },
+        {
+          "image": "rune-shatter-moment.jpg",
+          "caption": "The moment of Shatter",
+          "post": "runes-that-keep-their-promises"
+        },
+        {
+          "image": "rune-shatter-veins.jpg",
+          "caption": "An ore bound to Shatter",
+          "post": "runes-that-keep-their-promises"
+        },
+        {
+          "image": "rune-shatter-tree.jpg",
+          "caption": "A tree veined in blue",
+          "post": "runes-that-keep-their-promises"
+        },
+        {
+          "image": "gods-shatter.jpg",
+          "caption": "Ore in Hades' purple",
+          "post": "the-first-god-wakes"
+        },
+        {
+          "image": "media/s01_hermes_statue_orbit_0080.jpg",
+          "caption": "The Statue of Hermes"
+        },
+        {
+          "image": "media/s01b_hermes_statue_hud_0062.jpg",
+          "caption": "The Statue of Hermes with HUD"
+        },
+        {
+          "image": "media/s02_ares_statue_orbit_0086.jpg",
+          "caption": "The Statue of Ares"
+        },
+        {
+          "image": "media/s02c_ares_whisper_hud_0080.jpg",
+          "caption": "Ares speaks"
+        },
+        {
+          "image": "media/s04_ares_awakened_orbit_0026.jpg",
+          "caption": "Ares awakened"
+        },
+        {
+          "image": "media/p01_rune_pages_tour_0077.jpg",
+          "caption": "The six rune pages"
+        },
+        {
+          "image": "media/p01_rune_pages_tour_0227.jpg",
+          "caption": "The six rune pages"
+        },
+        {
+          "image": "media/p02_rune_page_with_inventory_0098.jpg",
+          "caption": "Rune page and inventory"
+        }
       ]
     },
     {
       "title": "Combat and creatures",
       "items": [
-        {"image": "combat-echo.jpg", "caption": "Echo of the God", "post": "new-skills-new-enemies"},
-        {"image": "combat-tartarus.jpg", "caption": "Tartarus Rift", "post": "new-skills-new-enemies"},
-        {"image": "combat-warcry.jpg", "caption": "War Cry", "post": "new-skills-new-enemies"},
-        {"image": "combat-earths.jpg", "caption": "Earth's Embrace", "post": "new-skills-new-enemies"},
-        {"image": "feet-hermes-boots.jpg", "caption": "Hermes Boots", "post": "finding-your-feet"},
-        {"image": "combat-cyclops.jpg", "caption": "The Cyclops' crushing blow", "post": "new-skills-new-enemies"},
-        {"image": "fight-hounds.jpg", "caption": "A skeletal hound pack", "post": "every-weapon-pulls-its-weight"},
-        {"image": "combat-creatures.jpg", "caption": "The creatures of the first area", "post": "new-skills-new-enemies"},
-        {"image": "feel-dodge.jpg", "caption": "A dodge", "post": "hits-dodges-and-menus-that-answer-back"},
-        {"image": "feel-block.jpg", "caption": "A block", "post": "hits-dodges-and-menus-that-answer-back"}
+        {
+          "image": "combat-echo.jpg",
+          "caption": "Echo of the God",
+          "post": "new-skills-new-enemies"
+        },
+        {
+          "image": "combat-tartarus.jpg",
+          "caption": "Tartarus Rift",
+          "post": "new-skills-new-enemies"
+        },
+        {
+          "image": "combat-warcry.jpg",
+          "caption": "War Cry",
+          "post": "new-skills-new-enemies"
+        },
+        {
+          "image": "combat-earths.jpg",
+          "caption": "Earth's Embrace",
+          "post": "new-skills-new-enemies"
+        },
+        {
+          "image": "feet-hermes-boots.jpg",
+          "caption": "Hermes Boots",
+          "post": "finding-your-feet"
+        },
+        {
+          "image": "combat-cyclops.jpg",
+          "caption": "The Cyclops' crushing blow",
+          "post": "new-skills-new-enemies"
+        },
+        {
+          "image": "fight-hounds.jpg",
+          "caption": "A skeletal hound pack",
+          "post": "every-weapon-pulls-its-weight"
+        },
+        {
+          "image": "combat-creatures.jpg",
+          "caption": "The creatures of the first area",
+          "post": "new-skills-new-enemies"
+        },
+        {
+          "image": "feel-dodge.jpg",
+          "caption": "A dodge",
+          "post": "hits-dodges-and-menus-that-answer-back"
+        },
+        {
+          "image": "feel-block.jpg",
+          "caption": "A block",
+          "post": "hits-dodges-and-menus-that-answer-back"
+        },
+        {
+          "image": "media/c01_goblin_charge_two_shot_0176.jpg",
+          "caption": "Charging a goblin camp"
+        },
+        {
+          "image": "media/c03_goblin_fight_hud_0218.jpg",
+          "caption": "Goblin fight with HUD"
+        },
+        {
+          "image": "media/h01_hounds_sword_two_shot_0083.jpg",
+          "caption": "Sword against skeletal hounds"
+        },
+        {
+          "image": "media/h08_hounds_combat_hud_0143.jpg",
+          "caption": "Hound fight with HUD"
+        },
+        {
+          "image": "media/y01_cyclops_two_shot_low_0116.jpg",
+          "caption": "Facing the Cyclops"
+        },
+        {
+          "image": "media/y01_cyclops_two_shot_low_0206.jpg",
+          "caption": "Facing the Cyclops"
+        },
+        {
+          "image": "media/y04_cyclops_hud_0149.jpg",
+          "caption": "Cyclops fight with HUD"
+        },
+        {
+          "image": "media/h03b_war_cry_hounds_0101.jpg",
+          "caption": "War Cry"
+        },
+        {
+          "image": "media/h04b_crimson_arc_hounds_0047.jpg",
+          "caption": "Crimson Arc"
+        },
+        {
+          "image": "media/h04b_crimson_arc_hounds_0086.jpg",
+          "caption": "Crimson Arc"
+        },
+        {
+          "image": "media/h05b_earths_embrace_hounds_0038.jpg",
+          "caption": "Earth's Embrace"
+        },
+        {
+          "image": "media/h07_talaria_dash_hounds_0014.jpg",
+          "caption": "Talaria Dash"
+        },
+        {
+          "image": "media/h07_talaria_dash_hounds_0074.jpg",
+          "caption": "Talaria Dash"
+        },
+        {
+          "image": "media/c01d_goblin_charge_two_shot_v2_0146.jpg",
+          "caption": "Charging a goblin camp"
+        },
+        {
+          "image": "media/c02d_goblin_fight_low_orbit_v2_0077.jpg",
+          "caption": "Close fight at the goblin camp"
+        },
+        {
+          "image": "media/c02d_goblin_fight_low_orbit_v2_0080.jpg",
+          "caption": "Close fight at the goblin camp"
+        },
+        {
+          "image": "media/c02d_goblin_fight_low_orbit_v2_0203.jpg",
+          "caption": "Close fight at the goblin camp"
+        },
+        {
+          "image": "media/c04d_goblin_tartarus_v2_0005.jpg",
+          "caption": "Tartarus Rift on goblins"
+        },
+        {
+          "image": "media/c05e_goblin_war_cry_v2_0050.jpg",
+          "caption": "War Cry"
+        },
+        {
+          "image": "media/c06e_goblin_crimson_arc_v2_0029.jpg",
+          "caption": "Crimson Arc"
+        },
+        {
+          "image": "media/c06e_goblin_crimson_arc_v2_0071.jpg",
+          "caption": "Crimson Arc"
+        },
+        {
+          "image": "media/c08e_goblin_echo_of_the_god_v2_0083.jpg",
+          "caption": "Echo of the God"
+        },
+        {
+          "image": "media/c08e_goblin_echo_of_the_god_v2_0131.jpg",
+          "caption": "Echo of the God"
+        },
+        {
+          "image": "media/c10e_goblin_tartarus_high_v2_0050.jpg",
+          "caption": "Tartarus Rift from above"
+        },
+        {
+          "image": "media/c11e_goblin_skills_hud_v2_0149.jpg",
+          "caption": "Skill combo with HUD"
+        },
+        {
+          "image": "media/c11e_goblin_skills_hud_v2_0152.jpg",
+          "caption": "Skill combo with HUD"
+        },
+        {
+          "image": "media/c11e_goblin_skills_hud_v2_0371.jpg",
+          "caption": "Skill combo with HUD"
+        },
+        {
+          "image": "media/h01d_hounds_sword_two_shot_v2_0059.jpg",
+          "caption": "Sword against skeletal hounds"
+        },
+        {
+          "image": "media/h01d_hounds_sword_two_shot_v2_0128.jpg",
+          "caption": "Sword against skeletal hounds"
+        },
+        {
+          "image": "media/h01d_hounds_sword_two_shot_v2_0197.jpg",
+          "caption": "Sword against skeletal hounds"
+        },
+        {
+          "image": "media/y01e_cyclops_two_shot_low_v2_0092.jpg",
+          "caption": "Facing the Cyclops"
+        },
+        {
+          "image": "media/y03e_cyclops_echo_v2_0077.jpg",
+          "caption": "Echo of the God on the Cyclops"
+        },
+        {
+          "image": "media/y03e_cyclops_echo_v2_0143.jpg",
+          "caption": "Echo of the God on the Cyclops"
+        },
+        {
+          "image": "media/y05e_cyclops_tartarus_v2_0026.jpg",
+          "caption": "Tartarus Rift on the Cyclops"
+        },
+        {
+          "image": "media/y05e_cyclops_tartarus_v2_0065.jpg",
+          "caption": "Tartarus Rift on the Cyclops"
+        }
+      ]
+    },
+    {
+      "title": "Weapons, tempers and Hermes Boots",
+      "items": [
+        {
+          "image": "media/b01_hermes_boots_run_side_0080.jpg",
+          "caption": "Hermes Boots"
+        },
+        {
+          "image": "media/b02_hermes_boots_run_front_0074.jpg",
+          "caption": "Hermes Boots, front view"
+        },
+        {
+          "image": "media/r01_boots_run_sword_notemper_0071.jpg",
+          "caption": "Hermes Boots with a sword"
+        },
+        {
+          "image": "media/r02_boots_run_sword_burn_0017.jpg",
+          "caption": "Hermes Boots with a sword, Burn Temper"
+        },
+        {
+          "image": "media/r03_boots_run_polearm_chill_0071.jpg",
+          "caption": "Hermes Boots with a polearm, Chill Temper"
+        },
+        {
+          "image": "media/r03_boots_run_polearm_chill_0077.jpg",
+          "caption": "Hermes Boots with a polearm, Chill Temper"
+        },
+        {
+          "image": "media/r04_boots_run_scythes_poison_0017.jpg",
+          "caption": "Hermes Boots with a scythe, Poison Temper"
+        },
+        {
+          "image": "media/r05_boots_run_hammer_bleed_0077.jpg",
+          "caption": "Hermes Boots with a hammer, Bleed Temper"
+        },
+        {
+          "image": "media/r06_boots_run_staves_truedamage_0047.jpg",
+          "caption": "Hermes Boots with a staff, Absolute Temper"
+        },
+        {
+          "image": "media/r07_boots_run_dagger_criticaldamage_0041.jpg",
+          "caption": "Hermes Boots with a twin daggers, Shatter Temper"
+        },
+        {
+          "image": "media/r07_boots_run_dagger_criticaldamage_0089.jpg",
+          "caption": "Hermes Boots with a twin daggers, Shatter Temper"
+        },
+        {
+          "image": "media/t01b_temper_burn_sword_wide_0029.jpg",
+          "caption": "Sword with Burn Temper"
+        },
+        {
+          "image": "media/t01b_temper_burn_sword_wide_0098.jpg",
+          "caption": "Sword with Burn Temper"
+        },
+        {
+          "image": "media/t02b_temper_chill_sword_wide_0059.jpg",
+          "caption": "Sword with Chill Temper"
+        },
+        {
+          "image": "media/t04b_temper_bleed_sword_wide_0068.jpg",
+          "caption": "Sword with Bleed Temper"
+        },
+        {
+          "image": "media/t05b_temper_criticaldamage_sword_wide_0032.jpg",
+          "caption": "Sword with Shatter Temper"
+        },
+        {
+          "image": "media/t05b_temper_criticaldamage_sword_wide_0098.jpg",
+          "caption": "Sword with Shatter Temper"
+        },
+        {
+          "image": "media/t06b_temper_criticalchance_sword_wide_0059.jpg",
+          "caption": "Sword with Vital Temper"
+        },
+        {
+          "image": "media/t07b_temper_attackspeed_sword_wide_0038.jpg",
+          "caption": "Sword with Swift Temper"
+        },
+        {
+          "image": "media/t07b_temper_attackspeed_sword_wide_0101.jpg",
+          "caption": "Sword with Swift Temper"
+        },
+        {
+          "image": "media/t08b_temper_damagemultiplier_sword_wide_0104.jpg",
+          "caption": "Sword with Potency Temper"
+        },
+        {
+          "image": "media/t09b_temper_armorpen_sword_wide_0053.jpg",
+          "caption": "Sword with Penetration Temper"
+        },
+        {
+          "image": "media/t10b_temper_flatattack_sword_wide_0056.jpg",
+          "caption": "Sword with Strength Temper"
+        },
+        {
+          "image": "media/t11b_temper_truedamage_sword_wide_0014.jpg",
+          "caption": "Sword with Absolute Temper"
+        },
+        {
+          "image": "media/t11b_temper_truedamage_sword_wide_0104.jpg",
+          "caption": "Sword with Absolute Temper"
+        },
+        {
+          "image": "media/w01a_sword_fight_0068.jpg",
+          "caption": "Sword"
+        },
+        {
+          "image": "media/w01a_sword_fight_0149.jpg",
+          "caption": "Sword"
+        },
+        {
+          "image": "media/w01b_sword_temper_burn_fight_0017.jpg",
+          "caption": "Sword, Burn Temper"
+        },
+        {
+          "image": "media/w01b_sword_temper_burn_fight_0104.jpg",
+          "caption": "Sword, Burn Temper"
+        },
+        {
+          "image": "media/w02a_axe_fight_0068.jpg",
+          "caption": "Axe"
+        },
+        {
+          "image": "media/w02a_axe_fight_0128.jpg",
+          "caption": "Axe"
+        },
+        {
+          "image": "media/w02b_axe_temper_chill_fight_0020.jpg",
+          "caption": "Axe, Chill Temper"
+        },
+        {
+          "image": "media/w02b_axe_temper_chill_fight_0158.jpg",
+          "caption": "Axe, Chill Temper"
+        },
+        {
+          "image": "media/w03a_dagger_fight_0143.jpg",
+          "caption": "Twin daggers"
+        },
+        {
+          "image": "media/w03b_dagger_temper_poison_fight_0029.jpg",
+          "caption": "Twin daggers, Poison Temper"
+        },
+        {
+          "image": "media/w03b_dagger_temper_poison_fight_0110.jpg",
+          "caption": "Twin daggers, Poison Temper"
+        },
+        {
+          "image": "media/w04a_fist_fight_0092.jpg",
+          "caption": "Fists"
+        },
+        {
+          "image": "media/w04b_fist_temper_bleed_fight_0044.jpg",
+          "caption": "Fists, Bleed Temper"
+        },
+        {
+          "image": "media/w04b_fist_temper_bleed_fight_0140.jpg",
+          "caption": "Fists, Bleed Temper"
+        },
+        {
+          "image": "media/w05a_hammer_fight_0008.jpg",
+          "caption": "Hammer"
+        },
+        {
+          "image": "media/w05b_hammer_temper_criticaldamage_fight_0014.jpg",
+          "caption": "Hammer, Shatter Temper"
+        },
+        {
+          "image": "media/w05b_hammer_temper_criticaldamage_fight_0173.jpg",
+          "caption": "Hammer, Shatter Temper"
+        },
+        {
+          "image": "media/w06a_mace_fight_0128.jpg",
+          "caption": "Twin maces"
+        },
+        {
+          "image": "media/w06b_mace_temper_criticalchance_fight_0059.jpg",
+          "caption": "Twin maces, Vital Temper"
+        },
+        {
+          "image": "media/w06b_mace_temper_criticalchance_fight_0098.jpg",
+          "caption": "Twin maces, Vital Temper"
+        },
+        {
+          "image": "media/w07a_polearm_fight_0089.jpg",
+          "caption": "Polearm"
+        },
+        {
+          "image": "media/w07b_polearm_temper_attackspeed_fight_0029.jpg",
+          "caption": "Polearm, Swift Temper"
+        },
+        {
+          "image": "media/w07b_polearm_temper_attackspeed_fight_0089.jpg",
+          "caption": "Polearm, Swift Temper"
+        },
+        {
+          "image": "media/w08a_scythes_fight_0080.jpg",
+          "caption": "Scythe"
+        },
+        {
+          "image": "media/w08b_scythes_temper_damagemultiplier_fight_0095.jpg",
+          "caption": "Scythe, Potency Temper"
+        },
+        {
+          "image": "media/w10c_spellbook_fight_0143.jpg",
+          "caption": "Spellbook"
+        },
+        {
+          "image": "media/w11b_staves_temper_truedamage_fight_0026.jpg",
+          "caption": "Staff, Absolute Temper"
+        },
+        {
+          "image": "media/w11b_staves_temper_truedamage_fight_0131.jpg",
+          "caption": "Staff, Absolute Temper"
+        },
+        {
+          "image": "media/w11c_staves_fight_0017.jpg",
+          "caption": "Staff"
+        },
+        {
+          "image": "media/w11c_staves_fight_0161.jpg",
+          "caption": "Staff"
+        },
+        {
+          "image": "media/w12a_bow_fight_0149.jpg",
+          "caption": "Bow"
+        },
+        {
+          "image": "media/w13a_wand_fight_0086.jpg",
+          "caption": "Twin wands"
+        },
+        {
+          "image": "media/w13b_wand_temper_chill_fight_0086.jpg",
+          "caption": "Twin wands, Chill Temper"
+        },
+        {
+          "image": "media/w13b_wand_temper_chill_fight_0155.jpg",
+          "caption": "Twin wands, Chill Temper"
+        }
       ]
     },
     {
       "title": "Interface",
       "items": [
-        {"image": "ui-hud.jpg", "caption": "The HUD", "post": "a-new-look-for-the-interface"},
-        {"image": "ui-craft-window.jpg", "caption": "Crafting", "post": "every-window-one-game"},
-        {"image": "ui-inventory-after.jpg", "caption": "The inventory", "post": "a-new-look-for-the-interface"},
-        {"image": "ui-equipment.jpg", "caption": "Equipment", "post": "a-new-look-for-the-interface"},
-        {"image": "ui-tooltips.jpg", "caption": "Tooltips", "post": "a-new-look-for-the-interface"},
-        {"image": "ui-world-access.jpg", "caption": "World Access", "post": "every-window-one-game"},
-        {"image": "ui-realms.jpg", "caption": "The main menu and Realms", "post": "every-window-one-game"},
-        {"image": "ui-floating-text.jpg", "caption": "Floating combat text", "post": "every-window-one-game"},
-        {"image": "ui-action-wheel.jpg", "caption": "The action wheel", "post": "every-window-one-game"},
-        {"image": "ui-grinder.jpg", "caption": "The Grinder", "post": "every-window-one-game"},
-        {"image": "feet-demo-end.jpg", "caption": "The end of the demo", "post": "finding-your-feet"}
+        {
+          "image": "ui-hud.jpg",
+          "caption": "The HUD",
+          "post": "a-new-look-for-the-interface"
+        },
+        {
+          "image": "ui-craft-window.jpg",
+          "caption": "Crafting",
+          "post": "every-window-one-game"
+        },
+        {
+          "image": "ui-inventory-after.jpg",
+          "caption": "The inventory",
+          "post": "a-new-look-for-the-interface"
+        },
+        {
+          "image": "ui-equipment.jpg",
+          "caption": "Equipment",
+          "post": "a-new-look-for-the-interface"
+        },
+        {
+          "image": "ui-tooltips.jpg",
+          "caption": "Tooltips",
+          "post": "a-new-look-for-the-interface"
+        },
+        {
+          "image": "ui-world-access.jpg",
+          "caption": "World Access",
+          "post": "every-window-one-game"
+        },
+        {
+          "image": "ui-realms.jpg",
+          "caption": "The main menu and Realms",
+          "post": "every-window-one-game"
+        },
+        {
+          "image": "ui-floating-text.jpg",
+          "caption": "Floating combat text",
+          "post": "every-window-one-game"
+        },
+        {
+          "image": "ui-action-wheel.jpg",
+          "caption": "The action wheel",
+          "post": "every-window-one-game"
+        },
+        {
+          "image": "ui-grinder.jpg",
+          "caption": "The Grinder",
+          "post": "every-window-one-game"
+        },
+        {
+          "image": "feet-demo-end.jpg",
+          "caption": "The end of the demo",
+          "post": "finding-your-feet"
+        }
       ]
     },
     {
       "title": "The workshop",
       "items": [
-        {"image": "archive-blacksmith.jpg", "caption": "Blacksmith workbench variants", "post": "archive-workshop-tiers-and-production"},
-        {"image": "archive-alchemisttable.jpg", "caption": "Alchemy table variants", "post": "archive-workshop-tiers-and-production"},
-        {"image": "archive-orefurnace.jpg", "caption": "Ore furnace variants", "post": "archive-workshop-tiers-and-production"},
-        {"image": "archive-grinder.jpg", "caption": "Grinder variants", "post": "archive-workshop-tiers-and-production"},
-        {"image": "archive-farm-plots.jpg", "caption": "Farm plots", "post": "archive-growing-a-field"},
-        {"image": "archive-ore-studies.jpg", "caption": "Ore nodes", "post": "archive-gathering-and-resources"}
+        {
+          "image": "archive-blacksmith.jpg",
+          "caption": "Blacksmith workbench variants",
+          "post": "archive-workshop-tiers-and-production"
+        },
+        {
+          "image": "archive-alchemisttable.jpg",
+          "caption": "Alchemy table variants",
+          "post": "archive-workshop-tiers-and-production"
+        },
+        {
+          "image": "archive-orefurnace.jpg",
+          "caption": "Ore furnace variants",
+          "post": "archive-workshop-tiers-and-production"
+        },
+        {
+          "image": "archive-grinder.jpg",
+          "caption": "Grinder variants",
+          "post": "archive-workshop-tiers-and-production"
+        },
+        {
+          "image": "archive-farm-plots.jpg",
+          "caption": "Farm plots",
+          "post": "archive-growing-a-field"
+        },
+        {
+          "image": "archive-ore-studies.jpg",
+          "caption": "Ore nodes",
+          "post": "archive-gathering-and-resources"
+        },
+        {
+          "image": "media/r01_rune_forge_open_and_craft_0017.jpg",
+          "caption": "Forging a rune"
+        },
+        {
+          "image": "media/r01_rune_forge_open_and_craft_0236.jpg",
+          "caption": "Forging a rune"
+        },
+        {
+          "image": "media/r07_rune_forge_hammer_side_0098.jpg",
+          "caption": "The hammer at the furnace"
+        },
+        {
+          "image": "media/r10_rune_forge_panel_hammer_framed_0050.jpg",
+          "caption": "The rune forge"
+        },
+        {
+          "image": "media/a01_alchemy_bench_craft_0092.jpg",
+          "caption": "Crafting at the Alchemy Bench"
+        },
+        {
+          "image": "media/o01_hideout_wide_orbit_0050.jpg",
+          "caption": "The hideout"
+        },
+        {
+          "image": "media/o02_hideout_benches_orbit_0089.jpg",
+          "caption": "Workbenches in the hideout"
+        },
+        {
+          "image": "media/o03_hideout_walk_side_0038.jpg",
+          "caption": "Walking through the hideout"
+        },
+        {
+          "image": "media/o04_hideout_hud_walk_0119.jpg",
+          "caption": "The hideout with HUD"
+        }
       ]
     }
-  ]
+  ],
+  "outtakes": {
+    "title": "Outtakes",
+    "intro": "The shots that did not make the cut: cameras stuck behind pillars and trees, mirrored damage numbers, enemies out of frame, repeats and early tests. Kept here because they are part of the work.",
+    "sections": [
+      {
+        "title": "Clips",
+        "items": [
+          {
+            "video": "media/prologue-pillars-in-the-way.mp4",
+            "poster": "media/prologue-pillars-in-the-way-poster.jpg",
+            "caption": "The duel, with pillars in the way"
+          },
+          {
+            "video": "media/prologue-far-camera.mp4",
+            "poster": "media/prologue-far-camera-poster.jpg",
+            "caption": "The duel from a distant camera"
+          },
+          {
+            "video": "media/c02_goblin_fight_low_orbit.mp4",
+            "poster": "media/c02_goblin_fight_low_orbit-poster.jpg",
+            "caption": "Close fight at the goblin camp"
+          },
+          {
+            "video": "media/c07e_goblin_earths_embrace_v2.mp4",
+            "poster": "media/c07e_goblin_earths_embrace_v2-poster.jpg",
+            "caption": "Earth's Embrace"
+          },
+          {
+            "video": "media/f02_valley_waterfall_wide.mp4",
+            "poster": "media/f02_valley_waterfall_wide-poster.jpg",
+            "caption": "The waterfall valley"
+          },
+          {
+            "video": "media/f04_shore_camp_golden_orbit.mp4",
+            "poster": "media/f04_shore_camp_golden_orbit-poster.jpg",
+            "caption": "The shore at golden hour"
+          },
+          {
+            "video": "media/h02b_tartarus_rift_hounds.mp4",
+            "poster": "media/h02b_tartarus_rift_hounds-poster.jpg",
+            "caption": "Tartarus Rift on skeletal hounds"
+          },
+          {
+            "video": "media/h03b_war_cry_hounds.mp4",
+            "poster": "media/h03b_war_cry_hounds-poster.jpg",
+            "caption": "War Cry"
+          },
+          {
+            "video": "media/h06b_echo_of_the_god_hounds.mp4",
+            "poster": "media/h06b_echo_of_the_god_hounds-poster.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "video": "media/k01_tartarus_rift.mp4",
+            "poster": "media/k01_tartarus_rift-poster.jpg",
+            "caption": "Tartarus Rift"
+          },
+          {
+            "video": "media/k02_war_cry.mp4",
+            "poster": "media/k02_war_cry-poster.jpg",
+            "caption": "War Cry"
+          },
+          {
+            "video": "media/k04_earths_embrace.mp4",
+            "poster": "media/k04_earths_embrace-poster.jpg",
+            "caption": "Earth's Embrace"
+          },
+          {
+            "video": "media/k05_echo_of_the_god.mp4",
+            "poster": "media/k05_echo_of_the_god-poster.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "video": "media/k06_talaria_dash.mp4",
+            "poster": "media/k06_talaria_dash-poster.jpg",
+            "caption": "Talaria Dash"
+          },
+          {
+            "video": "media/n06_sonar_front_crane_clean.mp4",
+            "poster": "media/n06_sonar_front_crane_clean-poster.jpg",
+            "caption": "Sonar from the front"
+          },
+          {
+            "video": "media/o02_hideout_benches_orbit.mp4",
+            "poster": "media/o02_hideout_benches_orbit-poster.jpg",
+            "caption": "Workbenches in the hideout"
+          },
+          {
+            "video": "media/o03_hideout_walk_side.mp4",
+            "poster": "media/o03_hideout_walk_side-poster.jpg",
+            "caption": "Walking through the hideout"
+          },
+          {
+            "video": "media/r02_rune_forge_craft_again.mp4",
+            "poster": "media/r02_rune_forge_craft_again-poster.jpg",
+            "caption": "Forging a rune"
+          },
+          {
+            "video": "media/r08_rune_forge_hammer_side2.mp4",
+            "poster": "media/r08_rune_forge_hammer_side2-poster.jpg",
+            "caption": "The hammer at the furnace"
+          },
+          {
+            "video": "media/r11_rune_forge_panel_hammer_wide.mp4",
+            "poster": "media/r11_rune_forge_panel_hammer_wide-poster.jpg",
+            "caption": "The rune forge"
+          },
+          {
+            "video": "media/s01b_hermes_statue_hud.mp4",
+            "poster": "media/s01b_hermes_statue_hud-poster.jpg",
+            "caption": "The Statue of Hermes with HUD"
+          },
+          {
+            "video": "media/w02_start_crane_reveal.mp4",
+            "poster": "media/w02_start_crane_reveal-poster.jpg",
+            "caption": "The first area"
+          },
+          {
+            "video": "media/w04b_start_hud_walk.mp4",
+            "poster": "media/w04b_start_hud_walk-poster.jpg",
+            "caption": "Exploring with HUD"
+          },
+          {
+            "video": "media/y02_cyclops_low_orbit.mp4",
+            "poster": "media/y02_cyclops_low_orbit-poster.jpg",
+            "caption": "Circling the Cyclops"
+          },
+          {
+            "video": "media/y02e_cyclops_low_orbit_v2.mp4",
+            "poster": "media/y02e_cyclops_low_orbit_v2-poster.jpg",
+            "caption": "Circling the Cyclops"
+          },
+          {
+            "video": "media/y03_cyclops_echo.mp4",
+            "poster": "media/y03_cyclops_echo-poster.jpg",
+            "caption": "Echo of the God on the Cyclops"
+          },
+          {
+            "video": "media/r02b_boots_run_sword_burn.mp4",
+            "poster": "media/r02b_boots_run_sword_burn-poster.jpg",
+            "caption": "Hermes Boots with a sword, Burn Temper"
+          },
+          {
+            "video": "media/r04b_boots_run_scythes_poison.mp4",
+            "poster": "media/r04b_boots_run_scythes_poison-poster.jpg",
+            "caption": "Hermes Boots with a scythe, Poison Temper"
+          },
+          {
+            "video": "media/r05_boots_run_hammer_bleed.mp4",
+            "poster": "media/r05_boots_run_hammer_bleed-poster.jpg",
+            "caption": "Hermes Boots with a hammer, Bleed Temper"
+          },
+          {
+            "video": "media/r06b_boots_run_staves_truedamage.mp4",
+            "poster": "media/r06b_boots_run_staves_truedamage-poster.jpg",
+            "caption": "Hermes Boots with a staff, Absolute Temper"
+          },
+          {
+            "video": "media/r08_boots_run_axe_armorpen.mp4",
+            "poster": "media/r08_boots_run_axe_armorpen-poster.jpg",
+            "caption": "Hermes Boots with a axe, Penetration Temper"
+          },
+          {
+            "video": "media/t01_temper_burn_sword.mp4",
+            "poster": "media/t01_temper_burn_sword-poster.jpg",
+            "caption": "Sword with Burn Temper, close-up"
+          },
+          {
+            "video": "media/t02_temper_chill_sword.mp4",
+            "poster": "media/t02_temper_chill_sword-poster.jpg",
+            "caption": "Sword with Chill Temper, close-up"
+          },
+          {
+            "video": "media/t03_temper_poison_sword.mp4",
+            "poster": "media/t03_temper_poison_sword-poster.jpg",
+            "caption": "Sword with Poison Temper, close-up"
+          },
+          {
+            "video": "media/t04_temper_bleed_sword.mp4",
+            "poster": "media/t04_temper_bleed_sword-poster.jpg",
+            "caption": "Sword with Bleed Temper, close-up"
+          },
+          {
+            "video": "media/t05_temper_criticaldamage_sword.mp4",
+            "poster": "media/t05_temper_criticaldamage_sword-poster.jpg",
+            "caption": "Sword with Shatter Temper, close-up"
+          },
+          {
+            "video": "media/t06_temper_criticalchance_sword.mp4",
+            "poster": "media/t06_temper_criticalchance_sword-poster.jpg",
+            "caption": "Sword with Vital Temper, close-up"
+          },
+          {
+            "video": "media/t07_temper_attackspeed_sword.mp4",
+            "poster": "media/t07_temper_attackspeed_sword-poster.jpg",
+            "caption": "Sword with Swift Temper, close-up"
+          },
+          {
+            "video": "media/t08_temper_damagemultiplier_sword.mp4",
+            "poster": "media/t08_temper_damagemultiplier_sword-poster.jpg",
+            "caption": "Sword with Potency Temper, close-up"
+          },
+          {
+            "video": "media/t09_temper_armorpen_sword.mp4",
+            "poster": "media/t09_temper_armorpen_sword-poster.jpg",
+            "caption": "Sword with Penetration Temper, close-up"
+          },
+          {
+            "video": "media/t10_temper_flatattack_sword.mp4",
+            "poster": "media/t10_temper_flatattack_sword-poster.jpg",
+            "caption": "Sword with Strength Temper, close-up"
+          },
+          {
+            "video": "media/t11_temper_truedamage_sword.mp4",
+            "poster": "media/t11_temper_truedamage_sword-poster.jpg",
+            "caption": "Sword with Absolute Temper, close-up"
+          },
+          {
+            "video": "media/w09a_spearandshield_fight.mp4",
+            "poster": "media/w09a_spearandshield_fight-poster.jpg",
+            "caption": "Spear and shield"
+          },
+          {
+            "video": "media/w09b_spearandshield_temper_armorpen_fight.mp4",
+            "poster": "media/w09b_spearandshield_temper_armorpen_fight-poster.jpg",
+            "caption": "Spear and shield, Penetration Temper"
+          },
+          {
+            "video": "media/w09c_spearandshield_temper_armorpen_fight.mp4",
+            "poster": "media/w09c_spearandshield_temper_armorpen_fight-poster.jpg",
+            "caption": "Spear and shield, Penetration Temper"
+          },
+          {
+            "video": "media/w10a_spellbook_fight.mp4",
+            "poster": "media/w10a_spellbook_fight-poster.jpg",
+            "caption": "Spellbook"
+          },
+          {
+            "video": "media/w10b_spellbook_temper_flatattack_fight.mp4",
+            "poster": "media/w10b_spellbook_temper_flatattack_fight-poster.jpg",
+            "caption": "Spellbook, Strength Temper"
+          },
+          {
+            "video": "media/w10d_spellbook_temper_burn_fight.mp4",
+            "poster": "media/w10d_spellbook_temper_burn_fight-poster.jpg",
+            "caption": "Spellbook, Burn Temper"
+          },
+          {
+            "video": "media/w11a_staves_fight.mp4",
+            "poster": "media/w11a_staves_fight-poster.jpg",
+            "caption": "Staff"
+          },
+          {
+            "video": "media/w12b_bow_temper_burn_fight.mp4",
+            "poster": "media/w12b_bow_temper_burn_fight-poster.jpg",
+            "caption": "Bow, Burn Temper"
+          },
+          {
+            "video": "media/w12c_bow_temper_poison_fight.mp4",
+            "poster": "media/w12c_bow_temper_poison_fight-poster.jpg",
+            "caption": "Bow, Poison Temper"
+          }
+        ]
+      },
+      {
+        "title": "Short loops",
+        "items": [
+          {
+            "video": "media/loop-07-tartarus-rift.mp4",
+            "poster": "media/loop-07-tartarus-rift-poster.jpg",
+            "caption": "Tartarus Rift"
+          },
+          {
+            "video": "media/loop-10-earths-embrace.mp4",
+            "poster": "media/loop-10-earths-embrace-poster.jpg",
+            "caption": "Earth's Embrace"
+          },
+          {
+            "video": "media/loop-11-echo-of-the-god.mp4",
+            "poster": "media/loop-11-echo-of-the-god-poster.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "video": "media/loop-16-altin-saat-hermes.mp4",
+            "poster": "media/loop-16-altin-saat-hermes-poster.jpg",
+            "caption": "The Statue of Hermes at golden hour"
+          },
+          {
+            "video": "media/loop-17-simya.mp4",
+            "poster": "media/loop-17-simya-poster.jpg",
+            "caption": "The Alchemy Bench"
+          },
+          {
+            "video": "media/loop-19-varis-basligi.mp4",
+            "poster": "media/loop-19-varis-basligi-poster.jpg",
+            "caption": "The Land of the First Gods"
+          },
+          {
+            "video": "media/loop-20-savas-hud.mp4",
+            "poster": "media/loop-20-savas-hud-poster.jpg",
+            "caption": "Skill combo with HUD"
+          },
+          {
+            "video": "media/loop-temper-03-poison.mp4",
+            "poster": "media/loop-temper-03-poison-poster.jpg",
+            "caption": "Sword with Poison Temper"
+          },
+          {
+            "video": "media/loop-temper-06-criticalchance.mp4",
+            "poster": "media/loop-temper-06-criticalchance-poster.jpg",
+            "caption": "Sword with Vital Temper"
+          },
+          {
+            "video": "media/loop-temper-08-damagemultiplier.mp4",
+            "poster": "media/loop-temper-08-damagemultiplier-poster.jpg",
+            "caption": "Sword with Potency Temper"
+          },
+          {
+            "video": "media/loop-mirrored-01-zeus-gokten-iner.mp4",
+            "poster": "media/loop-mirrored-01-zeus-gokten-iner-poster.jpg",
+            "caption": "Zeus descends, mirrored damage numbers"
+          },
+          {
+            "video": "media/loop-mirrored-02-echo-alti-tanri.mp4",
+            "poster": "media/loop-mirrored-02-echo-alti-tanri-poster.jpg",
+            "caption": "Echo of the God: all six gods, mirrored damage numbers"
+          },
+          {
+            "video": "media/loop-mirrored-07-tartarus-rift.mp4",
+            "poster": "media/loop-mirrored-07-tartarus-rift-poster.jpg",
+            "caption": "Tartarus Rift, mirrored damage numbers"
+          },
+          {
+            "video": "media/loop-mirrored-08-war-cry.mp4",
+            "poster": "media/loop-mirrored-08-war-cry-poster.jpg",
+            "caption": "War Cry, mirrored damage numbers"
+          },
+          {
+            "video": "media/loop-mirrored-09-crimson-arc.mp4",
+            "poster": "media/loop-mirrored-09-crimson-arc-poster.jpg",
+            "caption": "Crimson Arc, mirrored damage numbers"
+          },
+          {
+            "video": "media/loop-mirrored-10-earths-embrace.mp4",
+            "poster": "media/loop-mirrored-10-earths-embrace-poster.jpg",
+            "caption": "Earth's Embrace, mirrored damage numbers"
+          },
+          {
+            "video": "media/loop-mirrored-11-echo-of-the-god.mp4",
+            "poster": "media/loop-mirrored-11-echo-of-the-god-poster.jpg",
+            "caption": "Echo of the God, mirrored damage numbers"
+          },
+          {
+            "video": "media/loop-mirrored-12-talaria-dash.mp4",
+            "poster": "media/loop-mirrored-12-talaria-dash-poster.jpg",
+            "caption": "Talaria Dash, mirrored damage numbers"
+          },
+          {
+            "video": "media/loop-mirrored-13-cyclops.mp4",
+            "poster": "media/loop-mirrored-13-cyclops-poster.jpg",
+            "caption": "Facing the Cyclops, mirrored damage numbers"
+          },
+          {
+            "video": "media/loop-mirrored-20-savas-hud.mp4",
+            "poster": "media/loop-mirrored-20-savas-hud-poster.jpg",
+            "caption": "Skill combo with HUD, mirrored damage numbers"
+          }
+        ]
+      },
+      {
+        "title": "Screenshots",
+        "items": [
+          {
+            "image": "media/prologue2_0760.jpg",
+            "caption": "The duel begins"
+          },
+          {
+            "image": "media/prologue2_0940.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue2_1360.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue2_1420.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue2_1960.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue2_2200.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue2_2440.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "image": "media/prologue2_2550.jpg",
+            "caption": "Zeus"
+          },
+          {
+            "image": "media/prologue2_2750.jpg",
+            "caption": "Zeus"
+          },
+          {
+            "image": "media/prologue2_3100.jpg",
+            "caption": "Stripped of power"
+          },
+          {
+            "image": "media/prologue_0200.jpg",
+            "caption": "Zeus descends"
+          },
+          {
+            "image": "media/prologue_0361.jpg",
+            "caption": "The arena above the clouds"
+          },
+          {
+            "image": "media/prologue_0676.jpg",
+            "caption": "The duel begins"
+          },
+          {
+            "image": "media/prologue_0811.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue_0856.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue_1440.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue_1530.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue_1710.jpg",
+            "caption": "The duel"
+          },
+          {
+            "image": "media/prologue_2800.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "image": "media/prologue_2880.jpg",
+            "caption": "The gods answer"
+          },
+          {
+            "image": "media/prologue_3150.jpg",
+            "caption": "Stripped of power"
+          },
+          {
+            "image": "media/prologue_3375.jpg",
+            "caption": "The ground breaks"
+          },
+          {
+            "image": "media/f01_ares_hill_wide_orbit_0293.jpg",
+            "caption": "The hill of Ares from above"
+          },
+          {
+            "image": "media/f02_valley_waterfall_wide_0293.jpg",
+            "caption": "The waterfall valley"
+          },
+          {
+            "image": "media/f03_hermes_hill_wide_orbit_0206.jpg",
+            "caption": "The hill of Hermes from above"
+          },
+          {
+            "image": "media/f04_shore_camp_golden_orbit_0122.jpg",
+            "caption": "The shore at golden hour"
+          },
+          {
+            "image": "media/f04_shore_camp_golden_orbit_0173.jpg",
+            "caption": "The shore at golden hour"
+          },
+          {
+            "image": "media/f05_hermes_golden_orbit_0167.jpg",
+            "caption": "The Statue of Hermes at golden hour"
+          },
+          {
+            "image": "media/w02c_start_crane_reveal_golden_0005.jpg",
+            "caption": "The first area"
+          },
+          {
+            "image": "media/w04b_start_hud_walk_0101.jpg",
+            "caption": "Exploring with HUD"
+          },
+          {
+            "image": "media/w04b_start_hud_walk_0146.jpg",
+            "caption": "Exploring with HUD"
+          },
+          {
+            "image": "media/s01_hermes_statue_orbit_0116.jpg",
+            "caption": "The Statue of Hermes"
+          },
+          {
+            "image": "media/s01_hermes_statue_orbit_0245.jpg",
+            "caption": "The Statue of Hermes"
+          },
+          {
+            "image": "media/s02_ares_statue_orbit_0110.jpg",
+            "caption": "The Statue of Ares"
+          },
+          {
+            "image": "media/s02_ares_statue_orbit_0179.jpg",
+            "caption": "The Statue of Ares"
+          },
+          {
+            "image": "media/s04_ares_awakened_orbit_0083.jpg",
+            "caption": "Ares awakened"
+          },
+          {
+            "image": "media/s04_ares_awakened_orbit_0185.jpg",
+            "caption": "Ares awakened"
+          },
+          {
+            "image": "media/c01_goblin_charge_two_shot_0020.jpg",
+            "caption": "Charging a goblin camp"
+          },
+          {
+            "image": "media/c01_goblin_charge_two_shot_0206.jpg",
+            "caption": "Charging a goblin camp"
+          },
+          {
+            "image": "media/c02_goblin_fight_low_orbit_0074.jpg",
+            "caption": "Close fight at the goblin camp"
+          },
+          {
+            "image": "media/c03_goblin_fight_hud_0014.jpg",
+            "caption": "Goblin fight with HUD"
+          },
+          {
+            "image": "media/h01_hounds_sword_two_shot_0077.jpg",
+            "caption": "Sword against skeletal hounds"
+          },
+          {
+            "image": "media/h01_hounds_sword_two_shot_0185.jpg",
+            "caption": "Sword against skeletal hounds"
+          },
+          {
+            "image": "media/h08_hounds_combat_hud_0344.jpg",
+            "caption": "Hound fight with HUD"
+          },
+          {
+            "image": "media/y01_cyclops_two_shot_low_0092.jpg",
+            "caption": "Facing the Cyclops"
+          },
+          {
+            "image": "media/y02_cyclops_low_orbit_0044.jpg",
+            "caption": "Circling the Cyclops"
+          },
+          {
+            "image": "media/y02_cyclops_low_orbit_0092.jpg",
+            "caption": "Circling the Cyclops"
+          },
+          {
+            "image": "media/y02_cyclops_low_orbit_0188.jpg",
+            "caption": "Circling the Cyclops"
+          },
+          {
+            "image": "media/y04_cyclops_hud_0074.jpg",
+            "caption": "Cyclops fight with HUD"
+          },
+          {
+            "image": "media/y04_cyclops_hud_0197.jpg",
+            "caption": "Cyclops fight with HUD"
+          },
+          {
+            "image": "media/h02b_tartarus_rift_hounds_0038.jpg",
+            "caption": "Tartarus Rift on skeletal hounds"
+          },
+          {
+            "image": "media/h02b_tartarus_rift_hounds_0086.jpg",
+            "caption": "Tartarus Rift on skeletal hounds"
+          },
+          {
+            "image": "media/h03b_war_cry_hounds_0032.jpg",
+            "caption": "War Cry"
+          },
+          {
+            "image": "media/h05b_earths_embrace_hounds_0059.jpg",
+            "caption": "Earth's Embrace"
+          },
+          {
+            "image": "media/h06b_echo_of_the_god_hounds_0032.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "image": "media/h06b_echo_of_the_god_hounds_0059.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "image": "media/h06b_echo_of_the_god_hounds_0113.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "image": "media/k05_echo_of_the_god_0059.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "image": "media/k05_echo_of_the_god_0143.jpg",
+            "caption": "Echo of the God"
+          },
+          {
+            "image": "media/y03_cyclops_echo_0047.jpg",
+            "caption": "Echo of the God on the Cyclops"
+          },
+          {
+            "image": "media/y03_cyclops_echo_0089.jpg",
+            "caption": "Echo of the God on the Cyclops"
+          },
+          {
+            "image": "media/n04_sonar_hud_open_0068.jpg",
+            "caption": "Sonar pulse"
+          },
+          {
+            "image": "media/n05_sonar_crane_hud_open_0056.jpg",
+            "caption": "Sonar, rising camera"
+          },
+          {
+            "image": "media/n05_sonar_crane_hud_open_0071.jpg",
+            "caption": "Sonar, rising camera"
+          },
+          {
+            "image": "media/n05_sonar_crane_hud_open_0137.jpg",
+            "caption": "Sonar, rising camera"
+          },
+          {
+            "image": "media/b01_hermes_boots_run_side_0065.jpg",
+            "caption": "Hermes Boots"
+          },
+          {
+            "image": "media/b01_hermes_boots_run_side_0194.jpg",
+            "caption": "Hermes Boots"
+          },
+          {
+            "image": "media/r07_rune_forge_hammer_side_0041.jpg",
+            "caption": "The hammer at the furnace"
+          },
+          {
+            "image": "media/r07_rune_forge_hammer_side_0155.jpg",
+            "caption": "The hammer at the furnace"
+          },
+          {
+            "image": "media/r08_rune_forge_hammer_side2_0029.jpg",
+            "caption": "The hammer at the furnace"
+          },
+          {
+            "image": "media/r10_rune_forge_panel_hammer_framed_0134.jpg",
+            "caption": "The rune forge"
+          },
+          {
+            "image": "media/r11_rune_forge_panel_hammer_wide_0059.jpg",
+            "caption": "The rune forge"
+          },
+          {
+            "image": "media/r11_rune_forge_panel_hammer_wide_0170.jpg",
+            "caption": "The rune forge"
+          },
+          {
+            "image": "media/p01_rune_pages_tour_0152.jpg",
+            "caption": "The six rune pages"
+          },
+          {
+            "image": "media/p01_rune_pages_tour_0371.jpg",
+            "caption": "The six rune pages"
+          },
+          {
+            "image": "media/p01_rune_pages_tour_0464.jpg",
+            "caption": "The six rune pages"
+          },
+          {
+            "image": "media/p02_rune_page_with_inventory_0194.jpg",
+            "caption": "Rune page and inventory"
+          },
+          {
+            "image": "media/a01_alchemy_bench_craft_0320.jpg",
+            "caption": "Crafting at the Alchemy Bench"
+          },
+          {
+            "image": "media/o01_hideout_wide_orbit_0149.jpg",
+            "caption": "The hideout"
+          },
+          {
+            "image": "media/o01_hideout_wide_orbit_0275.jpg",
+            "caption": "The hideout"
+          },
+          {
+            "image": "media/o02_hideout_benches_orbit_0101.jpg",
+            "caption": "Workbenches in the hideout"
+          },
+          {
+            "image": "media/o02_hideout_benches_orbit_0242.jpg",
+            "caption": "Workbenches in the hideout"
+          },
+          {
+            "image": "media/o03_hideout_walk_side_0233.jpg",
+            "caption": "Walking through the hideout"
+          },
+          {
+            "image": "media/o04_hideout_hud_walk_0083.jpg",
+            "caption": "The hideout with HUD"
+          },
+          {
+            "image": "media/r01_boots_run_sword_notemper_0080.jpg",
+            "caption": "Hermes Boots with a sword"
+          },
+          {
+            "image": "media/r05_boots_run_hammer_bleed_0071.jpg",
+            "caption": "Hermes Boots with a hammer, Bleed Temper"
+          },
+          {
+            "image": "media/t02b_temper_chill_sword_wide_0005.jpg",
+            "caption": "Sword with Chill Temper"
+          },
+          {
+            "image": "media/t03b_temper_poison_sword_wide_0005.jpg",
+            "caption": "Sword with Poison Temper"
+          },
+          {
+            "image": "media/t03b_temper_poison_sword_wide_0095.jpg",
+            "caption": "Sword with Poison Temper"
+          },
+          {
+            "image": "media/t04b_temper_bleed_sword_wide_0017.jpg",
+            "caption": "Sword with Bleed Temper"
+          },
+          {
+            "image": "media/t06b_temper_criticalchance_sword_wide_0005.jpg",
+            "caption": "Sword with Vital Temper"
+          },
+          {
+            "image": "media/t08b_temper_damagemultiplier_sword_wide_0008.jpg",
+            "caption": "Sword with Potency Temper"
+          },
+          {
+            "image": "media/t09b_temper_armorpen_sword_wide_0104.jpg",
+            "caption": "Sword with Penetration Temper"
+          },
+          {
+            "image": "media/t10b_temper_flatattack_sword_wide_0005.jpg",
+            "caption": "Sword with Strength Temper"
+          },
+          {
+            "image": "media/w03a_dagger_fight_0005.jpg",
+            "caption": "Twin daggers"
+          },
+          {
+            "image": "media/w04a_fist_fight_0005.jpg",
+            "caption": "Fists"
+          },
+          {
+            "image": "media/w05a_hammer_fight_0107.jpg",
+            "caption": "Hammer"
+          },
+          {
+            "image": "media/w06a_mace_fight_0029.jpg",
+            "caption": "Twin maces"
+          },
+          {
+            "image": "media/w07a_polearm_fight_0005.jpg",
+            "caption": "Polearm"
+          },
+          {
+            "image": "media/w08a_scythes_fight_0005.jpg",
+            "caption": "Scythe"
+          },
+          {
+            "image": "media/w08b_scythes_temper_damagemultiplier_fight_0008.jpg",
+            "caption": "Scythe, Potency Temper"
+          },
+          {
+            "image": "media/w10c_spellbook_fight_0011.jpg",
+            "caption": "Spellbook"
+          },
+          {
+            "image": "media/w12a_bow_fight_0005.jpg",
+            "caption": "Bow"
+          },
+          {
+            "image": "media/w13a_wand_fight_0008.jpg",
+            "caption": "Twin wands"
+          }
+        ]
+      }
+    ]
+  }
 }
