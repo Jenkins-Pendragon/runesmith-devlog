@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The runesmith finds a voice · The Runesmith Devlog</title>
+<meta name="description" content="Your character talks now, all 31 potions work, chests get a Take All button, getting hit reads at a glance, and a long list of things that used to fail without telling you why.">
+<meta property="og:title" content="The runesmith finds a voice · The Runesmith Devlog">
+<meta property="og:description" content="Your character talks now, all 31 potions work, chests get a Take All button, getting hit reads at a glance, and a long list of things that used to fail without telling you why.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/chest-take-all.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/the-runesmith-finds-a-voice/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png?v=52ab8223">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css?v=539fea2d">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png?v=424a69f6" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a class="game-link" href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active" aria-current="page">Devlog</a>
+      <a href="/runesmith-devlog/archive/">Development Archive</a>
+      <a href="/runesmith-devlog/media/">Media</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #17 &middot; October 12, 2026 &middot; October 11 to 12</div>
+    <h1>The runesmith finds a voice</h1>
+    <p class="lead">Your character talks now, all 31 potions work, chests get a Take All button, getting hit reads at a glance, and a long list of things that used to fail without telling you why.</p>
+    
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/chest-take-all.jpg?v=2979615e" alt="The player standing at a chest in the hideout with the chest window and the inventory open, a Take All button at the top of the chest window"></figure>
+  <div class="post-body wrap-narrow">
+<p>The <a href="/runesmith-devlog/posts/a-codex-that-shows-you-how/">last post</a> was about the Codex. The rest of those two days went into dozens of smaller things. None of them is a feature you would put on a store page, but together they change how the game feels to play.</p>
+<h2>The character talks</h2>
+<p>Your runesmith has a voice now, a male one and a female one depending on the character you made, with 82 lines each. The lines cover three kinds of moments:</p>
+<ul>
+<li><strong>When something can't be done.</strong> Your bag is full, you have no weapon summoned, the forge is still busy, you are out of rune dust or runic energy, a chest is locked, a skill is on cooldown.</li>
+<li><strong>When something goes right.</strong> A rare forge, a high level upgrade, a level up, a long combo, several kills at once, a boss down, your first rune, a new map.</li>
+<li><strong>When it hurts.</strong> Taking a hit, a heavy hit, and falling.</li>
+</ul>
+<p>What I spent the most time on is when the character stays quiet. Only one line plays at a time, and a more important one cuts off a less important one. Nobody talks over Zeus, during cutscenes, while loading, in the pause menu or while dead. Each line has its own cooldown, and the same clip never plays twice in a row. Music and effects dip a little while a line is playing so you can hear it.</p>
+<h2>Getting hit, at a glance</h2>
+<p>Taking damage used to look the same at full health and at death's door. Now the red edge of the screen depends on how much health you have left: faint above 75%, stronger between 25% and 75%, full below 25%. Damage over time ticks flash softer and no longer make the character grunt on every tick.</p>
+<p>The camera shake for small hits is about half what it was, so a scratch and a heavy blow finally feel different. The health orb also shakes and glows when you are hit, and the health you lost drains away a moment later, so you can see how big the hit was.</p>
+<h2>Every potion works</h2>
+<p>There are 31 potions and brews in the game, and until this week only two of them did anything. Now all of them work. Some heal or restore runic energy on the spot. Most give you an effect that lasts five minutes:</p>
+<ul>
+<li><strong>Miner's Brew:</strong> ore and stone mining 30% faster.</li>
+<li><strong>Mule Elixir:</strong> 500 more carry weight.</li>
+<li><strong>Scholar's Elixir:</strong> 25% more experience.</li>
+<li><strong>Tonics and cures:</strong> tonics give you resistance to burn, chill or poison, and cures clear them, along with bleeding.</li>
+<li><strong>Nectar of Mnemosyne:</strong> lasts ten minutes and protects the experience you would lose when you fall.</li>
+</ul>
+<p><img alt="The inventory with the Mule Elixir tooltip open: increased carry weight capacity +500, duration 5:00" src="/runesmith-devlog/assets/img/potion-tooltip-mule-elixir.jpg?v=e711dedb" /></p>
+<p>Healing percentages are based on your maximum health, so a potion doesn't become useless as you level up. The effect lines in the tooltip are colored by type, in the same colors weapon tooltips use.</p>
+<h2>Nothing fails silently</h2>
+<p>I went through every place where the game says no: interactions, crafting, equipping, placing, swimming, skills. Every one of them now gives a visible reason. Pressing the same thing ten times no longer fills the chat with ten lines; the last line just bumps.</p>
+<p>Swimming got the most of it. You can't fight in the water, and now the game tells you so instead of just playing an error sound. Your weapon is put away when you swim; before, it stayed in your hand. A dash you pressed in the water no longer fires by itself the moment you reach the shore. The camera no longer sinks deep under the water, the jitter at the shoreline is gone, and the swimming sound no longer gets stuck in a loop if you jump back in too quickly.</p>
+<h2>Chests</h2>
+<p>Chests have a Take All button. If your bag can't hold everything, what doesn't fit stays in the chest and you are told so, instead of spilling on the ground.</p>
+<p>Behind that was a nasty bug. All 28 loot chests in the first area shared one inventory, so emptying one made the others vanish for good the next time you came back. Each chest has its own contents now. The chest in the arena is also no longer locked behind a quest.</p>
+<h2>Placing and moving structures</h2>
+<p>You can now place structures up to 6 meters away. Beyond that the preview turns red and won't confirm. Something you already placed can be moved with F, contents and all, and cancelling puts it back where it was. Farm plots now use the same placement system as every other structure.</p>
+<p><img alt="Two placement previews of a workbench: a red one far away out of range, a green one close to the player" src="/runesmith-devlog/assets/img/placement-range-red-green.jpg?v=b2fb7fde" />
+<em>Out of range on the left, in range on the right.</em></p>
+<h2>Going home and coming back</h2>
+<p>The return spell now takes 2.5 seconds instead of 5. In the hideout the same key takes you back to the last map you were on, at the same world tier. The fall from Olympus into the first area now plays in full, and the runic energy bar no longer gets stuck at 99.</p>
+<h2>Smaller fixes</h2>
+<ul>
+<li><strong>Area skills.</strong> Cone and area skills hit each enemy once. Enemies made of several colliders were taking two or three times the damage, with as many hit sounds.</li>
+<li><strong>Skills and auto attack.</strong> Using a skill cuts into your auto attack chain right away, and the "already casting" message is gone.</li>
+<li><strong>Skeletal hounds.</strong> They no longer jitter while chasing you; they were rerolling their attack choice every single frame.</li>
+<li><strong>Map to hideout.</strong> Enemies from a map no longer follow you back into the hideout.</li>
+<li><strong>Camera.</strong> It no longer clips into the terrain.</li>
+<li><strong>Gathering and the return key.</strong> Pressing the return key in the middle of mining or chopping, then letting go, could leave the character standing idle while the work carried on.</li>
+<li><strong>Standing still.</strong> The idle animation breathes instead of freezing.</li>
+</ul>
+<p>The build with all of this is version 0.1.4.</p>
+<h2>Next time</h2>
+<p>With the guides in place and the rough edges sanded down, the next stretch goes back into content. More on that soon.</p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/a-codex-that-shows-you-how/"><span>&larr; Previous</span>A codex that shows you how</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

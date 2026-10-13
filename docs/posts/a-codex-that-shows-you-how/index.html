@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A codex that shows you how · The Runesmith Devlog</title>
+<meta name="description" content="An in-game guide library with short videos for every core system, cards that tell you when a new page opens, and a looping clip beside every skill in the tree.">
+<meta property="og:title" content="A codex that shows you how · The Runesmith Devlog">
+<meta property="og:description" content="An in-game guide library with short videos for every core system, cards that tell you when a new page opens, and a looping clip beside every skill in the tree.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jenkins-pendragon.github.io/runesmith-devlog/assets/img/codex-panel-tempers.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenkins-pendragon.github.io/runesmith-devlog/posts/a-codex-that-shows-you-how/">
+<link rel="alternate" type="application/rss+xml" title="The Runesmith Devlog" href="/runesmith-devlog/feed.xml">
+<link rel="icon" href="/runesmith-devlog/assets/img/favicon.png?v=52ab8223">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/runesmith-devlog/assets/site.css?v=539fea2d">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/runesmith-devlog/" aria-label="The Runesmith Devlog home">
+      <img src="/runesmith-devlog/assets/img/logo.png?v=424a69f6" alt="The Runesmith" width="160" height="43">
+    </a>
+    <nav class="nav">
+      <a class="game-link" href="https://therunesmith.com/">The Game</a>
+      <a href="/runesmith-devlog/" class="active" aria-current="page">Devlog</a>
+      <a href="/runesmith-devlog/archive/">Development Archive</a>
+      <a href="/runesmith-devlog/media/">Media</a>
+      <a class="btn btn-gold btn-sm" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<article class="post">
+  <header class="post-head wrap-narrow">
+    <a class="back" href="/runesmith-devlog/">&larr; All devlogs</a>
+    <div class="eyebrow">Devlog #16 &middot; October 12, 2026 &middot; October 11 to 12</div>
+    <h1>A codex that shows you how</h1>
+    <p class="lead">An in-game guide library with short videos for every core system, cards that tell you when a new page opens, and a looping clip beside every skill in the tree.</p>
+    
+  </header>
+  <figure class="post-cover wrap"><img src="/runesmith-devlog/assets/img/codex-panel-tempers.jpg?v=559f5325" alt="The Codex window open on the Weapon Tempers entry, with a video on the left and a numbered how-it-works list on the right"></figure>
+  <div class="post-body wrap-narrow">
+<p>The <a href="/runesmith-devlog/posts/every-weapon-pulls-its-weight/">last post</a> was about fighting well. This one is about knowing how. The Runesmith has a lot of systems stacked on top of each other: runes, tempers, benches, farming, god statues, world tiers. Until now the only way to learn most of them was to poke at them and hope. So I built a place in the game that shows you.</p>
+<h2>The Codex</h2>
+<p>The Codex is a library of short guides that lives inside the game. It opens from a new button that sits above the bottom right corner of the HUD. There is no hotkey on purpose: it is there when you want it and quiet when you don't.</p>
+<p>Inside, entries are split into seven tabs: Basics, Combat, Runes, Crafting, Farming, Gods and World. There are 22 entries so far. Each one has:</p>
+<ul>
+<li>a slideshow of images or a video recorded in the game,</li>
+<li>a numbered "how it works" list that highlights the step the slide is showing,</li>
+<li>a tip in the gold box at the bottom, the kind of thing you would only learn after a few hours,</li>
+<li>links to related entries, plus search and filters for videos or guides.</li>
+</ul>
+<video src="/runesmith-devlog/assets/video/codex-weapon-tempers.mp4?v=57d1a917" poster="/runesmith-devlog/assets/img/codex-weapon-tempers-poster.jpg?v=24211548" autoplay muted loop playsinline controls preload="metadata"></video>
+<p><em>The Weapon Tempers entry's video: summon a weapon, use a temper from the hotbar, watch the blade light up.</em></p>
+<p>The tips are where I put the details that are easy to miss. Every 10 hits of combo add 10% damage, up to 50%, as long as you don't pause for 3 seconds. Falling costs you 10% of your progress toward the next level, but never the level itself. A planted farm plot can't be dismantled until you harvest it.</p>
+<h2>Pages open as you play</h2>
+<p>The Codex doesn't hand you everything at once. An entry opens when you reach the thing it explains: a feature unlocks, a quest starts or finishes, an item lands in your bag, or you place a structure for the first time. Once a page is open it stays open.</p>
+<p><img alt="A &quot;New Codex entry: Weapon Tempers&quot; card sliding in above the Codex button in the corner of the HUD" src="/runesmith-devlog/assets/img/codex-new-entry-card.jpg?v=6401885b" />
+<em>A new entry card. It waits for a quiet moment, stays for three seconds, then flies into the Codex button.</em></p>
+<p>When a new page opens, a small card slides in from the right. It waits if you are in a cutscene, loading or have a window open. After three seconds it flies into the Codex button and the badge on the button bumps. Clicking the card takes you straight to that page. To keep it from turning into a stream of popups, cards are at least 45 seconds apart, and anything that unlocks in between is bundled into a single card.</p>
+<h2>A video beside every skill</h2>
+<p>The skill tree got the same idea. Hover over a skill and a short looping clip plays next to its tooltip, showing what the skill actually does before you spend a point on it. Eight skills have one: War Cry, Tartarus Rift, Crimson Arc, Earth's Embrace, Echo of the God, Moon Arrow, Talaria Dash and Hermes Boots.</p>
+<p><img alt="The Ares skill tree with the Crimson Arc tooltip open and a clip of the crimson wave cutting through goblins beside it" src="/runesmith-devlog/assets/img/skill-tree-video-tooltip.jpg?v=5472f271" /></p>
+<p>The poster frame shows up instantly. The video itself starts a moment later, so sweeping the mouse across the tree doesn't start and stop a dozen videos.</p>
+<h2>Moon Arrow, retuned</h2>
+<p>Recording those clips made a few skills look wrong on camera, and Moon Arrow was the worst. Its description said it pierces through enemies, but it stopped at the first one. It also cost almost nothing and hit far too hard.</p>
+<video src="/runesmith-devlog/assets/video/skill-moon-arrow.mp4?v=bc0dabd3" poster="/runesmith-devlog/assets/img/skill-moon-arrow-poster.jpg?v=e2a21c91" autoplay muted loop playsinline controls preload="metadata"></video>
+<p><em>Moon Arrow's new tree clip: one arrow, three goblins.</em></p>
+<p>Now it goes through up to three enemies, has a 6 second cooldown and costs 20 runic energy, the same class as Crimson Arc. Its damage dropped from 25 times your attack to 5 times. The archer also steps back when firing instead of forward. While I was there, Earth's Embrace got a fix too: its healing effect now stands upright instead of tilting with the character.</p>
+<h2>Tools</h2>
+<p>Every Codex video and skill clip comes from the same recording tool inside the editor. It records the game frame by frame, draws a fake cursor and key prompts so you can see what is being pressed, and zooms toward the part of the screen that matters. That last part came from feedback on the first clips: on a full screen recording the interface was too small to read. Adding a new Codex page is now a matter of writing the steps and recording a take.</p>
+<h2>Next time</h2>
+<p>The next post is a grab bag from the same few days, and it is a big one: the character starts talking, every potion finally does something, and a lot of quiet failures now tell you why.</p>
+  </div>
+  <aside class="cta wrap-narrow">
+    <div>
+      <h3>Forge with us</h3>
+      <p>The Runesmith is coming to Steam. A wishlist is the single best way to help a solo developer.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn btn-gold" href="https://store.steampowered.com/app/4116240/The_Runesmith/">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="https://discord.gg/R8SJpTqVku">Join the Discord</a>
+    </div>
+  </aside>
+  <nav class="post-nav wrap-narrow"><a class="pn prev" href="/runesmith-devlog/posts/every-weapon-pulls-its-weight/"><span>&larr; Previous</span>Every weapon pulls its weight</a><a class="pn next" href="/runesmith-devlog/posts/the-runesmith-finds-a-voice/"><span>Next &rarr;</span>The runesmith finds a voice</a></nav>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; 2026 Shawk Studios</span>
+    <span class="footer-links">
+      <a href="https://therunesmith.com/">therunesmith.com</a>
+      <a href="https://store.steampowered.com/app/4116240/The_Runesmith/">Steam</a>
+      <a href="https://discord.gg/R8SJpTqVku">Discord</a>
+      <a href="/runesmith-devlog/feed.xml">RSS</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>
