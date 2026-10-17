@@ -188,8 +188,19 @@ def ensure_thumbs(media: dict) -> None:
         im.save(dst, quality=82, optimize=True)
 
 
+# Sekmeler: ana galeri + media.json'daki ek sayfalar (outtakes, media2). Her ek sayfa {title, intro, slug, sections}.
+EXTRA_PAGES = ("outtakes", "media2")
+
+
+def media_pages(media: dict) -> list:
+    return [(k, media[k]) for k in EXTRA_PAGES if k in media]
+
+
 def media_sections(media: dict) -> list:
-    return media["sections"] + (media["outtakes"]["sections"] if "outtakes" in media else [])
+    out = list(media["sections"])
+    for _, page in media_pages(media):
+        out += page["sections"]
+    return out
 
 
 def validate_media(media: dict, slugs: set) -> None:
@@ -203,9 +214,9 @@ def validate_media(media: dict, slugs: set) -> None:
                 raise ValueError(f"media.json: yazı yok -> {it['post']}")
 
 
-def render_media(media: dict, posts_by_slug: dict, outtakes: bool = False) -> str:
+def render_media(media: dict, posts_by_slug: dict, page_key: str | None = None) -> str:
     e = html.escape
-    page = media["outtakes"] if outtakes else media
+    page = media[page_key] if page_key else media
     sections = []
     first_image = ""
     for sec in page["sections"]:
@@ -215,9 +226,15 @@ def render_media(media: dict, posts_by_slug: dict, outtakes: bool = False) -> st
             source = f'<a class="media-source" href="{post["url"]}">{e(post["title"])}</a>' if post else ""
             cap = e(it["caption"])
             if "video" in it:
+                # Sesli reklam kesimleri (media2) sessiz başlamaz, döngüye girmez; oran sınıfı dikey/kare kutuyu kırpmadan gösterir.
+                attrs = 'controls playsinline preload="none"' if it.get("sound") else 'controls muted loop playsinline preload="none"'
+                ratio = f" media-video-{it['ratio']}" if it.get("ratio") else ""
+                if it.get("download"):
+                    size_mb = (ROOT / "assets" / "video" / it["video"]).stat().st_size / 1048576
+                    source = f'<a class="media-source" href="{BASE}/assets/video/{e(it["video"])}" download>Download · {size_mb:.0f} MB</a>'
                 tiles.append(f"""
-      <figure class="media-tile media-video">
-        <video src="{BASE}/assets/video/{e(it['video'])}" poster="{BASE}/assets/thumbs/{e(it['poster'])}" controls muted loop playsinline preload="none" aria-label="{cap}"></video>
+      <figure class="media-tile media-video{ratio}">
+        <video src="{BASE}/assets/video/{e(it['video'])}" poster="{BASE}/assets/thumbs/{e(it['poster'])}" {attrs} aria-label="{cap}"></video>
         <figcaption><span>{cap}</span>{source}</figcaption>
       </figure>""")
             else:
@@ -230,26 +247,32 @@ def render_media(media: dict, posts_by_slug: dict, outtakes: bool = False) -> st
         <figcaption><span>{cap}</span>{source}</figcaption>
       </figure>""")
         cls = "media-grid media-grid-video" if any("video" in it for it in sec["items"]) else "media-grid"
+        if sec.get("layout") == "formats":
+            cls = "media-grid media-grid-formats"
+        blurb = f"\n  <p class=\"media-blurb\">{e(sec['blurb'])}</p>" if sec.get("blurb") else ""
         sections.append(f"""
 <section class="wrap media-section">
-  <h2>{e(sec['title'])}</h2>
+  <h2>{e(sec['title'])}</h2>{blurb}
   <div class="{cls}">{''.join(tiles)}
   </div>
 </section>""")
     lead = page["intro"]
     tabs = ""
-    if "outtakes" in media:
-        g_state = "" if outtakes else ' class="active" aria-current="page"'
-        o_state = ' class="active" aria-current="page"' if outtakes else ""
+    pages = media_pages(media)
+    if pages:
+        active = ' class="active" aria-current="page"'
+        links = [f'<a href="{BASE}/media/"{"" if page_key else active}>Gallery</a>']
+        for key, pg in pages:
+            links.append(f'<a href="{BASE}/media/{e(pg.get("slug", key))}/"{active if page_key == key else ""}>{e(pg["title"])}</a>')
+        nl = "\n      "
         tabs = f"""
     <nav class="media-tabs" aria-label="Media sections">
-      <a href="{BASE}/media/"{g_state}>Gallery</a>
-      <a href="{BASE}/media/outtakes/"{o_state}>{e(media['outtakes']['title'])}</a>
+      {nl.join(links)}
     </nav>"""
     body = f"""
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Screenshots and clips</div>
+    <div class="eyebrow">{e(page.get('eyebrow', 'Screenshots and clips'))}</div>
     <h1>{e(page['title'])}</h1>
     <p class="lead">{e(lead)}</p>{tabs}
   </div>
@@ -275,7 +298,7 @@ def render_media(media: dict, posts_by_slug: dict, outtakes: bool = False) -> st
 </script>
 """
     og = f"{BASE}/assets/img/{first_image}" if first_image else ""
-    url = f"{BASE}/media/outtakes/" if outtakes else f"{BASE}/media/"
+    url = f"{BASE}/media/{page.get('slug', page_key)}/" if page_key else f"{BASE}/media/"
     return layout(f"{page['title']} · The Runesmith", lead, body, og, url, "media")
 
 
@@ -409,9 +432,10 @@ def build() -> list:
         (OUT / "media").mkdir()
         by_slug = {p["slug"]: p for p in posts}
         (OUT / "media" / "index.html").write_text(bust_cache(render_media(media, by_slug)), encoding="utf-8")
-        if "outtakes" in media:
-            (OUT / "media" / "outtakes").mkdir()
-            (OUT / "media" / "outtakes" / "index.html").write_text(bust_cache(render_media(media, by_slug, outtakes=True)), encoding="utf-8")
+        for key, pg in media_pages(media):
+            d = OUT / "media" / pg.get("slug", key)
+            d.mkdir(parents=True)
+            (d / "index.html").write_text(bust_cache(render_media(media, by_slug, page_key=key)), encoding="utf-8")
     for p in posts:
         neighbors = [other for other in posts if other["series"] == p["series"]]
         i = neighbors.index(p)

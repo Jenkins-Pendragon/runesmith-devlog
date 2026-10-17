@@ -158,6 +158,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.2; colo
 .media-section h2 { font-family: var(--serif); font-size: 22px; font-weight: 700; letter-spacing: 0.03em; color: #fff; margin: 0 0 18px; }
 .media-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .media-grid-video { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Reklam kesimleri: dört teslim biçimi yan yana, her kutu kendi oranında (dikey/kare kırpılmaz). */
+.media-grid-formats { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; }
+.media-tile.media-video-9x16 video { aspect-ratio: 9 / 16; object-fit: contain; }
+.media-tile.media-video-1x1 video { aspect-ratio: 1 / 1; object-fit: contain; }
+.media-tile.media-video-16x9 video { aspect-ratio: 16 / 9; object-fit: contain; }
+.media-blurb { color: var(--muted, #b9b3a6); margin: -8px 0 16px; font-size: 15px; line-height: 1.5; }
 .media-tile { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .media-tile img, .media-tile video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000; }
 .media-open { display: block; overflow: hidden; }
@@ -175,6 +181,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.2; colo
 @media (max-width: 860px) {
   .media-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .media-grid-video { grid-template-columns: 1fr; }
+  .media-grid-formats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 520px) {
   .media-grid { grid-template-columns: 1fr; }

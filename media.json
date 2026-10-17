@@ -2337,5 +2337,247 @@
         ]
       }
     ]
+  },
+  "media2": {
+    "title": "Media 2",
+    "slug": "2",
+    "eyebrow": "Ad cuts with game audio",
+    "intro": "Six montages cut for the October 2026 campaign, with the game's own sound. Three concepts, each in a short cut (12–13 s) and a long cut (22–25 s), delivered in four formats: 16:9 at 1440p and 1080p, square and vertical. Free to use in coverage; the Gallery tab has raw screenshots and clips.",
+    "sections": [
+      {
+        "title": "You Were a God · short cut (12 s)",
+        "blurb": "Fall, forge, gamble a rune, call the gods, wake Ares: the whole loop in one cut.",
+        "layout": "formats",
+        "items": [
+          {
+            "video": "media2/11-montaj-fallen-god_16x9_1440.mp4",
+            "poster": "media2/11-montaj-fallen-god_16x9_1440-poster.jpg",
+            "caption": "Short cut · 16:9 · 2560×1440 · 12 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/11-montaj-fallen-god_16x9_1080.mp4",
+            "poster": "media2/11-montaj-fallen-god_16x9_1080-poster.jpg",
+            "caption": "Short cut · 16:9 · 1920×1080 · 12 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/11-montaj-fallen-god_1x1.mp4",
+            "poster": "media2/11-montaj-fallen-god_1x1-poster.jpg",
+            "caption": "Short cut · Square · 1080×1080 · 12 s",
+            "ratio": "1x1",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/11-montaj-fallen-god_9x16.mp4",
+            "poster": "media2/11-montaj-fallen-god_9x16-poster.jpg",
+            "caption": "Short cut · Vertical · 1080×1920 · 12 s",
+            "ratio": "9x16",
+            "sound": true,
+            "download": true
+          }
+        ]
+      },
+      {
+        "title": "You Were a God · long cut (24 s)",
+        "blurb": "Fall, forge, gamble a rune, call the gods, wake Ares: the whole loop in one cut.",
+        "layout": "formats",
+        "items": [
+          {
+            "video": "media2/14-montaj-fallen-god-uzun_16x9_1440.mp4",
+            "poster": "media2/14-montaj-fallen-god-uzun_16x9_1440-poster.jpg",
+            "caption": "Long cut · 16:9 · 2560×1440 · 24 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/14-montaj-fallen-god-uzun_16x9_1080.mp4",
+            "poster": "media2/14-montaj-fallen-god-uzun_16x9_1080-poster.jpg",
+            "caption": "Long cut · 16:9 · 1920×1080 · 24 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/14-montaj-fallen-god-uzun_1x1.mp4",
+            "poster": "media2/14-montaj-fallen-god-uzun_1x1-poster.jpg",
+            "caption": "Long cut · Square · 1080×1080 · 24 s",
+            "ratio": "1x1",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/14-montaj-fallen-god-uzun_9x16.mp4",
+            "poster": "media2/14-montaj-fallen-god-uzun_9x16-poster.jpg",
+            "caption": "Long cut · Vertical · 1080×1920 · 24 s",
+            "ratio": "9x16",
+            "sound": true,
+            "download": true
+          }
+        ]
+      },
+      {
+        "title": "Mine, Build, Brew · short cut (12 s)",
+        "blurb": "Sonar, ore, a hideout that fills up, a farm that feeds the alchemy bench, and the rune furnace at the end.",
+        "layout": "formats",
+        "items": [
+          {
+            "video": "media2/12-montaj-zanaat_16x9_1440.mp4",
+            "poster": "media2/12-montaj-zanaat_16x9_1440-poster.jpg",
+            "caption": "Short cut · 16:9 · 2560×1440 · 12 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/12-montaj-zanaat_16x9_1080.mp4",
+            "poster": "media2/12-montaj-zanaat_16x9_1080-poster.jpg",
+            "caption": "Short cut · 16:9 · 1920×1080 · 12 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/12-montaj-zanaat_1x1.mp4",
+            "poster": "media2/12-montaj-zanaat_1x1-poster.jpg",
+            "caption": "Short cut · Square · 1080×1080 · 12 s",
+            "ratio": "1x1",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/12-montaj-zanaat_9x16.mp4",
+            "poster": "media2/12-montaj-zanaat_9x16-poster.jpg",
+            "caption": "Short cut · Vertical · 1080×1920 · 12 s",
+            "ratio": "9x16",
+            "sound": true,
+            "download": true
+          }
+        ]
+      },
+      {
+        "title": "Mine, Build, Brew · long cut (24 s)",
+        "blurb": "Sonar, ore, a hideout that fills up, a farm that feeds the alchemy bench, and the rune furnace at the end.",
+        "layout": "formats",
+        "items": [
+          {
+            "video": "media2/15-montaj-zanaat-uzun_16x9_1440.mp4",
+            "poster": "media2/15-montaj-zanaat-uzun_16x9_1440-poster.jpg",
+            "caption": "Long cut · 16:9 · 2560×1440 · 24 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/15-montaj-zanaat-uzun_16x9_1080.mp4",
+            "poster": "media2/15-montaj-zanaat-uzun_16x9_1080-poster.jpg",
+            "caption": "Long cut · 16:9 · 1920×1080 · 24 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/15-montaj-zanaat-uzun_1x1.mp4",
+            "poster": "media2/15-montaj-zanaat-uzun_1x1-poster.jpg",
+            "caption": "Long cut · Square · 1080×1080 · 24 s",
+            "ratio": "1x1",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/15-montaj-zanaat-uzun_9x16.mp4",
+            "poster": "media2/15-montaj-zanaat-uzun_9x16-poster.jpg",
+            "caption": "Long cut · Vertical · 1080×1920 · 24 s",
+            "ratio": "9x16",
+            "sound": true,
+            "download": true
+          }
+        ]
+      },
+      {
+        "title": "Six Gods Fight With You · short cut (13 s)",
+        "blurb": "A blade summoned from lightning, six skills, hounds, goblins and a cyclops.",
+        "layout": "formats",
+        "items": [
+          {
+            "video": "media2/13-montaj-savas_16x9_1440.mp4",
+            "poster": "media2/13-montaj-savas_16x9_1440-poster.jpg",
+            "caption": "Short cut · 16:9 · 2560×1440 · 13 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/13-montaj-savas_16x9_1080.mp4",
+            "poster": "media2/13-montaj-savas_16x9_1080-poster.jpg",
+            "caption": "Short cut · 16:9 · 1920×1080 · 13 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/13-montaj-savas_1x1.mp4",
+            "poster": "media2/13-montaj-savas_1x1-poster.jpg",
+            "caption": "Short cut · Square · 1080×1080 · 13 s",
+            "ratio": "1x1",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/13-montaj-savas_9x16.mp4",
+            "poster": "media2/13-montaj-savas_9x16-poster.jpg",
+            "caption": "Short cut · Vertical · 1080×1920 · 13 s",
+            "ratio": "9x16",
+            "sound": true,
+            "download": true
+          }
+        ]
+      },
+      {
+        "title": "Six Gods Fight With You · long cut (22 s)",
+        "blurb": "A blade summoned from lightning, six skills, hounds, goblins and a cyclops.",
+        "layout": "formats",
+        "items": [
+          {
+            "video": "media2/16-montaj-savas-uzun_16x9_1440.mp4",
+            "poster": "media2/16-montaj-savas-uzun_16x9_1440-poster.jpg",
+            "caption": "Long cut · 16:9 · 2560×1440 · 22 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/16-montaj-savas-uzun_16x9_1080.mp4",
+            "poster": "media2/16-montaj-savas-uzun_16x9_1080-poster.jpg",
+            "caption": "Long cut · 16:9 · 1920×1080 · 22 s",
+            "ratio": "16x9",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/16-montaj-savas-uzun_1x1.mp4",
+            "poster": "media2/16-montaj-savas-uzun_1x1-poster.jpg",
+            "caption": "Long cut · Square · 1080×1080 · 22 s",
+            "ratio": "1x1",
+            "sound": true,
+            "download": true
+          },
+          {
+            "video": "media2/16-montaj-savas-uzun_9x16.mp4",
+            "poster": "media2/16-montaj-savas-uzun_9x16-poster.jpg",
+            "caption": "Long cut · Vertical · 1080×1920 · 22 s",
+            "ratio": "9x16",
+            "sound": true,
+            "download": true
+          }
+        ]
+      }
+    ]
   }
 }
